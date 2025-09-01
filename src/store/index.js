@@ -1,6 +1,6 @@
 // store/albumStore.js
 import { create } from 'zustand';
-import { getSpotifyToken, searchAlbums } from './getAsync';
+import { getSpotifyToken, searchAlbums } from '../assets/api/getAsync';
 
 export const useAlbumStore = create((set, get) => ({
     token: null,

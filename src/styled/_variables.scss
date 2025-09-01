@@ -1,0 +1,21 @@
+$m_color2: #66ffdb;
+$m_color1: #d395f6;
+$s_color: #dcdcdc;
+$fc: #000;
+@mixin display_center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin p_center_top() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+@mixin p_center_left() {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+}

@@ -1,3 +1,11 @@
+@import './variables';
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+        format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
 html,
 body,
 div,
@@ -102,8 +110,9 @@ section {
 body {
     line-height: 1.6;
     font-size: 16px;
-    color: #000;
+    color: $fc;
     font-weight: 400;
+    font-family: 'Pretendard';
 }
 ol,
 ul,

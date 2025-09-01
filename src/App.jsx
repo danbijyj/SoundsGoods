@@ -1,7 +1,7 @@
 import { Router, BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login, Main } from './page';
 import Layout from './common/Layout';
-
+import './styled/reset.scss';
 const App = () => {
     return (
         <>
