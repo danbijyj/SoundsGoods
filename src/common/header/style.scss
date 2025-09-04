@@ -8,6 +8,7 @@
     background: #fff;
     transition: 0.5s;
     overflow: hidden;
+    z-index: 1000;
     &.active {
         height: rem(635px);
     }
@@ -50,7 +51,7 @@
     position: absolute;
     left: 0;
     top: rem(136px);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 1);
     h2 {
         width: 67.7083vw;
         @include display_al();
