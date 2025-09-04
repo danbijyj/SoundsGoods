@@ -1,4 +1,4 @@
-@import './variables';
+@use './utils' as *;
 @font-face {
     font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
@@ -112,11 +112,13 @@ body {
     font-size: 10px;
 }
 body {
+    margin-top: 13.6rem;
     line-height: 1.6;
     font-size: 1.6rem;
     color: $fc;
     font-weight: 400;
     font-family: 'Pretendard';
+    overflow-x: hidden;
 }
 .inner {
     width: 1200px;
@@ -126,6 +128,11 @@ body {
     .inner {
         width: 1500px;
     }
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 ol,
 ul,
@@ -146,4 +153,7 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+input {
+    outline: none;
 }

@@ -1,0 +1,13 @@
+@mixin display_center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin display_al() {
+    display: flex;
+    align-items: center;
+}
+@mixin display_ju() {
+    display: flex;
+    justify-content: center;
+}

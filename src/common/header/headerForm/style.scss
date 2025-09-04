@@ -1,0 +1,35 @@
+@use '../../../styled/utils' as *;
+
+form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    width: 28.125vw;
+    @include display_al();
+    justify-content: space-between;
+    label {
+        @include font-14px-400();
+        @include display_center();
+        height: 4rem;
+        width: 5.2083vw;
+    }
+    input {
+        border: 1px solid $m_color2;
+        border-radius: rem(50px);
+        width: 20.8333vw;
+        height: rem(40px);
+        padding-left: rem(30px);
+        padding-right: rem(64px);
+    }
+    .search_header {
+        @include p_center_top();
+        left: 48.6rem;
+        z-index: 10;
+        i {
+            @include display_center();
+            color: $m_color2;
+            font-size: rem(24px);
+        }
+    }
+}
