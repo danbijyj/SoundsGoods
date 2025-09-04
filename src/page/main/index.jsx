@@ -1,42 +1,37 @@
 import React from 'react';
-import { useAlbumStore } from '../../store';
-// import useAlbumStore from '../store';
 
 const Main = () => {
-    const { query, setQuery, fetchAlbums, albums, loading } = useAlbumStore();
+    // useEffect(() => {
+    //     const tag = document.createElement("script");
+    //     tag.src = "https://www.youtube.com/iframe_api";
+    //     document.body.appendChild(tag);
 
+    //     window.onYouTubeIframeAPIReady = () => {
+    //       const newPlayers = {};
+    //       tracks.forEach((track) => {
+    //         newPlayers[track.id] = new window.YT.Player(`player-${track.id}`, {
+    //           events: {
+    //             onReady: (event) => {
+    //               event.target.setVolume(100); // 기본 볼륨
+    //             }
+    //           }
+    //         });
+    //       });
+    //       setPlayers(newPlayers);
+    //     };
+    //   }, []);
     return (
-        <div style={{ padding: '2rem' }}>
-            <h1>Spotify Album Search (zustand, auto token)</h1>
-            <div>
-                <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search for an album"
-                    style={{ marginRight: '0.5rem', padding: '0.5rem' }}
-                />
-                <button onClick={fetchAlbums}>Search</button>
-            </div>
-
-            {loading ? (
-                <p>Loading albums...</p>
-            ) : albums.length === 0 ? (
-                <p>No albums found.</p>
-            ) : (
-                <div style={{ marginTop: '1rem' }}>
-                    {albums.map((album) => (
-                        <div key={album.id} style={{ marginBottom: '1.5rem' }}>
-                            <h3>{album.name}</h3>
-                            <p>Artist: {album.artists.map((a) => a.name).join(', ')}</p>
-                            <p>Release Date: {album.release_date}</p>
-                            {album.images && album.images.length > 0 && (
-                                <img src={album.images[0].url} alt={album.name} width={200} />
-                            )}
-                        </div>
-                    ))}
-                </div>
-            )}
+        <div>
+            <iframe
+                width="1250"
+                height="703"
+                src="https://www.youtube.com/embed/9_bTl2vvYQg"
+                title="Golden"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
         </div>
     );
 };

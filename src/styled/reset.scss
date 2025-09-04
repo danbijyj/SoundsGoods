@@ -107,12 +107,25 @@ nav,
 section {
     display: block;
 }
+html,
+body {
+    font-size: 10px;
+}
 body {
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: $fc;
     font-weight: 400;
     font-family: 'Pretendard';
+}
+.inner {
+    width: 1200px;
+    position: relative;
+}
+#main {
+    .inner {
+        width: 1500px;
+    }
 }
 ol,
 ul,

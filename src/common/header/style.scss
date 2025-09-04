@@ -1,3 +1,11 @@
+@import '../../styled/variables';
 #header {
     width: 100%;
+    border: 1px solid $m_color1;
+    position: relative;
+    .inner {
+        height: 160px;
+        width: 1500px;
+        margin: auto;
+    }
 }

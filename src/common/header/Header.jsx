@@ -1,7 +1,14 @@
 import React from 'react';
 import './style.scss';
+import Nav from './nav/Nav';
 const Header = () => {
-    return <div></div>;
+    return (
+        <header id="header">
+            <div className="inner">
+                <Nav />
+            </div>
+        </header>
+    );
 };
 
 export default Header;
