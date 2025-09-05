@@ -1,5 +1,7 @@
 import React from 'react';
-
+import './style.scss';
+import Main_visual from '../../component/main/main_visual/Main_visual';
+import Video_Artist from '../../component/main/video_artist/Video_Artist';
 const Main = () => {
     // useEffect(() => {
     //     const tag = document.createElement("script");
@@ -21,17 +23,9 @@ const Main = () => {
     //     };
     //   }, []);
     return (
-        <div>
-            <iframe
-                width="1250"
-                height="703"
-                src="https://www.youtube.com/embed/9_bTl2vvYQg"
-                title="Golden"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-            ></iframe>
+        <div id="main home">
+            <Main_visual />
+            <Video_Artist />
         </div>
     );
 };

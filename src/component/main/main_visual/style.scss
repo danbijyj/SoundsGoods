@@ -1,0 +1,8 @@
+@use '../../../styled/utils' as *;
+
+#main-visual {
+    @include bg();
+    width: 100vw;
+    height: rem(608px);
+    background-color: $m_color2;
+}

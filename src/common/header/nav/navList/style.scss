@@ -1,0 +1,13 @@
+@forward '../../../../styled/variables';
+.gnb {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    li {
+        width: 7.8125vw;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
