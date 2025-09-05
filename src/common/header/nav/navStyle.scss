@@ -1,7 +1,7 @@
 @use '../../../styled/utils' as *;
 #nav {
     width: 100%;
-    height: 4.8rem;
+    height: vw(48);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -9,7 +9,7 @@
     justify-content: space-between;
     p {
         width: 7.8125vw;
-        height: 4rem;
+        height: vw(40);
         @include font-18px-400();
         @include display_center();
     }

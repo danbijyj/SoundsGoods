@@ -5,29 +5,29 @@
 
     .inner {
         width: 78.125vw;
-        height: rem(394px);
+        height: vw(394px);
         margin: auto;
         text-align: center;
         h2 {
             @include font-14px-700();
-            font-size: rem(32px);
-            margin-top: rem(40px);
+            font-size: vw(32px);
+            margin-top: vw(40px);
         }
         .sns_icons {
             @include display_ju();
-            gap: rem(30px);
-            margin-top: rem(20px);
-            margin-bottom: rem(60px);
+            gap: vw(30px);
+            margin-top: vw(20px);
+            margin-bottom: vw(60px);
             li {
                 background-color: $m_color2;
                 width: 1.875vw;
-                height: rem(36px);
+                height: vw(36px);
             }
         }
         .promotion {
             @include display_ju();
-            gap: rem(24px);
-            margin-bottom: rem(10px);
+            gap: vw(24px);
+            margin-bottom: vw(10px);
             li {
                 @include font-14px-400();
                 position: relative;
@@ -36,8 +36,8 @@
                     background-color: $fc;
                     width: 1px;
                     @include p_center_top();
-                    left: rem(-12px);
-                    height: rem(15px);
+                    left: vw(-12px);
+                    height: vw(15px);
                     position: absolute;
                 }
                 &:first-child {
@@ -49,8 +49,8 @@
         }
         .footer_con {
             @include display_ju();
-            gap: rem(24px);
-            margin-bottom: rem(10px);
+            gap: vw(24px);
+            margin-bottom: vw(10px);
             li {
                 @include font-14px-400();
                 position: relative;
@@ -59,8 +59,8 @@
                     background-color: $fc;
                     width: 1px;
                     @include p_center_top();
-                    left: rem(-12px);
-                    height: rem(15px);
+                    left: vw(-12px);
+                    height: vw(15px);
                     position: absolute;
                 }
                 &:first-child {
@@ -71,7 +71,7 @@
             }
         }
         .con3 {
-            margin-bottom: rem(60px);
+            margin-bottom: vw(60px);
         }
         .con4 {
             @include font-14px-400();

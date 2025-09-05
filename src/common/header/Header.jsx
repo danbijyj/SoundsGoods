@@ -59,9 +59,10 @@ const Header = () => {
                         {data[2].onContent.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <div className="swiper_content">
-                                    <img src="" alt="" />
+                                    <img src={item.img} alt="" />
                                     <p>{item.title}</p>
                                     <span>{item.desc}</span>
+                                    <div className="bg"></div>
                                 </div>
                             </SwiperSlide>
                         ))}
