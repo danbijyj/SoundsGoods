@@ -1,4 +1,18 @@
 @use '../../../styled/utils' as *;
 
 #video_artist {
+    width: 100vw;
+    height: rem(1553px);
+    box-sizing: border-box;
+    padding-top: rem(60px);
+    text-align: center;
+    .inner {
+        width: 1500px;
+        position: relative;
+        margin: auto;
+        h2 {
+            @include font-30px-600();
+            margin-bottom: rem(40px);
+        }
+    }
 }

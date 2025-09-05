@@ -40,7 +40,6 @@
     letter-spacing: rem(0);
     color: $fc;
 }
-
 @mixin font-14px-400 {
     font-size: rem(14px);
     font-weight: 400;
@@ -58,6 +57,12 @@
 @mixin font-10px-400 {
     font-size: rem(10px);
     font-weight: 400;
+    letter-spacing: rem(0);
+    color: $fc;
+}
+@mixin font-30px-600 {
+    font-size: rem(30px);
+    font-weight: 600;
     letter-spacing: rem(0);
     color: $fc;
 }

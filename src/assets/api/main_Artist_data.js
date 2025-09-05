@@ -5,7 +5,7 @@ export default [
         ganre: 'K-POP',
         album: 'KPop Demon Hunters',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al1.jpg',
         isLike: false,
     },
     {
@@ -14,7 +14,7 @@ export default [
         ganre: '댄스/팝',
         album: 'jump',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al2.jpg',
         isLike: false,
     },
     {
@@ -23,7 +23,7 @@ export default [
         ganre: '댄스/팝',
         album: 'FAMOUS',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al3.jpg',
         isLike: false,
     },
     {
@@ -32,7 +32,7 @@ export default [
         ganre: 'ROCK/R&B',
         album: 'OO-LI',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al4.jpg',
         isLike: false,
     },
     {
@@ -41,7 +41,7 @@ export default [
         ganre: '댄스/팝',
         album: 'IVE SECRET',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al5.jpg',
         isLike: false,
     },
     {
@@ -50,7 +50,7 @@ export default [
         ganre: '댄스/팝',
         album: 'PERMISSION TO DANCE ON STAGE',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al6.jpg',
         isLike: false,
     },
     {
@@ -59,7 +59,7 @@ export default [
         ganre: 'POP/ROCK',
         album: 'Stay',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al7.jpg',
         isLike: false,
     },
     {
@@ -68,7 +68,7 @@ export default [
         ganre: '댄스/팝',
         album: 'DIRTY WORK',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al8.jpg',
         isLike: false,
     },
     {
@@ -77,7 +77,7 @@ export default [
         ganre: '댄스/팝',
         album: 'Übermensch',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al9.jpg',
         isLike: false,
     },
     {
@@ -86,7 +86,7 @@ export default [
         ganre: '댄스/팝',
         album: 'NewJeans 1st EP',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al10.jpg',
         isLike: false,
     },
     {
@@ -95,7 +95,7 @@ export default [
         ganre: '댄스/팝',
         album: '꽃갈피 셋',
         artist_img: '',
-        album_img: '',
+        album_img: '/images/main/album/al11.jpg',
         isLike: false,
     },
 ];
