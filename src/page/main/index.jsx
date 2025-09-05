@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import Main_visual from '../../component/main/main_visual/Main_visual';
-import Video_Artist from '../../component/main/video_artist/Video_Artist';
+import VideoArtist from '../../component/main/video_artist/VideoArtist';
 const Main = () => {
     // useEffect(() => {
     //     const tag = document.createElement("script");
@@ -25,7 +25,7 @@ const Main = () => {
     return (
         <div id="main home">
             <Main_visual />
-            <Video_Artist />
+            <VideoArtist />
         </div>
     );
 };
