@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login, Main, Oauth } from './page';
 import Layout from './common/Layout';
 import './styled/reset.scss';
+import Mymusic from './page/mymusic';
 const App = () => {
     return (
         <>
@@ -11,6 +12,7 @@ const App = () => {
                         <Route index element={<Main />} />
                         <Route path="login" element={<Login />} />
                         <Route path="oauth" element={<Oauth />} />
+                        <Route path="mymusic" element={<Mymusic />} />
 
                         {/* <Route path="" element={``} />
                         <Route path="" element={``} />
