@@ -1,0 +1,31 @@
+@use '../../../../styled/utils' as *;
+.goods_category_list {
+    @include display_center();
+    gap: vw(40);
+    margin-bottom: vw(60);
+    li {
+        &:not(:last-child) {
+            img {
+                width: vw(103);
+            }
+        }
+        &:last-child {
+            img {
+                height: vw(100);
+            }
+        }
+        a {
+            @include display_al();
+            flex-direction: column;
+            div {
+                width: vw(103);
+                height: vw(100);
+                overflow: hidden;
+                @include display_center();
+            }
+            span {
+                @include font-14px-700();
+            }
+        }
+    }
+}

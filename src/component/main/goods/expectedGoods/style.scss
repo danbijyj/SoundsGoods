@@ -1,6 +1,6 @@
 @use '../../../../styled/utils' as *;
 
-.goods_list_limit {
+.goods_list_expected {
     @include display_center();
     gap: vw(40);
     li {

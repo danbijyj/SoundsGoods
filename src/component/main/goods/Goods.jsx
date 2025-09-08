@@ -2,54 +2,24 @@ import React from 'react';
 import './style.scss';
 import { Link } from 'react-router-dom';
 import LimitGoodsList from './limitGoodsList/LimitGoodsList';
+import ExpectedGoodsList from './expectedGoods/ExpectedGoodsList';
+import GoodsCategory from './goodsCategory/GoodsCategory';
 const Goods = () => {
     return (
         <section id="goods">
             <div className="inner">
-                <h2>더 다양한 다양한 굿즈를 SOUNDSGOODS에서</h2>
-                <ul className="goods_category_list">
-                    <li>
-                        <Link>
-                            <div>
-                                <img src="/images/main/cd.jpg" alt="" />
-                            </div>
-                            <span>CD / DVD</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <div>
-                                <img src="/images/main/md.jpg" alt="" />
-                            </div>
-                            <span>MD</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <div>
-                                <img src="/images/main/book.jpg" alt="" />
-                            </div>
-                            <span>BOOK</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <div>
-                                <img src="/images/main/clothes.png" alt="" />
-                            </div>
-                            <span>CLOTHES</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <div>
-                                <img src="/images/main/etc.jpg" alt="" />
-                            </div>
-                            <span>ETC</span>
-                        </Link>
-                    </li>
-                </ul>
+                <h2 className="goods_title">더 다양한 다양한 굿즈를 SOUNDSGOODS에서</h2>
+                <GoodsCategory />
+                <div className="limit_goods_title">
+                    <h2>한정판 예약 기간 임박 굿즈</h2>
+                    <p>한정판 굿즈를 만나볼 수 있는 마지막 기회</p>
+                </div>
                 <LimitGoodsList />
+                <div className="expected_goods_title">
+                    <h2>판매 예정</h2>
+                    <p>아티스트와의 함께할 순간을 더 특별하게</p>
+                </div>
+                <ExpectedGoodsList />
             </div>
         </section>
     );

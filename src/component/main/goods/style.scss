@@ -10,39 +10,50 @@
         padding: vw(82) 0;
         width: vw(1500);
         margin: auto;
-        h2 {
+        .goods_title {
             @include font-28px-600();
             text-align: center;
             margin-bottom: vw(40);
         }
-        .goods_category_list {
+        .limit_goods_title {
             @include display_center();
-            gap: vw(40);
-            margin-bottom: vw(60);
-            li {
-                &:not(:last-child) {
-                    img {
-                        width: vw(103);
-                    }
+            gap: vw(45.47);
+            margin-bottom: vw(40);
+            h2 {
+                @include font-28px-600;
+                position: relative;
+                &::after {
+                    content: '';
+                    @include p_center_left();
+                    bottom: 0;
+                    width: vw(300);
+                    height: vw(12);
+                    background-image: url(/images/icons/rota.png);
                 }
-                &:last-child {
-                    img {
-                        height: vw(100);
-                    }
+            }
+            p {
+                @include font-16px-700;
+            }
+        }
+        .expected_goods_title {
+            margin-top: vw(60);
+            @include display_center();
+            gap: vw(45.47);
+            margin-bottom: vw(40);
+            h2 {
+                @include font-28px-600;
+                position: relative;
+                &::after {
+                    content: '';
+                    @include p_center_left();
+                    bottom: 0;
+                    width: vw(139);
+                    height: vw(12);
+                    background-image: url(/images/icons/rota2.png);
                 }
-                a {
-                    @include display_al();
-                    flex-direction: column;
-                    div {
-                        width: vw(103);
-                        height: vw(100);
-                        overflow: hidden;
-                        @include display_center();
-                    }
-                    span {
-                        @include font-14px-700();
-                    }
-                }
+            }
+            p {
+                @include font-16px-700;
             }
         }
     }

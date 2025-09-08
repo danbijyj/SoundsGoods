@@ -152,3 +152,21 @@
     letter-spacing: vw(0);
     color: $fc;
 }
+@mixin font-80px-600 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: vw(80px);
+    font-weight: 600;
+    letter-spacing: vw(1px);
+}
+@mixin font-80px-300 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: vw(80px);
+    font-weight: 300;
+    letter-spacing: vw(1px);
+}
+@mixin font-24px-600 {
+    font-size: vw(24px);
+    font-weight: 600;
+    letter-spacing: vw(0);
+    color: $fc;
+}

@@ -1,0 +1,35 @@
+@use '../../../../styled/utils' as *;
+
+.popup_right_list {
+    @include display_ju();
+    align-items: end;
+    gap: vw(20);
+    li {
+        @include display_al();
+        flex-direction: column;
+        width: vw(200);
+        height: vw(440);
+        gap: vw(20);
+        .pic {
+            width: vw(200);
+            height: vw(260);
+            overflow: hidden;
+            @include display_center();
+            img {
+                width: vw(400);
+            }
+        }
+        strong {
+            margin-top: vw(10);
+            display: block;
+            @include font-18px-600();
+            width: vw(160);
+        }
+        span {
+            display: block;
+            @include font-16px-700();
+            width: vw(160);
+            opacity: 0.6;
+        }
+    }
+}
