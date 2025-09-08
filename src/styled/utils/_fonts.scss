@@ -140,3 +140,27 @@
     letter-spacing: vw(0);
     color: $fc;
 }
+@mixin font-24px-600 {
+    font-size: vw(24px);
+    font-weight: 600;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+@mixin font-26px-800 {
+    font-size: vw(26px);
+    font-weight: 800;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+@mixin font-90px-700 {
+    font-size: vw(90px);
+    font-weight: 700;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+@mixin font-34px-600 {
+    font-size: vw(34px);
+    font-weight: 600;
+    letter-spacing: vw(0);
+    color: $fc;
+}

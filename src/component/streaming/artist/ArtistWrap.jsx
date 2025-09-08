@@ -5,7 +5,7 @@ import './style.scss';
 
 const ArtistWrap = () => {
     return (
-        <section id="artistwrap">
+        <section id="artist-wrap">
             <div className="inner">
                 <RecArtist />
                 <ArtistCategory />
