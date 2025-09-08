@@ -7,6 +7,8 @@ export default [
         artist_img: '/images/main/artist/at1.jpg',
         album_img: '/images/main/album/al1.jpg',
         isLike: false,
+        yid: '9_bTl2vvYQg',
+        actv: false,
     },
     {
         id: 2,
@@ -16,6 +18,8 @@ export default [
         artist_img: '/images/main/artist/at2.jpg',
         album_img: '/images/main/album/al2.jpg',
         isLike: false,
+        yid: 'RUKqwwyAiEU',
+        actv: false,
     },
     {
         id: 3,
@@ -25,6 +29,8 @@ export default [
         artist_img: '/images/main/artist/at3.webp',
         album_img: '/images/main/album/al3.jpg',
         isLike: false,
+        yid: 'VjvzYjU1mY0',
+        actv: false,
     },
     {
         id: 4,
@@ -34,6 +40,8 @@ export default [
         artist_img: '/images/main/artist/at4.jpg',
         album_img: '/images/main/album/al4.jpg',
         isLike: false,
+        yid: 'v39uoOIoOhI',
+        actv: false,
     },
     {
         id: 5,
@@ -43,6 +51,8 @@ export default [
         artist_img: '/images/main/artist/at5.jpg',
         album_img: '/images/main/album/al5.jpg',
         isLike: false,
+        yid: 'B1ShLiq3EVc',
+        actv: false,
     },
     {
         id: 6,
@@ -52,6 +62,8 @@ export default [
         artist_img: '/images/main/artist/at6.jpg',
         album_img: '/images/main/album/al6.jpg',
         isLike: false,
+        yid: 'gdZLi9oWNZg',
+        actv: false,
     },
     {
         id: 7,
@@ -61,6 +73,8 @@ export default [
         artist_img: '/images/main/artist/at7.jpg',
         album_img: '/images/main/album/al7.jpg',
         isLike: false,
+        yid: 'kTJczUoc26U',
+        actv: false,
     },
     {
         id: 8,
@@ -70,6 +84,8 @@ export default [
         artist_img: '/images/main/artist/at8.jpg',
         album_img: '/images/main/album/al8.jpg',
         isLike: false,
+        yid: '',
+        actv: false,
     },
     {
         id: 9,
@@ -79,15 +95,19 @@ export default [
         artist_img: '/images/main/artist/at9.jpg',
         album_img: '/images/main/album/al9.jpg',
         isLike: false,
+        yid: '',
+        actv: false,
     },
     {
         id: 10,
         artist: 'NewJeans',
         ganre: '댄스/팝',
         album: 'NewJeans 1st EP',
-        artist_img: '/images/main/artist/at10.jpg',
+        artist_img: '/images/main/artist/at10.png',
         album_img: '/images/main/album/al10.jpg',
         isLike: false,
+        yid: '',
+        actv: false,
     },
     {
         id: 11,
@@ -97,5 +117,7 @@ export default [
         artist_img: '/images/main/artist/at11.jpg',
         album_img: '/images/main/album/al11.jpg',
         isLike: false,
+        yid: '',
+        actv: false,
     },
 ];

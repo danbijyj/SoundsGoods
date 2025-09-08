@@ -1,0 +1,36 @@
+@use '../../../../styled/utils' as *;
+
+.top_list {
+    display: flex;
+    flex-direction: column;
+    height: vw(288);
+    row-gap: vw(16);
+    column-gap: vw(20);
+    flex-wrap: wrap;
+    margin-bottom: vw(40);
+    li {
+        width: vw(300);
+        @include display_center();
+        gap: vw(20);
+        text-align: left;
+        img {
+            width: vw(60);
+        }
+        p {
+            width: vw(180);
+            strong {
+                display: block;
+                @include font-16px-700();
+                margin-bottom: vw(8);
+            }
+            span {
+                margin: none;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                @include font-14px-700();
+            }
+        }
+    }
+}

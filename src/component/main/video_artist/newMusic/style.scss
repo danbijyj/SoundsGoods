@@ -1,0 +1,22 @@
+@use '../../../../styled/utils' as *;
+
+.new_list {
+    display: flex;
+    justify-content: space-between;
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: vw(10);
+        text-align: left;
+        img {
+            width: vw(280);
+            margin-bottom: vw(10);
+        }
+        strong {
+            @include font-18px-700();
+        }
+        span {
+            @include font-14px-700();
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@use './unit' as *;
+@use './color' as *;
+@mixin button($w) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vw(10);
+    background-color: $m_color1;
+    border-radius: vw(50);
+    height: vw(40);
+    width: $w;
+}

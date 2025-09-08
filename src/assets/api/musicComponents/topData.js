@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        image: 'https://github.com/SongTam-tam/SoundsGoods_image/raw/main/images/top/TOP40.jpg',
+        image: 'https://github.com/SongTam-tam/SoundsGoods_image/raw/main/images/top/TOP1.jpg',
         track: 'yebNIHKAC4A', // Golden (HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast) — Official lyric/audio ID
         artist: 'HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast',
         album: 'KPop Demon Hunters (Soundtrack from the Netflix Film)',

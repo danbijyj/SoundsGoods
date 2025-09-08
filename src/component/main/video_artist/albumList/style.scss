@@ -11,11 +11,30 @@
         box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
         overflow: hidden;
         position: relative;
+        cursor: pointer;
+        &.active {
+            .album_pic {
+                img {
+                    border-radius: 100%;
+                    animation: spin 3s linear infinite;
+                }
+            }
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
         .album_pic {
             width: 15.625vw;
             height: vw(300px);
+            transition: 1s;
             img {
                 width: 15.625vw;
+                transition: 0.3s;
             }
         }
         p {

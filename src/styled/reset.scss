@@ -112,13 +112,10 @@ body {
     font-size: 10px;
 }
 body {
-    margin-top: 13.6rem;
-    line-height: 1.6;
-    font-size: 1.6rem;
-    color: $fc;
-    font-weight: 400;
+    margin-top: vw(136);
+    @include font-16px-400();
     font-family: 'Pretendard';
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 .inner {
     width: 1200px;
