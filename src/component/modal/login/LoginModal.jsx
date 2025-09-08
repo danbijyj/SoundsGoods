@@ -6,7 +6,7 @@ const LoginModal = () => {
     return (
         <div className="login">
             <p className="close">
-                <img src="./images/icons/close01.png" alt="" />
+                <img src="./images/icons/close.png" alt="" />
             </p>
             <h1>로고</h1>
 
