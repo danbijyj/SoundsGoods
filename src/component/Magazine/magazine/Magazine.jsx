@@ -13,7 +13,7 @@ const Magazine1 = () => {
                         <li>제42회 VMA, 후보에 오른 아티스트들</li>
                         <li>요즘 히트곡들은 모두 Vince의 손끝에서 만들어진다. </li>
                         <li>
-                            <img src="./images/main/main_con6_04.jpg" alt="" />
+                            <img src="./images/main/main_con6_04.jpg" alt="로제" />
                             <h3>로제&브루노 마스</h3>
                             <span>댓글 96 | 조회 1,872</span>
                             <p>
@@ -29,7 +29,7 @@ const Magazine1 = () => {
                         <li>
                             <img
                                 src="./images/magazine/magazine01.jpg"
-                                alt=""
+                                alt="임영웅"
                                 style={{ width: 340 }}
                             />
                             <h3>임영웅</h3>
@@ -40,7 +40,7 @@ const Magazine1 = () => {
                             </p>
                         </li>
                         <li>
-                            <img src="./images/magazine/magazine02.jpg" alt="" />
+                            <img src="./images/magazine/magazine02.jpg" alt="제니" />
                             <h3>제니</h3>
                             <span>댓글 96 | 조회 1,872</span>
                             <p>
@@ -61,7 +61,7 @@ const Magazine1 = () => {
                             </h3>
                             <img
                                 src="./images/magazine/magazine04.jpg"
-                                alt=""
+                                alt="코르티스"
                                 style={{ width: 400 }}
                             />
                             <h3>선 밖에서 나타난 코르티스, 자신들을 보여준 패기의 '영크크'</h3>
@@ -83,7 +83,7 @@ const Magazine1 = () => {
                     </h2>
                     <ul>
                         <li>
-                            <img src="./images/magazine/magazine05.jpg" alt="" />
+                            <img src="./images/magazine/magazine05.jpg" alt="아이브" />
                             <h3> 아이브(IVE)</h3>
                             <span>댓글 96 | 조회 1,872</span>
                             <p>
@@ -93,7 +93,7 @@ const Magazine1 = () => {
                         </li>
 
                         <li>
-                            <img src="./images/magazine/magazine06.jpg" alt="" />
+                            <img src="./images/magazine/magazine06.jpg" alt="전소미" />
                             <h3> 전소미</h3>
                             <span>댓글 96 | 조회 1,872</span>
                             <p>더블랙레이블 주가 더 끌어올린 터줏대감의 품격.</p>
