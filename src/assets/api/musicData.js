@@ -21,7 +21,7 @@ export default [
         image: 'https://github.com/SongTam-tam/SoundsGoods_image/raw/main/images/top/TOP2.jpg',
         track: 'CgCVZdcKcqY', // BLACKPINK - '뛰어(JUMP)' M/V
         artist: 'BLACKPINK',
-        artistimg: '/images/artist/blackpink.jpg',
+        artistimg: '/images/artist/blackpink.jpg', //아티스트 이미지 추가
         album: '뛰어(JUMP)',
         title: '뛰어(JUMP)',
         release: '2025.07.11',
