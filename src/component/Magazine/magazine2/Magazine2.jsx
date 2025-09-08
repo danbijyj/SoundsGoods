@@ -5,7 +5,7 @@ const Magazine2 = () => {
         <div className="content2">
             <div className="pick">
                 <a href="">
-                    <img src="./images/magazine/magazine_pick01.jpg" alt="" />
+                    <img src="./images/magazine/magazine_pick01.jpg" alt="pick" />
                 </a>
 
                 <div className="title">
@@ -19,7 +19,7 @@ const Magazine2 = () => {
                     <div className="subes">
                         <div className="sub1">
                             <a href="">
-                                <img src="./images/magazine/magazine_pick02.jpg" alt="" />
+                                <img src="./images/magazine/magazine_pick02.jpg" alt="Artiste" />
                             </a>
                             <h3>Artiste</h3>
                             <p>
@@ -29,7 +29,7 @@ const Magazine2 = () => {
                         </div>
                         <div className="sub2">
                             <a href="">
-                                <img src="./images/magazine/magazine_pick03.jpg" alt="" />
+                                <img src="./images/magazine/magazine_pick03.jpg" alt="헌트릭스" />
                             </a>
                             <h3>헌트릭스</h3>
                             <p>
@@ -37,7 +37,7 @@ const Magazine2 = () => {
                             </p>
                         </div>
                         <div className="sub3">
-                            <a href="">
+                            <a href="사자보이즈">
                                 <img src="./images/magazine/magazine_pick04.jpg" alt="" />
                             </a>
                             <h3>사자보이즈</h3>
