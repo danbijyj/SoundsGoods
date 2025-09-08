@@ -1,0 +1,43 @@
+@use '../../../../styled/utils/' as *;
+#rec-artist {
+    margin-bottom: vw(55);
+    h2 {
+        @include font-30px-600();
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: vw(40);
+        img {
+            width: vw(32);
+            height: vw(32);
+            margin-left: vw(20);
+        }
+    }
+    .rec-artist-list {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        @include tablet {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .rec-artist-item {
+            text-align: center;
+            margin-bottom: vw(40);
+            img {
+                width: vw(120);
+                height: vw(120);
+                margin-bottom: vw(20);
+            }
+            h3 {
+                @include font-16px-700();
+                margin-bottom: vw(5);
+                line-height: 1;
+            }
+            h4 {
+                @include font-14px-400();
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use '../../../../styled/utils/' as *;
+#artist-goods {
+    h2 {
+        @include font-30px-600();
+        color: $m_color2;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: vw(40);
+        img {
+            width: vw(32);
+            height: vw(32);
+            margin-left: vw(20);
+        }
+    }
+    .artist-goods-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .artist-goods-item {
+            width: vw(260);
+            margin-bottom: vw(40);
+            .goods-img {
+                position: relative;
+                margin-bottom: vw(10);
+                img {
+                    width: vw(260);
+                    height: vw(260);
+                    border-radius: vw(20);
+                }
+                p {
+                    position: absolute;
+                    top: vw(10);
+                    right: vw(10);
+                    img {
+                        width: vw(40);
+                        height: vw(28);
+                    }
+                }
+            }
+            h3 {
+                @include font-16px-700();
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            h4 {
+                @include font-16px-400();
+            }
+        }
+    }
+}

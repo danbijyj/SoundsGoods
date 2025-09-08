@@ -1,1 +1,10 @@
 @use '../../../styled/utils' as *;
+
+#artistwrap {
+    width: 100vw;
+    .inner {
+        width: vw(1410);
+        padding-top: vw(60);
+        margin: 0 auto;
+    }
+}
