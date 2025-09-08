@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import main_Artist_data from '../assets/api/main_Artist_data';
-
+import goodsData from '../assets/api/goods';
 // 작업 수정
 
 // YT 상수 정의를 함수 내부로 이동하거나 안전하게 처리
@@ -258,5 +258,10 @@ export const usemainAlbumStore = create((set, get) => {
                 currentPlayerId: null,
             });
         },
+    };
+});
+export const useGoodsStore = create((set) => {
+    return {
+        goods: goodsData,
     };
 });

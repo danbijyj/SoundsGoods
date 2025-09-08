@@ -19,8 +19,14 @@ form {
         border-radius: vw(50px);
         width: 20.8333vw;
         height: vw(40px);
-        padding-left: vw(30px);
-        padding-right: vw(64px);
+        box-sizing: border-box;
+        @include display_al();
+        padding: vw(15) vw(64) vw(15) vw(30);
+        &::placeholder {
+            @include display_al();
+            @include font-14px-700();
+            vertical-align: middle;
+        }
     }
     .search_header {
         @include p_center_top();

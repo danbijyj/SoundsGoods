@@ -13,7 +13,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
-                        <Route path="login" element={<Login />} />
+
                         <Route path="oauth" element={<Oauth />} />
 
                         {/* <Route path="" element={``} />
