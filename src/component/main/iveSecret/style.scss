@@ -1,0 +1,52 @@
+@use '../../../styled/utils' as *;
+
+.ive_secret {
+    @include display_center();
+    .music_video_right {
+        width: vw(1120);
+        height: vw(800);
+        .muvi {
+            width: vw(1120);
+            height: vw(800);
+        }
+    }
+    .left_ive_secret {
+        display: flex;
+        flex-direction: column;
+        width: vw(800);
+        height: vw(800);
+        .left_ive_text {
+            box-sizing: border-box;
+            width: vw(800);
+            height: vw(468);
+            padding: vw(45) vw(60);
+            h2 {
+                white-space: pre-line;
+                text-transform: uppercase;
+                @include font-30px-700();
+                margin-bottom: vw(40);
+            }
+            .textBox {
+                @include font-16px-700();
+                display: flex;
+                flex-direction: column;
+                gap: vw(2);
+                margin-bottom: vw(40);
+                li {
+                    @include display_al();
+                    gap: vw(12);
+                    p {
+                        &:nth-child(1) {
+                            width: vw(42);
+                            height: vw(26);
+                        }
+                        height: vw(26);
+                    }
+                }
+            }
+            .btn_more {
+                @include button();
+            }
+        }
+    }
+}
