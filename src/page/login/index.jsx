@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import LoginModal from '../../component/modal/login/LoginModal';
 
 const Login = () => {
