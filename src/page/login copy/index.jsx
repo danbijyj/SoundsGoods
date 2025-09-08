@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import LoginModal from '../../component/modal/login/LoginModal';
 
 const Login = () => {
     return (
         <div>
-            <Login />
-            {/* 수정 */}
+            <LoginModal />
         </div>
     );
 };
