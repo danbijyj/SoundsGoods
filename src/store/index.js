@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import main_Artist_data from '../assets/api/main_Artist_data';
 
+// 작업 수정
+
 // YT 상수 정의를 함수 내부로 이동하거나 안전하게 처리
 const getYT = () => {
     if (typeof window === 'undefined') return null;
