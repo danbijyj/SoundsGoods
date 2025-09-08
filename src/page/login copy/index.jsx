@@ -4,7 +4,6 @@ const Login = () => {
     return (
         <div>
             <Login />
-            {/* 수정 */}
         </div>
     );
 };
