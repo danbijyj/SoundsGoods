@@ -4,7 +4,7 @@ const JoinModal = () => {
     return (
         <div className="join">
             <p className="close">
-                <img src="./images/icons/close01.png" alt="" />
+                <img src="./images/icons/close.png" alt="" />
             </p>
             <h1>회원가입</h1>
             <div className="joinInput">
