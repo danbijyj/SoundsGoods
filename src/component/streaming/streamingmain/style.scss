@@ -1,0 +1,63 @@
+@use '../../../styled/utils' as *;
+
+#streaming-wrap {
+    width: vw(1690px);
+    .video-visual {
+        height: vw(400px);
+        background-color: $m_color1;
+        color: $fff;
+        @include font-80px-600;
+        @include display_center();
+        margin-bottom: vw(60px);
+        span {
+            @include font-80px-300;
+            margin-left: vw(18px);
+        }
+    }
+}
+
+.inner {
+    width: vw(1410px) !important;
+    margin: auto;
+    margin-bottom: vw(80px);
+    h3 {
+        @include font-30px-600;
+        margin-bottom: vw(20px);
+        img {
+            width: vw(34px);
+            height: vw(34px);
+            margin-left: vw(16px);
+            object-fit: cover;
+            vertical-align: middle;
+        }
+    }
+    .latest-wrap {
+        width: 100%;
+        @include display_between;
+        li {
+            img {
+                width: vw(444px);
+                height: vw(250px);
+                background: #000;
+                border-radius: 10px;
+                margin-bottom: vw(20px);
+            }
+            h4 {
+                @include font-18px-600;
+                margin-bottom: vw(6px);
+                line-height: 1;
+            }
+            strong {
+                @include font-18px-400;
+                margin-bottom: vw(6px);
+                color: $g777;
+                display: block;
+            }
+            p {
+                @include font-18px-400;
+                margin-bottom: vw(6px);
+                color: $g777;
+            }
+        }
+    }
+}

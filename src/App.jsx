@@ -1,11 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Login, Main, Oauth, Streaming } from './page';
+import {
+    Login,
+    Main,
+    Oauth,
+    Streaming,
+    Artist,
+    ArtistInfo,
+    Genre,
+    LatestMusic,
+    Top100,
+} from './page';
 import Layout from './common/Layout';
 import './styled/reset.scss';
-import Top100 from './component/streaming/top100/Top100';
-import Artist from './component/streaming/artist/Artist';
-import Genre from './component/streaming/genre/Genre';
-import LatestMusic from './component/streaming/latestmusic/LatestMusic';
 const App = () => {
     return (
         <>
@@ -15,7 +21,6 @@ const App = () => {
                         <Route index element={<Main />} />
                         <Route path="login" element={<Login />} />
                         <Route path="oauth" element={<Oauth />} />
-
                         {/* <Route path="" element={``} />
                         <Route path="" element={``} />
                         <Route path="" element={``} />
@@ -30,6 +35,7 @@ const App = () => {
                         <Route path="streaming">
                             <Route index element={<Streaming />} />
                             <Route path="artist" element={<Artist />} />
+                            <Route path="artistinfo" element={<ArtistInfo />} />
                             <Route path="genre" element={<Genre />} />
                             <Route path="latestmusic" element={<LatestMusic />} />
                             <Route path="top100" element={<Top100 />} />
@@ -40,5 +46,4 @@ const App = () => {
         </>
     );
 };
-
 export default App;
