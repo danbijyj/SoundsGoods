@@ -75,7 +75,7 @@ const Magazine1 = () => {
                 </div>
                 <div className="day24">
                     <h2>
-                        24 <span>Today</span>
+                        24 <span className="today">Today</span>
                     </h2>
                     <ul>
                         <li>
