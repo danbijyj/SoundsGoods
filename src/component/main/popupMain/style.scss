@@ -1,0 +1,26 @@
+@use '../../../styled/utils' as *;
+
+.popup_main {
+    padding: vw(110) 0;
+    h2 {
+        margin-bottom: vw(40);
+        text-align: center;
+        @include font-30px-600();
+    }
+    .popup_main_sub {
+        display: flex;
+        gap: vw(60);
+
+        .popup_left {
+            width: vw(940);
+            height: vw(500);
+            img {
+                width: 100%;
+            }
+        }
+        .popup_right {
+            @include display_ju();
+            width: vw(980);
+        }
+    }
+}

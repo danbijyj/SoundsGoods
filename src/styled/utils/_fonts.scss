@@ -141,6 +141,19 @@
     color: $fc;
 }
 
+@mixin font-30px-700 {
+    font-size: vw(30);
+    font-weight: 700;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+@mixin font-28px-600 {
+    font-size: vw(28);
+    font-weight: 600;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+
 @mixin font-80px-600 {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: vw(80px);

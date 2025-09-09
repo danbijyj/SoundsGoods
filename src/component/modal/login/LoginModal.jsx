@@ -4,11 +4,9 @@ const LoginModal = () => {
     const navigate = useNavigate();
     const goToJoin = () => navigate('/join');
     return (
-    
-
         <div className="login">
             <p className="close">
-                <img src="./images/icons/close01.png" alt="" />
+                <img src="./images/icons/close.png" alt="close" />
             </p>
             <h1>로고</h1>
 
