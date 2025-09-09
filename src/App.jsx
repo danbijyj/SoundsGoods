@@ -13,12 +13,16 @@ import {
 import Layout from './common/Layout';
 import './styled/reset.scss';
 
+import Mymusic from './page/mymusic';
+
+
 import Top100 from './component/streaming/top100/Top100';
 import Artist from './component/streaming/artist/Artist';
 import Genre from './component/streaming/genre/Genre';
 import LatestMusic from './component/streaming/latestmusic/LatestMusic';
 import Join from './page/join';
 import Magazine from './page/magazine';
+
 
 const App = () => {
     return (
@@ -34,6 +38,7 @@ const App = () => {
 
 
                         <Route path="oauth" element={<Oauth />} />
+                        <Route path="mymusic" element={<Mymusic />} />
 
                         <Route path="magazine" element={<Magazine />} />
 
