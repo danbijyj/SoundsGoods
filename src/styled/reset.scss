@@ -6,6 +6,9 @@
     font-weight: 400;
     font-display: swap;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 html,
 body,
 div,
@@ -112,13 +115,10 @@ body {
     font-size: 10px;
 }
 body {
-    margin-top: 13.6rem;
-    line-height: 1.6;
-    font-size: 1.6rem;
-    color: $fc;
-    font-weight: 400;
+    margin-top: vw(136);
+    @include font-16px-400();
     font-family: 'Pretendard';
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 .inner {
     width: 1200px;
@@ -158,4 +158,8 @@ table {
 }
 input {
     outline: none;
+}
+a {
+    text-decoration: none;
+    color: $fc;
 }

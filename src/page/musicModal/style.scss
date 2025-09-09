@@ -1,0 +1,56 @@
+@use '../../styled/utils' as *;
+
+.music_modal {
+    width: vw(330);
+    height: vw(400);
+    position: fixed;
+    right: vw(14);
+    bottom: vw(14);
+    background-color: $m_bg;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.15);
+    border-radius: vw(20px);
+    @include display_al();
+    flex-direction: column;
+    .album_pic {
+        margin-top: vw(10);
+        width: vw(310);
+        height: vw(310);
+        overflow: hidden;
+        border-radius: vw(10);
+        margin-bottom: vw(10);
+        img {
+            width: vw(310);
+        }
+        p {
+            @include p_center_left();
+            top: vw(247);
+            text-align: center;
+            color: $fff;
+        }
+        strong {
+            display: block;
+            @include font-18px-700();
+            margin-bottom: vw(12);
+        }
+        span {
+            @include font-14px-500();
+        }
+    }
+    .player_controll {
+        @include display_center();
+        gap: vw(20);
+        .btn {
+            @include display_center();
+            width: vw(30);
+            img {
+                width: vw(30);
+            }
+        }
+        .play {
+            width: vw(60);
+            img {
+                width: vw(60);
+            }
+        }
+    }
+}

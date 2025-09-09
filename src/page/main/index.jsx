@@ -2,30 +2,19 @@ import React from 'react';
 import './style.scss';
 import Main_visual from '../../component/main/main_visual/Main_visual';
 import VideoArtist from '../../component/main/video_artist/VideoArtist';
+import IveSecret from '../../component/main/iveSecret/IveSecret';
+import Goods from '../../component/main/goods/Goods';
+import PopupMain from '../../component/main/popupMain/PopupMain';
+import MagazineMain from '../../component/main/magazineMain/MagazineMain';
 const Main = () => {
-    // useEffect(() => {
-    //     const tag = document.createElement("script");
-    //     tag.src = "https://www.youtube.com/iframe_api";
-    //     document.body.appendChild(tag);
-
-    //     window.onYouTubeIframeAPIReady = () => {
-    //       const newPlayers = {};
-    //       tracks.forEach((track) => {
-    //         newPlayers[track.id] = new window.YT.Player(`player-${track.id}`, {
-    //           events: {
-    //             onReady: (event) => {
-    //               event.target.setVolume(100); // 기본 볼륨
-    //             }
-    //           }
-    //         });
-    //       });
-    //       setPlayers(newPlayers);
-    //     };
-    //   }, []);
     return (
         <div id="main home">
             <Main_visual />
             <VideoArtist />
+            <IveSecret />
+            <Goods />
+            <PopupMain />
+            <MagazineMain />
         </div>
     );
 };

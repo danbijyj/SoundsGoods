@@ -2,17 +2,92 @@
 
 #video_artist {
     width: 100vw;
-    height: rem(1553px);
+    height: vw(1553px);
     box-sizing: border-box;
-    padding-top: rem(60px);
+    padding-top: vw(60px);
     text-align: center;
+    position: relative;
     .inner {
-        width: 1500px;
+        width: vw(1500);
         position: relative;
         margin: auto;
         h2 {
             @include font-30px-600();
-            margin-bottom: rem(40px);
+            margin-bottom: vw(40px);
+        }
+        .artist_title {
+            @include font-30px-600();
+            margin-top: vw(60px);
+            margin-bottom: vw(10);
+        }
+        .artist_sub_title {
+            @include font-16px-700();
+            display: block;
+            margin-bottom: vw(40);
+        }
+        .more_main_artist {
+            cursor: pointer;
+            margin-top: vw(260);
+            margin-bottom: vw(56);
+            a {
+                @include display_center();
+                gap: vw(5);
+                text-decoration: none;
+                @include font-16px-600();
+                button {
+                    @include display_center();
+                    img {
+                        width: vw(40);
+                    }
+                }
+            }
+        }
+        .top_new_list {
+            @include display_center();
+            gap: vw(20);
+
+            .main_artist_left {
+                width: vw(700);
+                height: vw(464);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.4);
+                box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+                box-sizing: border-box;
+                padding: vw(20) vw(40);
+                position: relative;
+
+                > strong {
+                    text-align: left;
+                    display: block;
+                    @include font-20px-600();
+                    margin-bottom: vw(20);
+                }
+                > button {
+                    @include display_center();
+                    background-color: $m_color1;
+                    border-radius: vw(50);
+                    width: vw(144);
+                    height: vw(40);
+                    gap: vw(10);
+                    color: $fff;
+                    margin-left: vw(238);
+                }
+            }
+            .main_artist_right {
+                width: vw(660);
+                height: vw(464);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.4);
+                box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+                box-sizing: border-box;
+                padding: vw(20) vw(40);
+                > strong {
+                    text-align: left;
+                    display: block;
+                    @include font-20px-600();
+                    margin-bottom: vw(20);
+                }
+            }
         }
     }
 }

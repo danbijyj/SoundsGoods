@@ -1,0 +1,24 @@
+@use '../../../../styled/utils/' as *;
+#artist-category {
+    margin-bottom: vw(55);
+    h2 {
+        @include font-30px-600();
+        margin-bottom: vw(60);
+    }
+    .artist-category-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .artist-category-item {
+            text-align: center;
+            margin-bottom: vw(40);
+            img {
+                width: vw(260);
+                height: vw(260);
+                margin-bottom: vw(20);
+            }
+            h3 {
+                @include font-24px-600();
+            }
+        }
+    }
+}
