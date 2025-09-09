@@ -20,6 +20,7 @@ const ArtistITopMusic = () => {
                     <ArtistITopMusicItem />
                     <ArtistITopMusicItem />
                     <ArtistITopMusicItem />
+                    <ArtistITopMusicItem />
                 </tbody>
             </table>
         </div>

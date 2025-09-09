@@ -1,1 +1,13 @@
 @use '../../../styled/utils' as *;
+
+#genre-wrap {
+    width: 100vw;
+    .genre-img {
+        width: vw(1690);
+        margin: 0 auto;
+    }
+    .genre_con {
+        width: vw(1410);
+        margin: 0 auto;
+    }
+}

@@ -11,12 +11,12 @@
             width: vw(34);
             height: vw(34);
             margin-left: vw(20);
+            margin-top: vw(3);
         }
     }
     .rec-artist-list {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        gap: vw(60);
+        display: flex;
+        justify-content: space-between;
         .rec-artist-item {
             text-align: center;
             img {
