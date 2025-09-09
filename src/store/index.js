@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import main_Artist_data from '../assets/api/main_Artist_data';
-
+import goodsData from '../assets/api/goods';
 // 작업 수정
 
 // YT 상수 정의를 함수 내부로 이동하거나 안전하게 처리
@@ -258,5 +258,64 @@ export const usemainAlbumStore = create((set, get) => {
                 currentPlayerId: null,
             });
         },
+    };
+});
+export const useGoodsStore = create((set, get) => {
+    return {
+        goods: localStorage.getItem('goods')
+            ? JSON.parse(localStorage.getItem('goods'))
+            : goodsData,
+        goodsMain: localStorage.getItem('goodsMain')
+            ? JSON.parse(localStorage.getItem('goodsMain'))
+            : [],
+        goodsMain2: localStorage.getItem('goodsMain2')
+            ? JSON.parse(localStorage.getItem('goodsMain2'))
+            : [],
+        shuffl: () => {
+            const { goods } = get();
+            const limitData = goods.sort(() => Math.random() - 0.5).slice(0, 5);
+            localStorage.setItem('goodsMain', JSON.stringify(limitData));
+            set({ goodsMain: limitData });
+        },
+
+        isLike: (id) =>
+            set((state) => {
+                const newGoods = state.goods.map((item) =>
+                    item.id === id ? { ...item, like: !item.like } : item
+                );
+                const newGoodsMain = state.goodsMain.map((item) =>
+                    item.id === id
+                        ? {
+                              ...item,
+                              like: !item.like,
+                              count: !item.like ? item.count + 1 : item.count - 1,
+                          }
+                        : item
+                );
+
+                localStorage.setItem('goods', JSON.stringify(newGoods));
+                localStorage.setItem('goodsMain', JSON.stringify(newGoodsMain));
+
+                return { goods: newGoods, goodsMain: newGoodsMain };
+            }),
+        isLike2: (id) =>
+            set((state) => {
+                const newGoods = state.goods.map((item) =>
+                    item.id === id ? { ...item, like: !item.like } : item
+                );
+                const newGoodsMain2 = state.goodsMain2.map((item) =>
+                    item.id === id
+                        ? {
+                              ...item,
+                              like: !item.like,
+                          }
+                        : item
+                );
+
+                localStorage.setItem('goods', JSON.stringify(newGoods));
+                localStorage.setItem('goodsMain2', JSON.stringify(newGoodsMain2));
+
+                return { goods: newGoods, goodsMain2: newGoodsMain2 };
+            }),
     };
 });
