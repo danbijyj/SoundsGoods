@@ -3,7 +3,6 @@
     width: 100%;
     max-width: vw(1500px);
     margin: 0 0 vw(200px) 0;
-    font-family: 'Noto Sans KR', sans-serif;
     color: #000;
 
     .table-header {
@@ -11,16 +10,15 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 2px solid #333;
-        padding: 10px 0;
         margin-bottom: 15px;
 
         h3 {
-            font-size: 18px;
+            font-size: vw(20px);
             font-weight: 600;
         }
 
         a {
-            font-size: 14px;
+            font-size: vw(16px);
             color: #666;
             text-decoration: none;
         }
@@ -31,18 +29,19 @@
         border-collapse: collapse;
 
         td {
-            padding: 12px 5px;
+            padding: vw(12px) vw(5px);
             border-bottom: 1px solid #ddd;
-            font-size: 15px;
+            font-size: vw(16px);
+            font-weight: 400;
 
             &.title {
                 text-align: left;
             }
 
             &.date {
-                width: 120px;
+                width: vw(120px);
                 text-align: right;
-                font-size: 14px;
+                font-size: vw(14px);
                 color: #555;
             }
         }
@@ -52,13 +51,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        margin-top: 20px;
+        gap: vw(20px);
+        margin-top: vw(20px);
 
         button {
             background: none;
             border: none;
-            font-size: 14px;
+            font-size: vw(14px);
             cursor: pointer;
             color: #333;
 
@@ -73,7 +72,7 @@
         }
 
         span {
-            font-size: 14px;
+            font-size: vw(14px);
             color: #555;
         }
     }

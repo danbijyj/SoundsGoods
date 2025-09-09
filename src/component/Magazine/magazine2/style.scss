@@ -34,9 +34,7 @@
             }
         }
     }
-    h3 {
-        padding: vw(10px) 0;
-    }
+
     .subes {
         width: vw(1020px);
         height: vw(456px);
@@ -53,6 +51,8 @@
                 text-align: center;
                 font-weight: 600;
                 color: #000;
+                margin: auto;
+                padding: vw(10px) 0;
             }
 
             p {

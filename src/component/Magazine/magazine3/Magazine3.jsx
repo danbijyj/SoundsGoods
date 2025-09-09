@@ -36,13 +36,11 @@ const Magazine3 = () => {
     ];
 
     const [page, setPage] = useState(1);
-    const itemsPerPage = 5; // 한 페이지당 보여줄 개수
-
-    // 현재 페이지 데이터
+    const itemsPerPage = 5;
+    
     const startIndex = (page - 1) * itemsPerPage;
     const currentData = articles.slice(startIndex, startIndex + itemsPerPage);
 
-    // 총 페이지 수
     const totalPages = Math.ceil(articles.length / itemsPerPage);
 
     return (
