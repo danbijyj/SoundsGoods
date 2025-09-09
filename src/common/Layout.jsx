@@ -5,17 +5,24 @@ import MusicModal from '../page/musicModal';
 import { usemainAlbumStore } from '../store';
 import Login from '../page/login';
 import Join from '../page/join';
+import HeaderM from './mobileHeader/HeaderM';
+import { useEffect, useState } from 'react';
 
 const Layout = () => {
-    const { musicOn } = usemainAlbumStore((state) => state.musicOn);
+    const [width, setWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     return (
         <div id="wrap">
-            <Header />
+            {width > 1024 ? <Header /> : <HeaderM />}
             <main>
                 <Outlet />
                 <MusicModal />
-                <Login />
-                <Join />
+                {/* <Login /> */}
+                {/* <Join /> */}
             </main>
             <Footer />
         </div>

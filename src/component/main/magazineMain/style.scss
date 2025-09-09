@@ -3,8 +3,12 @@
 .magazin_main {
     width: 100vw;
     .inner {
+        padding: vw(120) 0;
         width: vw(1500);
-        height: vw(1064);
+        height: vw(670);
         margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
