@@ -161,8 +161,10 @@
 }
 @mixin font-34px-600 {
     font-size: vw(34px);
-
-
+    font-weight: 600;
+    letter-spacing: vw(0);
+    color: $fc;
+}
 @mixin font-30px-700 {
     font-size: vw(30);
     font-weight: 700;
