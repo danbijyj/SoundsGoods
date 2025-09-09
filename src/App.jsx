@@ -14,6 +14,8 @@ import {
 // wntjr
 import Layout from './common/Layout';
 import './styled/reset.scss';
+import Login from './page/login';
+import Join from './page/join';
 
 const App = () => {
     return (
@@ -22,13 +24,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
-<<<<<<< Updated upstream
-=======
-
                         <Route path="login" element={<Login />} />
                         <Route path="join" element={<Join />} />
-
->>>>>>> Stashed changes
                         <Route path="oauth" element={<Oauth />} />
                         <Route path="mymusic" element={<Mymusic />} />
                         <Route path="magazine" element={<Magazine />} />

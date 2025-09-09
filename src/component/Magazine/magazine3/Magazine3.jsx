@@ -37,7 +37,7 @@ const Magazine3 = () => {
 
     const [page, setPage] = useState(1);
     const itemsPerPage = 5;
-    
+
     const startIndex = (page - 1) * itemsPerPage;
     const currentData = articles.slice(startIndex, startIndex + itemsPerPage);
 
