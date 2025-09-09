@@ -1,26 +1,27 @@
 @use '../../../../styled/utils/' as *;
-#artist-goods {
+
+#artist-i-goods {
     h2 {
         @include font-30px-600();
         color: $m_color2;
         display: flex;
         align-items: center;
         line-height: 1;
-        margin-bottom: vw(40);
+        margin-bottom: vw(20);
         img {
             width: vw(34);
             height: vw(34);
             margin-left: vw(20);
-            margin-top: vw(3);
+            margin-top: vw(5);
         }
     }
-    .artist-goods-list {
+    .artist-i-goods-list {
         display: flex;
         justify-content: space-between;
-        .artist-goods-item {
+        .artist-i-goods-item {
             width: vw(260);
             margin-bottom: vw(40);
-            .goods-img {
+            .artist-i-goods-img {
                 position: relative;
                 margin-bottom: vw(10);
                 img {
@@ -49,14 +50,13 @@
                     }
                 }
             }
-            .artist-goods-text {
+            .artist-i-goods-text {
                 line-height: 1.5;
                 h3 {
                     @include font-18px-600();
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    margin-bottom: 0;
                 }
                 h4 {
                     @include font-18px-400();

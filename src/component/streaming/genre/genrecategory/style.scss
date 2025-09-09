@@ -1,0 +1,41 @@
+@use '../../../../styled/utils/' as *;
+
+#genre-category {
+    margin-bottom: vw(75);
+    h2 {
+        @include font-30px-600();
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: vw(20);
+        img {
+            width: vw(34);
+            height: vw(34);
+            margin-left: vw(20);
+            margin-top: vw(3);
+        }
+    }
+    .genre-sub {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            cursor: pointer;
+            margin-bottom: vw(20);
+            img {
+                border-radius: vw(10);
+                width: vw(337);
+            }
+            p {
+                text-align: center;
+                @include font-20px-600();
+                margin-top: vw(16);
+            }
+            &:hover {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
