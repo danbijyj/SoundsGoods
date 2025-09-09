@@ -8,12 +8,7 @@ const IveSecret = () => {
     return (
         <section className="ive_secret">
             <div className="music_video_right">
-                <iframe
-                    src="https://www.youtube.com/embed/B1ShLiq3EVc"
-                    frameborder="0"
-                    allowfullscreen
-                    className="muvi"
-                ></iframe>
+                <iframe src="https://www.youtube.com/embed/B1ShLiq3EVc" className="muvi"></iframe>
             </div>
             <div className="left_ive_secret">
                 <div className="left_ive_text">

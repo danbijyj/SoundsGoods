@@ -1,4 +1,4 @@
-import Magazine2 from '../magazine2/magazine2';
+import Magazine2 from '../magazine2/Magazine2';
 import Magazine3 from '../magazine3/Magazine3';
 import './style.scss';
 

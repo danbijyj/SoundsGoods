@@ -112,7 +112,7 @@ section {
 }
 html,
 body {
-    font-size: 10px;
+    font-size: 16px;
 }
 body {
     margin-top: vw(136);
@@ -121,7 +121,7 @@ body {
     overflow-x: hidden;
 }
 .inner {
-    width: 1200px;
+    width: vw(1200);
     position: relative;
 }
 #main {
@@ -129,6 +129,15 @@ body {
         width: 1500px;
         position: relative;
         margin: auto;
+    }
+}
+@include mobile {
+    #main {
+        .inner {
+            width: vw(560, 600);
+            position: relative;
+            margin: auto;
+        }
     }
 }
 button {

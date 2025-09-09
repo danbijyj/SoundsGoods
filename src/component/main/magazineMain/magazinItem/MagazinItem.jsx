@@ -5,22 +5,22 @@ const teamMembers = [
     {
         name: 'Emily Kim',
         role: 'Founder',
-        img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3',
+        img: '/images/main/main_con6_01.jpg',
     },
     {
         name: 'Michael Steward',
         role: 'Creative Director',
-        img: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3',
+        img: '/images/main/main_con6_02.jpg',
     },
     {
         name: 'Emma Rodriguez',
         role: 'Lead Developer',
-        img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+        img: '/images/main/main_con_03.jpg',
     },
     {
         name: 'Julia Gimmel',
         role: 'UX Designer',
-        img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+        img: '/images/main/main_con6_04.jpg',
     },
     // {
     //     name: 'Lisa Anderson',
