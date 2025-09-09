@@ -1,6 +1,6 @@
 import './style.scss';
-import ArtistITopIntro from './artist_i_top_intro/ArtistITopIntro';
-import ArtistITopMusic from './artist_i_top_music/ArtistITopMusic';
+import ArtistITopIntro from './artistitop_intro/ArtistITopIntro';
+import ArtistITopMusic from './artistitop_music/ArtistITopMusic';
 
 const ArtistITop = () => {
     return (

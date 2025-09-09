@@ -2,11 +2,11 @@
 #artist-i-top {
     margin-bottom: vw(75);
     display: flex;
-    gap: vw(100);
+    justify-content: space-between;
     .artist-i-top-left {
-        width: 30vw;
+        width: vw(464);
     }
     .artist-i-top-right {
-        width: 70vw;
+        width: vw(806);
     }
 }
