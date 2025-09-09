@@ -11,17 +11,12 @@
             width: vw(34);
             height: vw(34);
             margin-left: vw(20);
+            margin-top: vw(3);
         }
     }
     .artist-goods-list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        // @include tablet {
-        //     grid-template-columns: repeat(3, 1fr);
-        // }
-        // @include mobile {
-        //     grid-template-columns: repeat(2, 1fr);
-        // }
+        display: flex;
+        justify-content: space-between;
         .artist-goods-item {
             width: vw(260);
             margin-bottom: vw(40);
@@ -37,20 +32,35 @@
                     position: absolute;
                     top: vw(10);
                     right: vw(10);
+                    cursor: pointer;
+                    background-color: $fc;
+                    opacity: 0.6;
+                    border-radius: vw(500);
+                    padding-top: vw(4);
+                    padding-bottom: vw(4);
+                    padding-left: vw(10);
+                    padding-right: vw(10);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     img {
-                        width: vw(40);
-                        height: vw(28);
+                        width: vw(20);
+                        height: vw(20);
                     }
                 }
             }
-            h3 {
-                @include font-16px-700();
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            h4 {
-                @include font-16px-400();
+            .artist-goods-text {
+                line-height: 1.5;
+                h3 {
+                    @include font-18px-600();
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 0;
+                }
+                h4 {
+                    @include font-18px-400();
+                }
             }
         }
     }

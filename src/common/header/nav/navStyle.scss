@@ -8,6 +8,7 @@
     @include display_al();
     justify-content: space-between;
     p {
+        cursor: pointer;
         width: 7.8125vw;
         height: vw(40);
         @include font-18px-400();

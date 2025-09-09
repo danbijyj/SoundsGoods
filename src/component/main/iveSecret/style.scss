@@ -2,6 +2,7 @@
 
 .ive_secret {
     @include display_center();
+    padding: vw(120) 0;
     .music_video_right {
         width: vw(1120);
         height: vw(800);

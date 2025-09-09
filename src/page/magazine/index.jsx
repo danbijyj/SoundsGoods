@@ -5,8 +5,6 @@ const Magazine = () => {
     return (
         <div>
             <Magazine1 />
-            {/* <Magazine2 /> */}
-            {/* <Magazine3 /> */}
         </div>
     );
 };
