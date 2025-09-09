@@ -13,6 +13,8 @@ import {
 import Layout from './common/Layout';
 import './styled/reset.scss';
 
+ 
+
 import Mymusic from './page/mymusic';
 
 
@@ -24,6 +26,7 @@ import Join from './page/join';
 import Magazine from './page/magazine';
 
 
+ 
 const App = () => {
     return (
         <>
