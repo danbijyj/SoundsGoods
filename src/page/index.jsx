@@ -3,3 +3,8 @@ export { default as Main } from './main';
 export { default as Login } from './login';
 export { default as Oauth } from './oauth';
 export { default as Streaming } from './streaming';
+export { default as Artist } from './streaming/artist';
+export { default as ArtistInfo } from './streaming/artistinfo';
+export { default as Genre } from './streaming/genre';
+export { default as LatestMusic } from './streaming/latestmusic';
+export { default as Top100 } from './streaming/top100';

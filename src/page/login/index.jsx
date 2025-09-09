@@ -1,3 +1,9 @@
+
+import React, { useState } from 'react';
+
+const Login = () => {
+    return <div></div>;
+
 import LoginModal from '../../component/modal/login/LoginModal';
 
 const Login = () => {
@@ -6,6 +12,7 @@ const Login = () => {
             <LoginModal />
         </div>
     );
+
 };
 
 export default Login;
