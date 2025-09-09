@@ -1,1 +1,15 @@
 @use '../../../styled/utils' as *;
+
+#artist-info-wrap {
+    width: 100vw;
+    .artist-info-box {
+        .artist-info-img {
+            width: vw(1690);
+            margin: 0 auto;
+        }
+        .artist-info-con {
+            width: vw(1410);
+            margin: 0 auto;
+        }
+    }
+}

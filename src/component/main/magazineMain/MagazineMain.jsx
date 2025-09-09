@@ -1,6 +1,5 @@
-import React from 'react';
 import MagazinItem from './magazinItem/MagazinItem';
-
+import './style.scss';
 const MagazineMain = () => {
     return (
         <section className="magazin_main">

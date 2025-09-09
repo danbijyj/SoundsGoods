@@ -1,8 +1,10 @@
 @use '../../../styled/utils' as *;
 
-.magezin_main {
+.magazin_main {
+    width: 100vw;
     .inner {
         width: vw(1500);
+        height: vw(1064);
         margin: auto;
     }
 }

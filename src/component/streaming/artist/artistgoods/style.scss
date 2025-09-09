@@ -8,20 +8,20 @@
         line-height: 1;
         margin-bottom: vw(40);
         img {
-            width: vw(32);
-            height: vw(32);
+            width: vw(34);
+            height: vw(34);
             margin-left: vw(20);
         }
     }
     .artist-goods-list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        @include tablet {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @include mobile {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        // @include tablet {
+        //     grid-template-columns: repeat(3, 1fr);
+        // }
+        // @include mobile {
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
         .artist-goods-item {
             width: vw(260);
             margin-bottom: vw(40);
