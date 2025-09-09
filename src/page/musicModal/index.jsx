@@ -121,39 +121,41 @@ const MusicModal = () => {
                         <img src="/images/icons/icon-gray-close.png" alt="" />
                     </button>
                 </div>
-                <div className="center-controller">
-                    <button className="shuffle">
-                        <img src="/images/icons/shurple.png" alt="" />
-                    </button>
-                    <button className="btn-prev">
-                        <img src="/images/icons/prev.png" alt="" />
-                    </button>
-                    <button className="btn-play">
-                        <img src="/images/icons/play.png" alt="" />
-                    </button>
-                    <button className="btn-next">
-                        <img src="/images/icons/next.png" alt="" />
-                    </button>
-                    <button className="repeat">
-                        <img src="/images/icons/loop.png" alt="" />
-                    </button>
-                </div>
-                <div className="center-bar">
-                    <span className="current-time">00:46</span>
-                    <div className="progress-container">
-                        <div className="progress-bar"></div>
-                        <div className="progress-handle"></div>
-                    </div>
-                    <span className="whole-play-time">03:25</span>
-                </div>
-                <div className="right-controls">
-                    <div className="music-player__volume-container">
-                        <button className="volume-icon">
-                            <img src="/images/icons/icon-volume.png" alt="" />
+                <div className="controller-wrap">
+                    <div className="center-controller">
+                        <button className="shuffle">
+                            <img src="/images/icons/shurple.png" alt="" />
                         </button>
-                        <div className="music-player__volume-slider">
-                            <div className="volume-bar"></div>
-                            <div className="volume-handle"></div>
+                        <button className="btn-prev">
+                            <img src="/images/icons/prev.png" alt="" />
+                        </button>
+                        <button className="btn-play">
+                            <img src="/images/icons/play.png" alt="" />
+                        </button>
+                        <button className="btn-next">
+                            <img src="/images/icons/next.png" alt="" />
+                        </button>
+                        <button className="repeat">
+                            <img src="/images/icons/loop.png" alt="" />
+                        </button>
+                    </div>
+                    <div className="center-bar">
+                        <span className="current-time">00:46</span>
+                        <div className="progress-container">
+                            <div className="progress-bar">
+                                <div className="progress-handle"></div>
+                            </div>
+                        </div>
+                        <span className="whole-play-time">03:25</span>
+                    </div>
+                    <div className="right-controls">
+                        <div className="volume-container">
+                            <img src="/images/icons/icon-volume.png" alt="" />
+                            <div className="volume-slider">
+                                <div className="volume-bar">
+                                    <div className="volume-handle"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,7 +168,11 @@ const MusicModal = () => {
             {/* 뮤직플레이어 모달(확장형) */}
             <div className="music_modal">
                 <div className="album_pic">
-                    <img src={album_img} alt="" />
+                    <div className="img-wrap">
+                        <img className="change" src="/images/icons/change.png" alt="" />
+                        <img className="close" src="/images/icons/close.png" alt="" />
+                        <img src={album_img} alt="" />
+                    </div>
                     <p>
                         <strong>{artist}</strong>
                         <span>{album}</span>
