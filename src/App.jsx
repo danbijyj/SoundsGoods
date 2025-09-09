@@ -10,6 +10,7 @@ import {
     LatestMusic,
     Top100,
 } from './page';
+// wntjr
 import Layout from './common/Layout';
 import './styled/reset.scss';
 
