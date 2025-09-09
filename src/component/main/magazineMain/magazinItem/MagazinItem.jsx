@@ -22,16 +22,16 @@ const teamMembers = [
         role: 'UX Designer',
         img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
     },
-    {
-        name: 'Lisa Anderson',
-        role: 'Marketing Manager',
-        img: 'https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
-    },
-    {
-        name: 'James Wilson',
-        role: 'Product Manager',
-        img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3',
-    },
+    // {
+    //     name: 'Lisa Anderson',
+    //     role: 'Marketing Manager',
+    //     img: 'https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+    // },
+    // {
+    //     name: 'James Wilson',
+    //     role: 'Product Manager',
+    //     img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3',
+    // },
 ];
 
 const MagazinItem = () => {
@@ -82,8 +82,7 @@ const MagazinItem = () => {
                         if (offset === 0) className = 'card center';
                         else if (offset === 1) className = 'card right-1';
                         else if (offset === 2) className = 'card right-2';
-                        else if (offset === teamMembers.length - 1) className = 'card left-1';
-                        else if (offset === teamMembers.length - 2) className = 'card left-2';
+                        else if (offset === 3) className = 'card right-3';
 
                         return (
                             <div key={i} className={className} onClick={() => updateCarousel(i)}>
