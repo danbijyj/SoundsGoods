@@ -1,5 +1,61 @@
 @use '../../styled/utils' as *;
 
+.bottom-music-player {
+    width: vw(1920px);
+    height: vw(100px);
+    background: $m_bg;
+    padding: vw(20px) vw(60px);
+    box-sizing: border-box;
+    @include display_al;
+    @include display_between;
+    .left-close {
+        .close {
+            img {
+                width: vw(36px);
+                height: vw(36px);
+            }
+        }
+    }
+    .center-controller {
+        @include display_center;
+        gap: vw(20px);
+        > img {
+            width: vw(30px);
+            height: vw(30px);
+        }
+    }
+    .center-bar {
+        @include display_between;
+        align-items: center;
+        .current-time {
+            @include font-16px-400;
+            color: $grey555;
+        }
+        .whole-play-time {
+            @include font-16px-400;
+            color: $grey555;
+        }
+        .progress-container {
+            padding: 0 vw(20px);
+            position: relative;
+
+            .progress-bar {
+                width: vw(840px);
+                height: vw(3px);
+                background: $fff;
+            }
+            .progress-handle {
+                position: absolute;
+                left: vw(20px) _;
+                top: 0;
+                width: vw(180px);
+                height: vw(3px);
+                background: $grey555;
+            }
+        }
+    }
+}
+
 .music_modal {
     width: vw(330);
     height: vw(400);

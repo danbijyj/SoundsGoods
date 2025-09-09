@@ -1,6 +1,6 @@
 const Con1Latest = () => {
     return (
-        <div className="con1 inner">
+        <div className="con-inner">
             <h3>
                 지금 뜨고 있는 VIDEO
                 <img src="/images/streaming/more.png" alt="" />
@@ -8,12 +8,18 @@ const Con1Latest = () => {
             <ul className="latest-wrap">
                 <li>
                     <img src="" alt="" />
+                    <button class="play-btn">
+                        <img src="/images/streaming/mv-play-icon.png" alt="Play" />
+                    </button>
                     <h4>Album Name</h4>
                     <strong>Artist Name</strong>
                     <p>2025.09.08</p>
                 </li>
                 <li>
                     <img src="" alt="" />
+                    <button class="play-btn">
+                        <img src="/images/streaming/mv-pause-icon.png" alt="Play" />
+                    </button>
                     <h4>Album Name</h4>
                     <strong>Artist Name</strong>
                     <p>2025.09.08</p>
