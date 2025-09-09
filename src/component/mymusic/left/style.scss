@@ -55,6 +55,11 @@
                 .profile_bottom {
                     h2 {
                         font-size: vw(14);
+                        display: flex;
+                        strong {
+                            font-size: vw(12);
+                            margin-left: vw(30);
+                        }
                     }
                     p {
                         font-size: vw(18);

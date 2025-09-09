@@ -14,8 +14,6 @@ const Layout = () => {
             <main>
                 <Outlet />
                 <MusicModal />
-                <Login />
-                <Join />
             </main>
             <Footer />
         </div>

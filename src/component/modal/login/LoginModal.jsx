@@ -1,32 +1,68 @@
+import { useState } from 'react';
+import useUserStore from '../../../store/userSlice';
 import './style.scss';
-import { useNavigate } from 'react-router-dom';
-const LoginModal = () => {
-    const navigate = useNavigate();
-    const goToJoin = () => navigate('/join');
+import { IoClose } from 'react-icons/io5';
+
+const LoginModal = ({ onClose, onJoin }) => {
+    const login = useUserStore((state) => state.login);
+    const [loginForm, setLoginForm] = useState({ loginEmail: '', loginPW: '' });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setLoginForm((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleLogin = () => {
+        const users = JSON.parse(localStorage.getItem('members')) || [];
+        const user = users.find(
+            (u) => u.loginId === loginForm.loginEmail && u.password === loginForm.loginPW
+        );
+
+        if (user) {
+            login({ name: user.name, loginId: user.loginId });
+            alert(`${user.name}님, 오신 걸 환영합니다.`);
+            onClose();
+        } else {
+            alert('로그인 정보를 확인해주세요.');
+        }
+    };
+
+    const onHandleClick = () => {
+        onJoin();
+        onClose();
+    };
+
     return (
         <div className="login">
             <p className="close">
-                <img src="./images/icons/close.png" alt="close" />
+                <IoClose onClick={onClose} />
             </p>
-            <h1>로고</h1>
+            <h1>로그인</h1>
 
             <div className="loginInput">
                 <p>
-                    <input type="email" name="email" placeholder="이메일" />
+                    <input
+                        type="text"
+                        name="loginEmail"
+                        placeholder="아이디"
+                        value={loginForm.loginEmail}
+                        onChange={handleChange}
+                    />
                 </p>
+
                 <p>
-                    <input type="passowrd" name="password" placeholder="비밀번호" />
+                    <input
+                        type="password"
+                        name="loginPW"
+                        placeholder="비밀번호"
+                        value={loginForm.loginPW}
+                        onChange={handleChange}
+                    />
                 </p>
             </div>
 
-            {/* <p className="save-find">
-                    <label>
-                        <input type="checkbox" /> 아이디 저장
-                    </label>
-                </p> */}
-
             <div className="btn1">
-                <button className="on" type="submit">
+                <button className="on" type="button" onClick={handleLogin}>
                     로그인
                 </button>
             </div>
@@ -34,29 +70,18 @@ const LoginModal = () => {
             <ul>
                 <li>아이디 찾기</li>
                 <li>비밀번호 찾기</li>
-                <li onClick={goToJoin}>회원가입</li>
+                <li onClick={onHandleClick}>회원가입</li>
             </ul>
+
             <i className="snslogin">
                 <p>
-                    <img
-                        src="./images/login/login01.png"
-                        alt="googlelogin"
-                        style={{ width: 32, height: 32 }}
-                    />
+                    <img src="/images/icons/login01.png" alt="googlelogin" width={32} height={32} />
                 </p>
                 <p>
-                    <img
-                        src="./images/login/login02.png"
-                        alt="applelogin"
-                        style={{ width: 32, height: 32 }}
-                    />
+                    <img src="/images/icons/login02.png" alt="applelogin" width={32} height={32} />
                 </p>
                 <p>
-                    <img
-                        src="./images/login/login03.png"
-                        alt="kakaologin"
-                        style={{ width: 32, height: 32 }}
-                    />
+                    <img src="/images/icons/login03.png" alt="kakaologin" width={32} height={32} />
                 </p>
             </i>
         </div>

@@ -8,26 +8,39 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import useUserStore from '../../store/userSlice';
+import Login from '../../page/login';
+import Join from '../../page/join';
+
 const Header = () => {
+    const { isLoggedIn, userInfo, logout } = useUserStore();
     const [show, setShow] = useState(false);
     const [data, setData] = useState(headerData);
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    const [isJoinOpen, setIsJoinOpen] = useState(false);
+    const toggleLogin = () => setIsLoginOpen((prev) => !prev);
+    const toggleJoin = () => setIsJoinOpen((prev) => !prev);
     const swiperRef = useRef();
     return (
         <header id="header" className={show ? 'active' : ''} onMouseLeave={() => setShow(false)}>
             <div className="header_top_menu">
                 <ul>
-                    <li>로그인</li>
-                    <li>회원가입</li>
+                    {!isLoggedIn ? (
+                        <>
+                            <li onClick={toggleLogin}>로그인</li>
+                            <li onClick={toggleJoin}>회원가입</li>
+                        </>
+                    ) : (
+                        <>
+                            <li>{userInfo?.name}님</li>
+                            <li onClick={logout}>로그아웃</li>
+                            <li>장바구니</li>
+                            <li>내 예약</li>
+                        </>
+                    )}
                 </ul>
             </div>
-            {/* <div className="header_top_menu">
-                <ul>
-                    <li>00님</li>
-                    <li>로그아웃</li>
-                    <li>장바구니</li>
-                    <li>내 예약</li>
-                </ul>
-            </div> */}
+
             <div className="inner">
                 <h1 className="logo">
                     <Link to="/">{/* <img src="" alt="" /> */}</Link>
@@ -70,6 +83,8 @@ const Header = () => {
                 </div>
             )}
             {data[1].isOn && <div className="header_content2"></div>}
+            {isLoginOpen && <Login onClose={toggleLogin} onJoin={toggleJoin} />}
+            {isJoinOpen && <Join onClose={toggleJoin} />}
         </header>
     );
 };
