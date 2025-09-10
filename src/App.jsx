@@ -11,12 +11,10 @@ import {
     Mymusic,
     Magazine,
 } from './page';
-// wntjr
 import Layout from './common/Layout';
 import './styled/reset.scss';
-import Login from './page/login';
-import Join from './page/join';
-
+import Mymusic_Access from './component/mymusic/access/Mymusic_Access';
+import Search from './page/search';
 const App = () => {
     return (
         <>
@@ -24,11 +22,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
-                        <Route path="login" element={<Login />} />
-                        <Route path="join" element={<Join />} />
-
                         <Route path="oauth" element={<Oauth />} />
                         <Route path="mymusic" element={<Mymusic />} />
+                        <Route path="search" element={<Search />} />
+                        <Route path="mymusic/access" element={<Mymusic_Access />} />
                         <Route path="magazine" element={<Magazine />} />
                         <Route path="streaming">
                             <Route index element={<Streaming />} />
