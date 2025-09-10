@@ -4,6 +4,7 @@ const Magazine = () => {
     return (
         <div>
             <Magazine1 />
+            {/* 수정 */}
         </div>
     );
 };
