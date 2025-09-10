@@ -27,7 +27,11 @@ const Magazine1 = () => {
                     <h2>22</h2>
                     <ul className="magazine22">
                         <li>
-                            <img src="./images/magazine/magazine01.jpg" alt="임영웅" />
+                            <img
+                                src="./images/magazine/magazine01.jpg"
+                                alt="임영웅"
+                                style={{ width: 340 }}
+                            />
                             <h3>임영웅</h3>
                             <span>댓글 96 | 조회 1,872</span>
                             <p>
