@@ -113,33 +113,91 @@ const MusicModal = () => {
     // musicModal에서 필요한 속성만 안전하게 추출
     const { artist, album, album_img, id } = musicModal;
     return (
-        <div className="music_modal">
-            <div className="album_pic">
-                <img src={album_img} alt="" />
-                <p>
-                    <strong>{artist}</strong>
-                    <span>{album}</span>
-                </p>
+        <>
+            {/* 뮤직플레이어 바(축소형) */}
+            <div className="bottom-music-player">
+                <div className="left-close">
+                    <button className="close">
+                        <img src="/images/icons/icon-gray-close.png" alt="" />
+                    </button>
+                </div>
+                <div className="controller-wrap">
+                    <div className="center-controller">
+                        <button className="shuffle">
+                            <img src="/images/icons/shurple.png" alt="" />
+                        </button>
+                        <button className="btn-prev">
+                            <img src="/images/icons/prev.png" alt="" />
+                        </button>
+                        <button className="btn-play">
+                            <img src="/images/icons/play.png" alt="" />
+                        </button>
+                        <button className="btn-next">
+                            <img src="/images/icons/next.png" alt="" />
+                        </button>
+                        <button className="repeat">
+                            <img src="/images/icons/loop.png" alt="" />
+                        </button>
+                    </div>
+                    <div className="center-bar">
+                        <span className="current-time">00:46</span>
+                        <div className="progress-container">
+                            <div className="progress-bar">
+                                <div className="progress-handle"></div>
+                            </div>
+                        </div>
+                        <span className="whole-play-time">03:25</span>
+                    </div>
+                    <div className="right-controls">
+                        <div className="volume-container">
+                            <img src="/images/icons/icon-volume.png" alt="" />
+                            <div className="volume-slider">
+                                <div className="volume-bar">
+                                    <div className="volume-handle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="right-expand">
+                    <button className="expand">
+                        <img src="/images/icons/icon-expand.png" alt="" />
+                    </button>
+                </div>
             </div>
-            <div className="player_controll">
-                <button className="btn shurple">
-                    <img src="/images/icons/shurple.png" alt="" />
-                </button>
-                <button className="btn prev">
-                    <img src="/images/icons/prev.png" alt="" />
-                </button>
-                <button className="btn play" onClick={handlePlayPause}>
-                    <img src="/images/icons/play.png" alt="" />
-                </button>
-                <button className="btn next">
-                    <img src="/images/icons/next.png" alt="" />
-                </button>
-                <button className="btn loop">
-                    <img src="/images/icons/loop.png" alt="" />
-                </button>
+            {/* 뮤직플레이어 모달(확장형) */}
+            <div className="music_modal">
+                <div className="album_pic">
+                    <div className="img-wrap">
+                        <img className="change" src="/images/icons/change.png" alt="" />
+                        <img className="close" src="/images/icons/close.png" alt="" />
+                        <img src={album_img} alt="" />
+                    </div>
+                    <p>
+                        <strong>{artist}</strong>
+                        <span>{album}</span>
+                    </p>
+                </div>
+                <div className="player_controll">
+                    <button className="btn shurple">
+                        <img src="/images/icons/shurple.png" alt="" />
+                    </button>
+                    <button className="btn prev">
+                        <img src="/images/icons/prev.png" alt="" />
+                    </button>
+                    <button className="btn play" onClick={handlePlayPause}>
+                        <img src="/images/icons/play.png" alt="" />
+                    </button>
+                    <button className="btn next">
+                        <img src="/images/icons/next.png" alt="" />
+                    </button>
+                    <button className="btn loop">
+                        <img src="/images/icons/loop.png" alt="" />
+                    </button>
+                </div>
+                <div id={`youtube-player-${id}`} style={{ display: 'none' }}></div>
             </div>
-            <div id={`youtube-player-${id}`} style={{ display: 'none' }}></div>
-        </div>
+        </>
     );
 };
 
