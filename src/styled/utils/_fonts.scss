@@ -211,3 +211,10 @@
     letter-spacing: vw(0);
     color: $fc;
 }
+
+@mixin font-40px-800 {
+    font-size: clamp(36px, vw(40), 44px);
+    font-weight: 800;
+    letter-spacing: vw(0);
+    color: $fc;
+}

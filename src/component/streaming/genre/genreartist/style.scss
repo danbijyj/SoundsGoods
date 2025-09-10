@@ -1,17 +1,16 @@
 @use '../../../../styled/utils/' as *;
-#artist-category {
-    margin-bottom: vw(55);
+
+#genre-artist {
+    margin-bottom: vw(75);
     h2 {
-        @include font-30px-600();
-        margin-bottom: vw(60);
+        @include font-34px-600();
+        margin-bottom: vw(50);
     }
-    .artist-category-list {
-        width: vw(1410);
+    .genre-artist-list {
         display: flex;
         flex-wrap: wrap;
-        gap: vw(27);
         justify-content: space-between;
-        .artist-category-item {
+        .genre-artist-item {
             text-align: center;
             img {
                 width: vw(260);
