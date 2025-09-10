@@ -5,6 +5,7 @@
 
     li {
         width: vw(180);
+        height: vw(184);
         @include display_al();
         flex-direction: column;
         gap: vw(8);

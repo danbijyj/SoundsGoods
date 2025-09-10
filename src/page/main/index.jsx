@@ -11,10 +11,10 @@ const Main = () => {
         <div id="main home">
             <Main_visual />
             <VideoArtist />
-            {/* <IveSecret />
+            <IveSecret />
             <Goods />
             <PopupMain />
-            <MagazineMain /> */}
+            <MagazineMain />
         </div>
     );
 };

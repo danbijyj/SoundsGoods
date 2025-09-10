@@ -34,3 +34,39 @@
         }
     }
 }
+@include tablet {
+    .top_list {
+        display: flex;
+        flex-direction: column;
+        height: vw(316, 393);
+        row-gap: vw(4, 393);
+        overflow: hidden;
+        flex-wrap: nowrap;
+        li {
+            width: vw(323, 393);
+            height: vw(60, 393);
+            @include display_center();
+            gap: vw(20, 393);
+            text-align: left;
+            img {
+                width: vw(60, 393);
+            }
+            p {
+                width: vw(243, 393);
+                strong {
+                    display: block;
+                    @include font-16px-700();
+                    margin-bottom: vw(8, 393);
+                }
+                span {
+                    margin: none;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include font-14px-700();
+                }
+            }
+        }
+    }
+}

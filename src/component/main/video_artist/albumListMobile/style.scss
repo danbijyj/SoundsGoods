@@ -1,23 +1,23 @@
 @use '../../../../styled/utils' as *;
 
 @include tablet {
-    .swiper {
-        width: 100%;
-        height: 100%;
-        overflow: visible !important;
-        .swiper-wrapper {
-            gap: vw(20, 393);
-            .swiper-slide {
-                font-size: 18px;
-                width: vw(100, 393) !important;
-                height: vw(141, 393);
-                display: flex;
-                justify-content: start;
-                overflow: visible;
+    .main_album_list {
+        .swiper {
+            width: 100%;
+            height: 100%;
+            overflow: visible !important;
+            .swiper-wrapper {
+                gap: vw(20, 393);
+                .swiper-slide {
+                    font-size: 18px;
+                    width: vw(100, 393) !important;
+                    height: vw(141, 393);
+                    display: flex;
+                    justify-content: start;
+                    overflow: visible;
+                }
             }
         }
-    }
-    .main_album_list {
         width: 100vw;
         // @include display_center();
         gap: vw(20, 393);
