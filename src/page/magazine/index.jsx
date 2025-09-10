@@ -1,5 +1,4 @@
-import React from 'react';
-import Magazine1 from '../../component/Magazine/magazine/Magazine';
+import Magazine1 from '../../component/Magazine/magazine1/Magazine1';
 
 const Magazine = () => {
     return (
