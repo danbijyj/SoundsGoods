@@ -1,6 +1,6 @@
 @use '../../../styled/utils' as *;
 .inner {
-    width: vw(1500px);
+    width: vw(1500px) !important;
     height: auto;
     margin: vw(120px) auto;
 
@@ -8,6 +8,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: vw(50);
 
         h2 {
             font-size: vw(80px);
@@ -21,7 +22,10 @@
             }
         }
     }
-    ul {
+    .magazine21,
+    .magazine22,
+    .magazine23,
+    .magazine24 {
         li {
             font-size: vw(16px);
             line-height: vw(30px);
@@ -32,10 +36,10 @@
                 color: #777777;
             }
         }
-    }
-    h3 {
-        font-size: vw(18px);
-        font-weight: 600;
+        h3 {
+            font-size: vw(18px);
+            font-weight: 600;
+        }
     }
 
     .day22,

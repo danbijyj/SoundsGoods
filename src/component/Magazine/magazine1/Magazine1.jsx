@@ -8,7 +8,7 @@ const Magazine1 = () => {
             <div className="content1">
                 <div className="day21">
                     <h2>21</h2>
-                    <ul>
+                    <ul className="magazine21">
                         <li>제니, 지금 K팝 최고의 빛이 나는 솔로</li>
                         <li>제42회 VMA, 후보에 오른 아티스트들</li>
                         <li>요즘 히트곡들은 모두 Vince의 손끝에서 만들어진다. </li>
@@ -25,7 +25,7 @@ const Magazine1 = () => {
                 </div>
                 <div className="day22">
                     <h2>22</h2>
-                    <ul>
+                    <ul className="magazine22">
                         <li>
                             <img src="./images/magazine/magazine01.jpg" alt="임영웅" />
                             <h3>임영웅</h3>
@@ -49,7 +49,7 @@ const Magazine1 = () => {
                 </div>
                 <div className="day23">
                     <h2>23</h2>
-                    <ul>
+                    <ul className="magazine23">
                         <li>
                             <h3>
                                 코르티스는 18일 데뷔 앨범 타이틀곡, 'What You Want'(왓 유 원트)를
@@ -77,7 +77,7 @@ const Magazine1 = () => {
                     <h2>
                         24 <span className="today">Today</span>
                     </h2>
-                    <ul>
+                    <ul className="magazine24">
                         <li>
                             <img src="./images/magazine/magazine05.jpg" alt="아이브" />
                             <h3> 아이브(IVE)</h3>
