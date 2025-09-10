@@ -3,7 +3,7 @@ import React from 'react';
 const PopupMainItem = ({ popup }) => {
     const { id, title, img, desc } = popup;
     return (
-        <li>
+        <li className="lili2">
             <div className="pic">
                 <img src={img} alt="" />
             </div>

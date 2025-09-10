@@ -1,0 +1,64 @@
+@use '../../../styled/utils' as *;
+.inner {
+    width: vw(1500px);
+    height: auto;
+    margin: vw(120px) auto;
+
+    .content1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: vw(80px);
+            font-weight: 700;
+            border-bottom: vw(3px) solid #000;
+
+            .today {
+                font-size: vw(18px);
+                font-weight: 500;
+                color: #777777;
+            }
+        }
+    }
+    ul {
+        li {
+            font-size: vw(16px);
+            line-height: vw(30px);
+            padding: vw(10px) 0;
+            border-bottom: vw(1px) solid #000;
+            span {
+                font-size: 12px;
+                color: #777777;
+            }
+        }
+    }
+    h3 {
+        font-size: vw(18px);
+        font-weight: 600;
+    }
+
+    .day22,
+    .day24 {
+        width: vw(300px);
+        height: vw(1300px);
+        padding: vw(80px) 0;
+        border-bottom: vw(1px) solid #000;
+    }
+    .day21 {
+        width: vw(340px);
+        height: vw(1300px);
+        padding: vw(80px) 0;
+        border-bottom: vw(1px) solid #000;
+    }
+    .day23 {
+        width: vw(400px);
+        height: vw(1300px);
+        padding: vw(80px) 0;
+        border-bottom: vw(1px) solid #000;
+        h3 {
+            text-align: center;
+            font-size: vw(20px);
+        }
+    }
+}

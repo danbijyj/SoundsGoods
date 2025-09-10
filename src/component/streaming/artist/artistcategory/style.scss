@@ -1,7 +1,6 @@
 @use '../../../../styled/utils/' as *;
 #artist-category {
     margin-bottom: vw(55);
-
     h2 {
         @include font-30px-600();
         margin-bottom: vw(60);

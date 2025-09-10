@@ -20,3 +20,33 @@
         }
     }
 }
+@include tablet {
+    .new_list {
+        display: flex;
+        justify-content: center;
+        gap: vw(20, 393);
+        li {
+            width: vw(130, 393);
+            height: vw(177, 393);
+            display: flex;
+            flex-direction: column;
+            gap: vw(6, 393);
+            text-align: center;
+            img {
+                width: vw(130, 393);
+                margin-bottom: vw(4, 393);
+            }
+            strong {
+                @include font-18px-700();
+                font-size: vw(14, 393);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            span {
+                @include font-14px-700();
+                font-size: vw(12, 393);
+            }
+        }
+    }
+}

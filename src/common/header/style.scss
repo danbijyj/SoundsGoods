@@ -28,18 +28,21 @@
         }
     }
     .header_top_menu {
-        width: 83.3333vw;
+        width: vw(1600);
         height: vw(48);
         @include p_center_left();
         @include display_al();
         justify-content: end;
+
         ul {
+            margin-right: vw(60);
             @include display_al();
+            gap: vw(40);
             li {
                 @include display_center();
                 @include font_14px_400();
                 height: vw(40);
-                width: 5.2083vw;
+
                 cursor: pointer;
             }
         }

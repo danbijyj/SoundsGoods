@@ -47,3 +47,34 @@
         }
     }
 }
+@mixin button_m($mw: 91) {
+    position: relative;
+    width: vw($mw, 393);
+    height: vw(26, 393);
+    cursor: pointer;
+    button {
+        @include p_center_top();
+        left: 0;
+        display: block;
+        background-color: $m_color1;
+        border-radius: vw(50, 393);
+        width: vw($mw, 393);
+        height: vw(26, 393);
+        transition: 0.4s;
+        text-align: left;
+        img {
+            width: vw(18, 393);
+            @include p_center_top();
+            left: vw(6, 393);
+        }
+    }
+    span {
+        white-space: nowrap;
+        @include p_center_top();
+        left: vw(29, 393);
+        @include font-16px-600();
+        color: #fff;
+        font-size: vw(12, 393);
+        transition: 0.4s;
+    }
+}
