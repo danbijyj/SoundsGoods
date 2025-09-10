@@ -4,7 +4,8 @@
     width: 100vw;
     height: vw(1553px);
     box-sizing: border-box;
-    padding-top: vw(60px);
+    padding-top: vw(120px);
+    margin-bottom: vw(120);
     text-align: center;
     position: relative;
     .inner {
@@ -27,7 +28,7 @@
         }
         .more_main_artist {
             cursor: pointer;
-            margin-top: vw(260);
+            margin-top: vw(40);
             margin-bottom: vw(56);
             a {
                 @include display_center();
@@ -87,6 +88,20 @@
                     @include font-20px-600();
                     margin-bottom: vw(20);
                 }
+            }
+        }
+    }
+}
+@include tablet {
+    #video_artist {
+        .inner {
+            width: vw(373, 393) !important;
+            position: relative;
+            margin: auto;
+            h2 {
+                text-align: left;
+                font-size: vw(16, 393);
+                margin-bottom: vw(20, 393);
             }
         }
     }

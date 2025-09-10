@@ -1,16 +1,19 @@
 @use '../../../../styled/utils/' as *;
 #artist-category {
     margin-bottom: vw(55);
+
     h2 {
         @include font-30px-600();
         margin-bottom: vw(60);
     }
     .artist-category-list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        width: vw(1410);
+        display: flex;
+        flex-wrap: wrap;
+        gap: vw(27);
+        justify-content: space-between;
         .artist-category-item {
             text-align: center;
-            margin-bottom: vw(40);
             img {
                 width: vw(260);
                 height: vw(260);

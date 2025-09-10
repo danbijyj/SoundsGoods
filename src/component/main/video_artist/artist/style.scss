@@ -1,9 +1,8 @@
 @use '../../../../styled/utils' as *;
 
 .artist_list_main {
-    @include p_center_left();
     @include display_center();
-    top: vw(656);
+
     li {
         width: vw(180);
         @include display_al();
@@ -29,4 +28,6 @@
             }
         }
     }
+}
+@include mobile {
 }

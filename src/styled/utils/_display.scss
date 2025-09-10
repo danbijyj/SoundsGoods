@@ -16,3 +16,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+@mixin display-flexwrap() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

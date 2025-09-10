@@ -9,11 +9,16 @@
     width: vw(380px);
     height: vw(440px);
     border-radius: vw(20px);
+    z-index: 20000;
+    background: white;
     .close {
         display: block;
         position: absolute;
         right: 0;
+        width: vw(24);
+        height: vw(24);
         padding: vw(26px);
+        cursor: pointer;
     }
     h1 {
         font-size: vw(26px);
@@ -24,17 +29,19 @@
         margin: vw(20px) 0;
         p {
             margin: vw(10px) 0;
-
+            color: #000000;
             input {
                 font-size: vw(12px);
                 font-weight: 600;
-                color: #777777;
+                color: #000000;
                 width: vw(280px);
                 height: vw(2px);
                 padding: vw(20px) vw(12px);
-                border: vw(1px) solid #777777;
-                opacity: 46%;
+                border: vw(1px) solid rgb(119, 119, 119, 0.46);
                 border-radius: vw(10px);
+            }
+            input::placeholder {
+                color: rgb(119, 119, 119, 0.46);
             }
         }
         // .save-find {
@@ -69,10 +76,10 @@
             padding: 0 vw(10px);
             box-sizing: border-box;
             &:nth-child(1) {
-                border-right: 1px solid #777777;
+                border-right: vw(1) solid #777777;
             }
             &:nth-child(2) {
-                border-right: 1px solid #777777;
+                border-right: vw(1) solid #777777;
             }
         }
     }

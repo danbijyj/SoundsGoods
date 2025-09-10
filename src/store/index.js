@@ -275,7 +275,9 @@ export const useGoodsStore = create((set, get) => {
             const { goods } = get();
             const limitData = goods.sort(() => Math.random() - 0.5).slice(0, 5);
             localStorage.setItem('goodsMain', JSON.stringify(limitData));
-            set({ goodsMain: limitData });
+            const limitData2 = goods.sort(() => Math.random() - 0.5).slice(0, 5);
+            localStorage.setItem('goodsMain2', JSON.stringify(limitData2));
+            set({ goodsMain: limitData, goodsMain2: limitData2 });
         },
 
         isLike: (id) =>

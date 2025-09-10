@@ -4,7 +4,6 @@ const Magazine = () => {
     return (
         <div>
             <Magazine1 />
-            {/* 수젓수서더ㅓㄹ머ㅏㅣㅓㄻ덜먿ㄹ ㅏㅓㅁㄴ ㄱ렃낭 */}
         </div>
     );
 };

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
+import useUserStore from '../../../../store/userSlice';
 
 const Mymusic_left_profile = () => {
+    const { userInfo } = useUserStore();
     // 사진교체함수
     const [profileImg, setProfileImg] = useState('/images/mymusic/ProfilePic.png');
     const fileInputRef = useRef(null);
@@ -16,6 +18,7 @@ const Mymusic_left_profile = () => {
         fileInputRef.current.click();
     };
     // 여기까지 사진교체함수
+
     return (
         <div className="Mymusic_left_profile">
             <div className="left_profile">
@@ -31,7 +34,7 @@ const Mymusic_left_profile = () => {
                 </div>
                 <div className="profile">
                     <div className="profile_top">
-                        <h2>00님</h2>
+                        <h2>{userInfo?.name}님</h2>
                         <p>이용권이 00일 남았습니다</p>
                     </div>
                     <div className="profile_friend">
