@@ -45,14 +45,17 @@
                 box-sizing: border-box;
                 padding: vw(20) vw(40);
                 position: relative;
-                > strong {
-                    text-align: left;
-                    display: block;
-                    @include font-20px-600();
+                .text_right_box {
                     margin-bottom: vw(20);
+                    > strong {
+                        text-align: left;
+                        display: block;
+                        @include font-20px-600();
+                    }
                 }
+
                 .btn_top_new {
-                    @include button();
+                    @include button($mw: 144);
                     margin-left: vw(238);
                 }
             }

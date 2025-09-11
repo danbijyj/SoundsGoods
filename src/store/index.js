@@ -265,6 +265,9 @@ export const useGoodsStore = create((set, get) => {
         goods: localStorage.getItem('goods')
             ? JSON.parse(localStorage.getItem('goods'))
             : goodsData,
+        iveGoods: localStorage.getItem('iveGoods')
+            ? JSON.parse(localStorage.getItem('iveGoods'))
+            : [],
         goodsMain: localStorage.getItem('goodsMain')
             ? JSON.parse(localStorage.getItem('goodsMain'))
             : [],
@@ -273,11 +276,13 @@ export const useGoodsStore = create((set, get) => {
             : [],
         shuffl: () => {
             const { goods } = get();
-            const limitData = goods.sort(() => Math.random() - 0.5).slice(0, 5);
+            const limitData = goodsData.sort(() => Math.random() - 0.5).slice(0, 5);
             localStorage.setItem('goodsMain', JSON.stringify(limitData));
-            const limitData2 = goods.sort(() => Math.random() - 0.5).slice(0, 5);
+            const limitData2 = goodsData.sort(() => Math.random() - 0.5).slice(0, 5);
             localStorage.setItem('goodsMain2', JSON.stringify(limitData2));
-            set({ goodsMain: limitData, goodsMain2: limitData2 });
+            const limitData3 = goodsData.sort(() => Math.random() - 0.5).slice(0, 6);
+            localStorage.setItem('iveGoods', JSON.stringify(limitData3));
+            set({ goodsMain: limitData, goodsMain2: limitData2, iveGoods: limitData3 });
         },
 
         isLike: (id) =>
@@ -310,6 +315,7 @@ export const useGoodsStore = create((set, get) => {
                         ? {
                               ...item,
                               like: !item.like,
+                              count: !item.like ? item.count + 1 : item.count - 1,
                           }
                         : item
                 );

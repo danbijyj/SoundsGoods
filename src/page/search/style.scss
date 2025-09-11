@@ -1,263 +1,214 @@
 @use '../../styled/utils' as *;
-
 .inner {
+    width: vw(1400);
     .search {
-        padding-top: vw(60);
         display: flex;
-        width: vw(1500);
         flex-direction: column;
         align-items: flex-start;
-        gap: vw(60);
+        gap: vw(40);
         .toptext {
+            margin-top: vw(124);
             h2 {
-                color: var(--main1, #6680ff);
+                color: $m_color1;
+
                 font-size: vw(30);
                 font-style: normal;
                 font-weight: 600;
                 line-height: 130%;
             }
         }
-        .middletext {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: vw(40);
-            h2 {
-                color: #000;
-                font-size: vw(20);
-                font-weight: 600;
-                line-height: 130%; /* 26px */
-            }
-        }
         .profile {
             display: flex;
-            width: vw(1500);
-            justify-content: center;
+            width: vw(1410);
+            justify-content: space-between;
             align-items: center;
-            border-top: vw(1) solid rgba(119, 119, 119, 0.47);
+            flex-shrink: 0;
+            border-top: vw(1) solid hsla(0, 0%, 47%, 0.47);
             .profileAll {
                 display: flex;
-                justify-content: center;
                 align-items: center;
+
                 gap: vw(48);
                 .profileImg {
-                    display: flex;
                     padding: vw(20) vw(50);
                     border-right: vw(1) solid rgba(119, 119, 119, 0.47);
-                    gap: vw(20);
                     img {
-                        width: vw(300);
-                        height: vw(300);
                         border-radius: vw(500);
-                        object-fit: contain;
                     }
                 }
                 .profile-text {
                     display: flex;
-                    width: 341px;
+                    width: vw(341);
                     flex-direction: column;
                     align-items: flex-start;
-
+                    gap: vw(22);
                     h2 {
-                        align-self: stretch;
-                        color: var(--main1, #6680ff);
-                        font-family: Pretendard;
+                        color: $m_color1;
                         font-size: vw(20);
-                        font-style: normal;
                         font-weight: 700;
-                        line-height: 130%; /* 26px */
-                        margin-bottom: vw(22);
-                    }
-                    h3 {
-                        width: vw(341);
-                        display: flex;
-                        justify-content: space-between;
-                        color: #000;
-                        font-size: vw(20);
-                        font-weight: 500;
                         line-height: 130%;
-                        margin-bottom: vw(12);
-                        span {
-                            width: vw(243);
-                            color: #000;
-                            font-size: vw(20);
-                            font-weight: 500;
-                            line-height: 130%; /* 26px */
+                    }
+                    .subtext {
+                        height: vw(178);
+                        display: flex;
+                        align-items: center;
+                        gap: vw(20);
+                        align-self: stretch;
+                        .subtitle {
+                            display: flex;
+                            width: vw(76);
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            gap: vw(12);
+                            h3 {
+                                width: vw(76);
+                                font-size: vw(20);
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 130%;
+                            }
+                        }
+                        .subspan {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            gap: vw(12);
+                            margin-right: vw(398);
+                            h3 {
+                                font-size: vw(20);
+                                font-weight: 500;
+                                line-height: 130%; /* 26px */
+                            }
+                        }
+                        .Relevant-Artist {
+                            display: flex;
+                            width: vw(225);
+                            height: vw(340);
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            flex-shrink: 0;
+                            h2 {
+                                font-size: vw(16);
+                                color: #000;
+                            }
+                            h3 {
+                                color: #000;
+                                font-size: vw(16);
+                            }
                         }
                     }
                 }
             }
         }
-        .search_middle {
-            padding-top: vw(60);
+    }
+    //Search-middleWrap
+    .search_middle {
+        margin-top: vw(100);
+        .middle_title {
             display: flex;
             justify-content: space-between;
-            flex-direction: column;
             align-items: center;
-            align-self: stretch;
-            .middle_title {
-                width: vw(1500);
+            width: vw(1410);
+
+            h2 {
+                color: #000;
+                font-size: vw(30);
+                font-weight: 600;
                 display: flex;
+                width: vw(184);
                 justify-content: space-between;
                 align-items: center;
-                align-self: stretch;
-                h2 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    gap: vw(40);
-                    color: #000;
-                    font-size: vw(20);
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 130%; /* 26px */
-                    span {
-                        color: #000;
-                        font-size: vw(20);
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 130%; /* 26px */
-                    }
-                }
+            }
+            h3 {
+                color: #000;
+                font-size: vw(30);
+                font-weight: 600;
+                cursor: pointer;
+                border-bottom: vw(1) solid #000;
             }
         }
         .listTable {
-            height: 561 (vw);
+            margin-top: vw(51);
+            margin-bottom: vw(100);
             display: flex;
             flex-direction: column;
-            .listtext {
-                margin-top: vw(40);
-                margin-left: vw(77);
-                width: vw(1500);
-                display: flex;
-                padding: 12px 0;
-                align-items: center;
-                gap: 16px;
-                align-self: stretch;
-                h2 {
-                    display: flex;
-                    width: vw(400);
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: flex-start;
-                    gap: vw(4);
-                    flex-shrink: 0;
-                    color: #777;
-                    font-size: vw(14);
-                    font-weight: 400;
-                }
-                h3 {
-                    width: vw(200);
-                    color: #777;
-                    font-size: vw(14);
-                    font-weight: 400;
-                    margin-bottom: 0;
-                }
-                h4 {
-                    width: vw(200);
-                    overflow: hidden;
-                    color: #777;
-                    font-size: vw(14);
-                    font-weight: 400;
-                }
-                h5 {
-                    width: vw(200);
-                    overflow: hidden;
-                    color: #777;
-                    font-size: vw(14);
-                    font-weight: 400;
-                }
-                .list {
-                    width: vw(143);
-                    padding-left: vw(114);
-                    display: flex;
-                    align-items: center;
-                    gap: vw(16);
-                    p {
-                        color: #777;
-                        font-size: vw(14);
-                        font-weight: 400;
-                    }
-                }
-            }
+            align-items: flex-start;
+            gap: vw(10);
+            align-self: stretch;
             .middleItem {
-                width: vw(1500);
-                height: vw(60);
+                width: vw(1410);
                 display: flex;
+                height: vw(60);
                 padding: vw(14) 0;
                 align-items: center;
-                justify-content: center;
                 gap: vw(16);
                 align-self: stretch;
-                border-top: vw(1) solid #d9d9d9;
-                border-bottom: vw(1) solid #d9d9d9;
+                border-top: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
                 .SearchMusic {
+                    width: vw(1410);
                     display: flex;
-                    width: vw(1500);
                     align-items: center;
-                    gap: vw(16);
-                    img {
-                        width: vw(60);
-                        height: vw(60);
-                    }
-                    .Musictitle {
+                    gap: vw(10);
+                    .Search-Check {
                         display: flex;
-                        width: vw(400);
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                        margin-right: vw(16);
-                        flex-shrink: 0;
-                        h2 {
-                            color: #000;
-                            font-size: vw(16);
-                            font-weight: 400;
-                        }
-                        h3 {
-                            color: #777;
-                            font-size: vw(14);
-                            font-weight: 400;
-                            margin-bottom: 0;
-                        }
-                    }
-                    .articttitle {
-                        width: vw(200);
-
-                        h2 {
-                            color: #000;
-                            font-size: vw(16);
-                            font-weight: 400;
-                        }
-                    }
-                    .playtime {
-                        width: vw(200);
-
-                        h2 {
-                            color: #000;
-                            font-size: vw(16);
-                            font-weight: 400;
-                        }
-                    }
-                    .Released {
-                        width: vw(200);
-                        margin-right: vw(120);
-                        h2 {
-                            color: #000;
-                            font-size: vw(16);
-                            font-weight: 400;
-                        }
-                    }
-                    .icon {
-                        display: flex;
-                        width: vw(144);
-                        justify-content: center;
                         align-items: center;
-                        flex-shrink: 0;
-                        img {
-                            margin-right: vw(30);
-                            width: vw(24);
-                            height: vw(24);
-                            object-fit: contain;
+                        gap: vw(20);
+                    }
+                    .SongInfo {
+                        display: flex;
+                        width: vw(1410);
+                        align-items: center;
+                        gap: vw(16);
+
+                        .Musictitle {
+                            display: flex;
+                            width: vw(400);
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            gap: vw(4);
+                            flex-shrink: 0;
+                        }
+                        .articttitle {
+                            display: -webkit-box;
+                            width: vw(150);
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            flex-shrink: 0;
+                            h2 {
+                                overflow: hidden;
+                                color: #000;
+                                text-overflow: ellipsis;
+                                font-size: vw(16);
+                                font-weight: 500;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .heart {
+                            margin-right: vw(400);
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-shrink: 0;
+
+                            p {
+                                width: vw(85);
+                                display: flex;
+                                padding: vw(3) 0;
+                                justify-content: space-between;
+                                align-items: center;
+                                flex-shrink: 0;
+                            }
+                        }
+                        .icon {
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
                         }
                     }
                 }

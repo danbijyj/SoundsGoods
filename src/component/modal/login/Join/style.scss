@@ -35,9 +35,9 @@
                 height: vw(2px);
                 padding: vw(20px) vw(12px);
                 border: vw(1px) solid rgb(119, 119, 119, 0.46);
-
                 border-radius: vw(10px);
-                input::placeholder {
+
+                &::placeholder {
                     color: rgb(119, 119, 119, 0.46);
                 }
             }
@@ -65,6 +65,11 @@
                 }
                 strong {
                     margin-right: vw(17.7);
+                    font-weight: 400;
+                    color: #777777;
+                }
+                h4 {
+                    color: #777777;
                 }
                 input {
                     display: flex;
@@ -75,10 +80,11 @@
                     align-items: center;
                     gap: vw(10);
                     border-radius: vw(4);
-                    border: vw(1) solid rgba(136, 136, 136, 0.53);
+                    border: vw(1) solid #777777;
                     padding: vw(4) vw(10);
-                    input::placeholder {
-                        color: rgba(136, 136, 136, 0.7);
+                    &::placeholder {
+                        color: #777777;
+
                         text-align: center;
                         font-size: vw(14);
                     }
@@ -95,7 +101,7 @@
         align-items: center;
         display: flex;
         margin: auto;
-        padding: vw(4px) 0;
+        padding: vw(5px) 0;
     }
     .agreeDitaile {
         text-align: start;
@@ -110,7 +116,6 @@
             background-color: #697de3;
             border-radius: vw(50px);
             color: #fff;
-
             width: vw(260px);
             height: vw(40px);
             font-size: vw(16px);

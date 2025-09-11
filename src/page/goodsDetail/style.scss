@@ -1,0 +1,13 @@
+@use '../../styled/utils' as *;
+
+#goods_detail {
+    padding-top: vw(40);
+    padding-bottom: vw(231);
+    position: relative;
+    width: 100vw;
+    .inner {
+        width: vw(1410);
+        display: flex;
+        margin: auto;
+    }
+}
