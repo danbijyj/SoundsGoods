@@ -10,16 +10,13 @@ const StreamingMenu = () => {
                         <Link to="/streaming/latestmusic">최신 음악</Link>
                     </li>
                     <li>
-                        <Link to="/streaming/top100">인기 차트 100</Link>
+                        <Link to="/streaming/top100">인기 차트 TOP 100</Link>
                     </li>
                     <li>
                         <Link to="/streaming/genre">장르별 음악</Link>
                     </li>
                     <li>
                         <Link to="/streaming/artist">아티스트별 음악</Link>
-                    </li>
-                    <li>
-                        <Link to="">최근 재생한 음악</Link>
                     </li>
                 </ul>
                 <ul className="streamingmenu_btt">

@@ -1,10 +1,7 @@
 const Con1Latest = () => {
     return (
         <div className="con-inner">
-            <h3>
-                지금 뜨고 있는 VIDEO
-                <img src="/images/streaming/more.png" alt="" />
-            </h3>
+            <h3>지금 뜨고 있는 VIDEO</h3>
             <ul className="latest-wrap">
                 <li>
                     <img src="" alt="" />
