@@ -165,6 +165,7 @@ const JoinModal = ({ onClose }) => {
             <div className="agreeDitaile">
                 <p>
                     <input
+                        className="agreeinput"
                         type="checkbox"
                         name="agreeService"
                         id=""
@@ -176,6 +177,7 @@ const JoinModal = ({ onClose }) => {
                 </p>
                 <p>
                     <input
+                        className="agreeinput"
                         type="checkbox"
                         name="agreeMarketing"
                         id=""
