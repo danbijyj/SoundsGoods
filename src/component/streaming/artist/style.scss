@@ -7,4 +7,10 @@
         padding-top: vw(60);
         margin: 0 auto;
     }
+    @include tablet {
+        .inner {
+            width: 100%;
+            padding: vw(40, 393) vw(20, 393) 0;
+        }
+    }
 }

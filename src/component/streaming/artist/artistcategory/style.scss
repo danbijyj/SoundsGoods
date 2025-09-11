@@ -1,9 +1,62 @@
 @use '../../../../styled/utils/' as *;
 #artist-category {
     margin-bottom: vw(55);
-    h2 {
-        @include font-30px-600();
-        margin-bottom: vw(60);
+    .artist-category-top {
+        @include display_between();
+        h2 {
+            @include font-30px-600();
+            margin-bottom: vw(60);
+        }
+        .artist-sort {
+            position: relative;
+            width: vw(106);
+            min-width: 68px;
+            white-space: nowrap;
+            .sort-down {
+                cursor: pointer;
+                @include font-16px-600();
+                color: $grey777;
+                width: vw(106);
+                border: vw(1) solid $greyc0;
+                border-radius: vw(50);
+                padding: vw(7) vw(20);
+                box-sizing: border-box;
+                text-align: left;
+                background: url('/images/streaming/bg_down.png') no-repeat right vw(15) center;
+                background-size: vw(24) auto;
+                background-origin: content-box;
+                padding-right: vw(0);
+            }
+            .sorting {
+                display: none;
+                ul {
+                    background-color: $fff;
+                    width: vw(106);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border: vw(1) solid $greyc0;
+                    border-radius: vw(10);
+                    padding: vw(1) vw(10) vw(1) vw(20);
+                    box-sizing: border-box;
+                    li {
+                        cursor: pointer;
+                        @include font-16px-400();
+                        color: $grey777;
+                        line-height: 2;
+                        &.sorting-title {
+                            @include font-16px-600();
+                            color: $grey777;
+                            line-height: 2;
+                            background: url('/images/streaming/bg_up.png') no-repeat right vw(5)
+                                center;
+                            background-size: vw(24) auto;
+                            background-origin: content-box;
+                        }
+                    }
+                }
+            }
+        }
     }
     .artist-category-list {
         width: vw(1410);
