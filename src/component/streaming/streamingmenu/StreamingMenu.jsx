@@ -7,10 +7,10 @@ const StreamingMenu = () => {
             <div className="menu_inner">
                 <ul>
                     <li>
-                        <Link to="/streaming/latestmusic">최신 음악</Link>
+                        <Link to="/streaming/top100">인기 차트 TOP 100</Link>
                     </li>
                     <li>
-                        <Link to="/streaming/top100">인기 차트 TOP 100</Link>
+                        <Link to="/streaming/latestmusic">최신 음악</Link>
                     </li>
                     <li>
                         <Link to="/streaming/genre">장르별 음악</Link>
