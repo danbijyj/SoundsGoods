@@ -1,1 +1,50 @@
 @use '../../../styled/utils' as *;
+#latest-wrap {
+    width: vw(1690px);
+    .video-visual {
+        position: relative;
+        width: 100%;
+        height: vw(400px);
+        overflow: hidden;
+        margin: 0 0 vw(60px) 0;
+        .bg-opacity {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $fc;
+            opacity: 0.35;
+            z-index: 1;
+        }
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250%; // 부모 가로에 맞춤
+            height: 250%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; // 클릭 막기 (텍스트 클릭 가능)
+            z-index: 0;
+        }
+
+        .video-text {
+            position: absolute; // 텍스트는 iframe 위로 올라오게
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: $fff;
+            @include font-80px-600;
+            @include display_center();
+            height: 100%;
+            letter-spacing: vw(-1px);
+
+            span {
+                @include font-80px-300;
+                margin-left: vw(18px);
+                letter-spacing: vw(1px);
+            }
+        }
+    }
+}
