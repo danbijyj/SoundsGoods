@@ -7,6 +7,19 @@
         height: vw(400px);
         overflow: hidden;
         margin: 0 0 vw(60px) 0;
+        .btn-wrap {
+            height: vw(40px);
+            position: absolute;
+            bottom: vw(50px);
+            right: vw(50px);
+            z-index: 10;
+            i {
+                font-size: vw(40px);
+                color: $fff;
+                margin-left: vw(30px);
+                pointer-events: auto;
+            }
+        }
         .bg-opacity {
             position: absolute;
             left: 0;
@@ -30,20 +43,27 @@
 
         .video-text {
             position: absolute; // 텍스트는 iframe 위로 올라오게
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            bottom: vw(50px);
+            left: vw(50px);
             z-index: 2;
-            color: $fff;
-            @include font-80px-600;
-            @include display_center();
-            height: 100%;
-            letter-spacing: vw(-1px);
-
-            span {
-                @include font-80px-300;
-                margin-left: vw(18px);
-                letter-spacing: vw(1px);
+            li {
+                text-align: left;
+                &:nth-child(1) {
+                    @include font-80px-600;
+                    letter-spacing: vw(-1px);
+                    color: $fff;
+                    line-height: 1;
+                }
+                &:nth-child(2) {
+                    font-family: 'Bricolage Grotesque';
+                    @include font-40px-700;
+                    color: $fff;
+                    margin-bottom: vw(40px);
+                }
+                &:nth-child(3) {
+                    @include font-18px-500;
+                    color: $fff;
+                }
             }
         }
     }

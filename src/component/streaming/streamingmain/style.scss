@@ -74,11 +74,11 @@
         @include font-30px-600;
         margin-bottom: vw(20px);
         img {
-            width: vw(34px);
-            height: vw(34px);
-            margin-left: vw(16px);
+            width: vw(40px);
+            height: vw(40px);
+            margin-left: vw(14px);
             object-fit: cover;
-            vertical-align: middle;
+            vertical-align: top;
         }
     }
     .latest-wrap {
