@@ -1,13 +1,13 @@
 import './style.scss';
 
-const RecArtistItem = () => {
+const RecArtistItemMobile = () => {
     return (
-        <li className="rec-artist-item">
+        <div className="rec-artist-item-mobile">
             <img src="/images/streaming/artist.png" alt="" />
             <h3>블랙핑크</h3>
             <h4>댄스/팝</h4>
-        </li>
+        </div>
     );
 };
 
-export default RecArtistItem;
+export default RecArtistItemMobile;

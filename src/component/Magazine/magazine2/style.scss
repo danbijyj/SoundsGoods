@@ -1,0 +1,64 @@
+@use '../../../styled/utils' as *;
+.content2 {
+    height: vw(667px);
+    margin: vw(120px) auto;
+    padding: vw(50px) 0;
+
+    .pick {
+        display: flex;
+        gap: vw(30px);
+        align-items: flex-start;
+        flex-direction: row;
+        flex: 2;
+        margin-bottom: vw(50px);
+
+        .title {
+            h2 {
+                font-size: vw(40px);
+                font-weight: 300;
+                border: none;
+            }
+            strong {
+                display: block;
+                font-size: vw(28px);
+                font-weight: 600;
+                padding: vw(20px) 0;
+            }
+            p {
+                font-size: vw(16px);
+                font-weight: 300;
+                line-height: 1.6;
+                margin-bottom: vw(20px);
+            }
+        }
+    }
+    h3 {
+        padding: vw(10px) 0;
+    }
+    .subes {
+        width: vw(1020px);
+        height: vw(456px);
+        display: flex;
+        gap: vw(15px);
+        flex-direction: row;
+        .sub1,
+        .sub2,
+        .sub3 {
+            display: block;
+
+            h3 {
+                font-size: vw(16px);
+                text-align: center;
+                font-weight: 600;
+                color: #000;
+            }
+
+            p {
+                font-size: vw(14px);
+                font-weight: 300;
+                line-height: 1.5;
+                color: #000;
+            }
+        }
+    }
+}

@@ -9,14 +9,11 @@ const RecArtist = () => {
                 <h2>
                     추천 아티스트
                     <Link to="">
-                        <img
-                            src="../../../../../public/images/streaming/more.png"
-                            alt=""
-                        />
+                        <img src="/images/streaming/more.png" alt="" />
                     </Link>
                 </h2>
             </div>
-            <div className="rec-artist-list">
+            <ul className="rec-artist-list">
                 <RecArtistItem />
                 <RecArtistItem />
                 <RecArtistItem />
@@ -25,7 +22,7 @@ const RecArtist = () => {
                 <RecArtistItem />
                 <RecArtistItem />
                 <RecArtistItem />
-            </div>
+            </ul>
         </section>
     );
 };
