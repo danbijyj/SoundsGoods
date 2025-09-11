@@ -1,0 +1,52 @@
+@use '../../../styled/utils' as *;
+
+.goods_side_bar {
+    position: fixed;
+    top: vw(136);
+    left: 0;
+    width: vw(230);
+    height: vw(920);
+    background-color: rgba(249, 208, 255, 0.4);
+    z-index: 800;
+    box-sizing: border-box;
+    padding: vw(40);
+    .side_inner {
+        width: vw(150);
+        // border: 1px solid $m_color1;
+        h2 {
+            @include font-18px-600();
+            margin-bottom: vw(20);
+        }
+        .side_sort {
+            .sort_text {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: vw(16);
+                > p {
+                    @include font-16px-400();
+                }
+                > img {
+                    width: vw(24);
+                }
+            }
+            .side_sort_btns {
+                display: flex;
+                gap: vw(7);
+
+                button {
+                    width: vw(42);
+                    height: vw(22);
+                    padding: vw(2) vw(8);
+                    border: 1px solid $m_color1;
+                    border-radius: vw(50);
+                    box-sizing: border-box;
+                    @include display_center();
+                    span {
+                        @include font-12px-400();
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

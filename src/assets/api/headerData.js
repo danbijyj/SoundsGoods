@@ -9,6 +9,7 @@ export default [
         id: 2,
         title: '굿즈 사전 예약',
         isOn: false,
+        path: '/goods',
     },
     {
         id: 3,
