@@ -35,7 +35,7 @@ const ExpectedGoodsItem = ({ item }) => {
                     </p>
                 )}
                 {width > 1024 ? (
-                    <p className="like_count" onClick={() => isLike(id)}>
+                    <p className="like_count" onClick={() => isLike2(id)}>
                         {like ? (
                             <i style={{ color: '#ff0000' }}>
                                 <FaHeart />
@@ -48,7 +48,7 @@ const ExpectedGoodsItem = ({ item }) => {
                         {count}
                     </p>
                 ) : (
-                    <p className="like_count_mobile" onClick={() => isLike(id)}>
+                    <p className="like_count_mobile" onClick={() => isLike2(id)}>
                         {like ? (
                             <i style={{ color: '#ff0000' }}>
                                 <FaHeart />

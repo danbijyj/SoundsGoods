@@ -8,10 +8,6 @@ import './style.scss';
 const StreamingMainWrap = () => {
     return (
         <section id="streaming-wrap">
-            {/* <div className="video-visual">
-                MUSIC<span>Streaming</span>
-            </div> */}
-
             <div className="video-visual">
                 <div className="bg-opacity"></div>
                 <iframe

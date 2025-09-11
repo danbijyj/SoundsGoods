@@ -310,6 +310,7 @@ export const useGoodsStore = create((set, get) => {
                         ? {
                               ...item,
                               like: !item.like,
+                              count: !item.like ? item.count + 1 : item.count - 1,
                           }
                         : item
                 );

@@ -10,7 +10,7 @@
     margin-bottom: vw(40);
     li {
         width: vw(300);
-        @include display_center();
+        @include display_al();
         gap: vw(20);
         text-align: left;
         img {

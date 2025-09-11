@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
 const Con4Genre = () => {
     return (
         <div className="con-inner">
             <h3>
                 장르별 음악
-                <img src="/images/streaming/more.png" alt="" />
+                <Link to="genre">
+                    <img src="/images/streaming/more.png" alt="" />
+                </Link>
             </h3>
             <ul className="genre-wrap">
                 <li>

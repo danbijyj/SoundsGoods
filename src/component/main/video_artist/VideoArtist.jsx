@@ -47,7 +47,7 @@ const VideoArtist = () => {
                     <div className="main_artist_left">
                         <div className="text_right_box">
                             <strong>지금 사람들이 많이 찾고 있는 곡들이에요</strong>
-                            <span>{formatted}</span>
+                            {width < 1024 && <span>{formatted}</span>}
                         </div>
 
                         <TopList />
