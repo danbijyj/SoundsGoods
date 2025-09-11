@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './style.scss';
+
 import Nav from './nav/Nav';
 import { Link } from 'react-router-dom';
 import headerData from '../../assets/api/headerData';
@@ -11,16 +12,19 @@ import 'swiper/css/navigation';
 import useUserStore from '../../store/userSlice';
 import Login from '../../page/login';
 import Join from '../../page/join';
+import GoodsList from './nav/navList/GoodsList';
 
 const Header = () => {
     const { isLoggedIn, userInfo, logout } = useUserStore();
     const [show, setShow] = useState(false);
     const [data, setData] = useState(headerData);
+
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     const [isJoinOpen, setIsJoinOpen] = useState(false);
     const toggleLogin = () => setIsLoginOpen((prev) => !prev);
     const toggleJoin = () => setIsJoinOpen((prev) => !prev);
     const swiperRef = useRef();
+
     return (
         <header id="header" className={show ? 'active' : ''} onMouseLeave={() => setShow(false)}>
             <div className="header_top_menu">
@@ -82,7 +86,15 @@ const Header = () => {
                     </Swiper>
                 </div>
             )}
-            {data[1].isOn && <div className="header_content2"></div>}
+            {/* ////////////////////////////////////////////////// */}
+            {data[1].isOn && (
+                <div className="header_content2">
+                    <div className="headergoods">
+                        <GoodsList data={data[1]} />
+                    </div>
+                </div>
+            )}
+
             {isLoginOpen && <Login onClose={toggleLogin} onJoin={toggleJoin} />}
             {isJoinOpen && <Join onClose={toggleJoin} />}
         </header>
