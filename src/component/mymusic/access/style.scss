@@ -1,5 +1,6 @@
 @use '../../../styled/utils' as *;
 .inner {
+    margin: 0 auto;
 }
 .access {
     padding-top: vw(217);
@@ -12,7 +13,6 @@
         height: vw(150);
         object-fit: contain;
         flex-shrink: 0;
-        aspect-ratio: 1/1;
     }
 }
 .text {

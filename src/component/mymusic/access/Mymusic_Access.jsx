@@ -36,7 +36,7 @@ const Mymusic_Access = () => {
                     회원가입
                 </button>
             </div>
-            {isLoginOpen && <Login onClose={onLogin} />}{' '}
+            {isLoginOpen && <Login onClose={onLogin} />}
             {isJoinOpen && <Join onClose={toggleJoin} />}
         </div>
     );
