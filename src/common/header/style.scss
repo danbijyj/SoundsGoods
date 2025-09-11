@@ -10,7 +10,7 @@
     overflow: hidden;
     z-index: 1000;
     &.active {
-        height: vw(635px);
+        height: vw(456px);
     }
     .inner {
         height: vw(88);
@@ -50,7 +50,7 @@
 }
 .header_content {
     width: 100vw;
-    height: vw(499px);
+    height: vw(320);
     position: absolute;
     left: 0;
     top: vw(136px);
@@ -60,7 +60,7 @@
         @include display_al();
         @include p_center_left();
         gap: vw(20px);
-        top: vw(104px);
+        top: vw(40);
         strong {
             @include font-14px-700();
             font-size: vw(32px);
@@ -72,17 +72,17 @@
     }
     .swiper_next {
         position: absolute;
-        top: vw(238px);
+        top: vw(174);
         right: vw(210px);
     }
     .swiper_prev {
         position: absolute;
-        top: vw(238px);
+        top: vw(174px);
         left: vw(210px);
     }
     .swiper {
         @include p_center_left();
-        top: vw(182px);
+        top: vw(118);
         width: 67.7083vw;
         height: vw(162px);
         .swiper_content {

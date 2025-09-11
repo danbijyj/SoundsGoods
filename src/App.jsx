@@ -11,6 +11,7 @@ import {
     Mymusic,
     Magazine,
     Goods,
+    GoodsDetail,
 } from './page';
 import Layout from './common/Layout';
 import './styled/reset.scss';
@@ -29,7 +30,10 @@ const App = () => {
                         <Route path="search" element={<Search />} />
                         <Route path="mymusic/access" element={<Mymusic_Access />} />
                         <Route path="magazine" element={<Magazine />} />
-                        <Route path="goods" element={<Goods />} />
+                        <Route path="goods">
+                            <Route index element={<Goods />} />
+                            <Route path=":goodsID" element={<GoodsDetail />} />
+                        </Route>
                         <Route path="streaming">
                             <Route index element={<Streaming />} />
                             <Route path="artist" element={<Artist />} />

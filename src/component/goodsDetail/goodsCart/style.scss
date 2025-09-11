@@ -1,0 +1,101 @@
+@use '../../../styled/utils' as *;
+
+.goods_cart {
+    width: vw(600);
+    height: vw(804);
+    box-sizing: border-box;
+    padding: vw(60) 0;
+    border-radius: vw(20);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+    .cart_inner {
+        width: vw(500);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            @include font-24px-600();
+            text-align: left;
+        }
+        .con {
+            margin-top: vw(10);
+            @include display_al();
+            gap: vw(20);
+            ul {
+                @include display_al();
+                gap: vw(10);
+                margin-bottom: vw(20);
+                li {
+                    @include font-14px-400();
+                    position: relative;
+                    &:first-child {
+                        &::after {
+                            content: '';
+                            @include p_center_top();
+                            right: vw(-6);
+                            height: vw(10);
+                            width: vw(1);
+                            background-color: $fc;
+                        }
+                    }
+                }
+            }
+        }
+        .price_cart {
+            @include font-24px-700();
+        }
+        .cart_form_chk {
+            width: vw(500);
+            height: vw(138);
+            padding: vw(10) 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: vw(8);
+            .form_con {
+                @include display_al();
+                gap: vw(18);
+                input[type='checkbox'] {
+                    display: none;
+                }
+                input + label {
+                    display: inline-block;
+                    @include bg();
+                    background-image: url(./images/icons/chk_mini.png);
+                    width: vw(20);
+                    height: vw(20);
+                    cursor: pointer;
+                    & :checked + label {
+                        background-image: url(./images/icons/chk_mini.png);
+                        display: block;
+                        width: vw(20);
+                        height: vw(20);
+                    }
+                }
+
+                span {
+                    @include font-14px-400();
+                }
+            }
+            .all_chk {
+                margin-top: vw(10);
+                gap: vw(20);
+                span {
+                    @include font-16px-600();
+                }
+                input[type='checkbox'] + label {
+                    width: vw(20);
+                    height: vw(20);
+                    border: 1px solid $m_color1;
+                    cursor: pointer;
+                }
+                input[type='checkbox']:checked + label {
+                    width: vw(20);
+                    height: vw(20);
+                }
+            }
+        }
+    }
+}
