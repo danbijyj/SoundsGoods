@@ -32,24 +32,16 @@
             .artist-music-3 {
                 width: 15%;
             }
-            .artist-music-4 {
-                text-align: right;
-                width: 7%;
-                cursor: pointer;
-            }
-            .artist-music-5 {
-                text-align: right;
-                width: 7%;
-                cursor: pointer;
-            }
+            .artist-music-4,
+            .artist-music-5,
             .artist-music-6 {
                 text-align: right;
                 width: 7%;
-                cursor: pointer;
             }
             .icon {
                 img {
                     width: vw(24);
+                    cursor: pointer;
                 }
             }
         }
