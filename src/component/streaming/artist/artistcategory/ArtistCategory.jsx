@@ -4,7 +4,20 @@ import './style.scss';
 const ArtistCategory = () => {
     return (
         <section id="artist-category">
-            <h2>아티스트별</h2>
+            <div className="artist-category-top">
+                <h2>아티스트별</h2>
+                <div className="artist-sort">
+                    <div className="sort-down">정렬</div>
+                    <div className="sorting">
+                        <ul>
+                            <li className="sorting-title">정렬</li>
+                            <li>가나다순</li>
+                            <li>알파벳순</li>
+                            <li>인기순</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div className="artist-category-list">
                 <ArtistCategoryItem />
                 <ArtistCategoryItem />
