@@ -1,5 +1,4 @@
 @use '../../../../styled/utils' as *;
-
 #top100-music {
     h2 {
         @include font-34px-600();
@@ -73,6 +72,9 @@
     table {
         width: vw(1410);
         col {
+            &.col-rank {
+                width: 3%;
+            }
             &.col-album {
                 width: 6%;
             }
@@ -123,6 +125,10 @@
             td {
                 padding: vw(14) 0;
                 vertical-align: middle;
+            }
+            .col-rank-td {
+                font-family: 'Bricolage Grotesque';
+                font-weight: 800;
             }
             .col-album-td {
                 img {

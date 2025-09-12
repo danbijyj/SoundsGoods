@@ -24,7 +24,6 @@ const Layout = () => {
 
                 {/* <Login /> */}
                 {/* <Join /> */}
-
             </main>
             <Footer />
         </div>

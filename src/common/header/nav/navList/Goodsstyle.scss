@@ -3,7 +3,7 @@
 .GoodsList {
     display: flex;
     margin-left: vw(260);
-    margin-top: vw(104);
+    margin-top: vw(40);
     .goods_item {
         display: flex;
         width: vw(1400);
@@ -15,12 +15,12 @@
             align-items: flex-start;
             justify-content: center;
             position: relative;
-            gap: vw(30);
+            gap: vw(20);
             flex: 1 0 0;
             align-self: stretch;
             img {
-                height: vw(230);
-                margin-right: vw(60);
+                height: vw(190.7);
+                margin-right: vw(81.5);
                 align-self: stretch;
                 aspect-ratio: 48/23;
             }
@@ -49,8 +49,8 @@
         }
         .right {
             display: flex;
-            width: vw(860);
-            height: vw(315);
+            width: vw(902);
+            height: vw(240);
 
             align-items: flex-start;
             gap: vw(40);
@@ -59,14 +59,13 @@
             .goodsbox {
                 display: flex;
                 align-items: center;
-                gap: vw(20);
-                flex: 1 0 0;
+                gap: vw(40);
                 align-self: stretch;
                 .goodsitembox {
                     display: flex;
                     flex-direction: column;
                     width: vw(200);
-                    height: vw(237);
+                    height: vw(202);
                     .imgbox {
                         justify-content: space-between;
                         align-items: flex-start;
@@ -77,27 +76,30 @@
                             object-fit: contain;
                             aspect-ratio: 25/14;
                         }
-                        margin-bottom: vw(21);
+                        margin-bottom: vw(12);
                     }
                     .goodTextbox {
+                        display: flex;
+                        width: vw(200);
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: vw(8);
                         h2 {
                             color: #2d2d2d;
                             font-size: vw(18);
                             font-weight: 700;
-                            width: 200px;
+                            width: vw(200);
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            margin-bottom: vw(8);
                         }
                         h3 {
                             display: -webkit-box;
-                            -webkit-line-clamp: 2;
-                            font-size: vw(16);
+                            -webkit-line-clamp: 1;
+                            font-size: vw(14);
                             -webkit-box-orient: vertical;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            margin-bottom: vw(8);
                         }
                         h4 {
                             font-size: vw(14);

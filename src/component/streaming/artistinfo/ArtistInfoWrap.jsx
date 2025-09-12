@@ -5,17 +5,17 @@ import ArtistITop from './artistitop/ArtistITop';
 import ArtistIVideo from './artistivideo/ArtistIVideo';
 import './style.scss';
 
-const ArtistInfoWrap = () => {
+const ArtistInfoWrap = ({ data }) => {
     return (
         <section id="artist-info-wrap">
             <div className="artist-info-img">
-                <ArtistIImg />
+                <ArtistIImg data={data} />
             </div>
             <div className="artist-info-con">
-                <ArtistITop />
-                <ArtistIAlbum />
+                <ArtistITop data={data} />
+                <ArtistIAlbum data={data} />
                 <ArtistIVideo />
-                <ArtistIGoods />
+                <ArtistIGoods data={data} />
             </div>
         </section>
     );

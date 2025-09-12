@@ -1,7 +1,11 @@
 import './style.scss';
 import LatestMusicItem from './LatestMusicItem';
+import { useState } from 'react';
+import newData_51_100 from '../../../../assets/api/musicComponents/newData_51_100';
 
 const LatestMusicList = () => {
+    const [newData, setNewData] = useState(newData_51_100);
+
     return (
         <table>
             <colgroup>
@@ -27,16 +31,9 @@ const LatestMusicList = () => {
                 </tr>
             </thead>
             <tbody>
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
-                <LatestMusicItem />
+                {newData.map((item) => (
+                    <LatestMusicItem key={item.id} item={item} />
+                ))}
             </tbody>
         </table>
     );

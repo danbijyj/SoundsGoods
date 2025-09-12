@@ -66,10 +66,12 @@
         justify-content: space-between;
         .artist-category-item {
             text-align: center;
+
             img {
                 width: vw(260);
                 height: vw(260);
                 margin-bottom: vw(20);
+                object-fit: contain;
             }
             h3 {
                 @include font-24px-600();

@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import jazz_401_450 from '../../../assets/api/musicComponents/jazz_401_450';
 const Con4Genre = () => {
     return (
         <div className="con-inner">

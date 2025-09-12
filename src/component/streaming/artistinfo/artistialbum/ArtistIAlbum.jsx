@@ -2,7 +2,7 @@ import ArtistIAlbumItem from './ArtistIAlbumItem';
 import './style.scss';
 import { Link } from 'react-router-dom';
 
-const ArtistIAlbum = () => {
+const ArtistIAlbum = ({ data }) => {
     return (
         <section id="artist-i-album">
             <div>
@@ -14,11 +14,9 @@ const ArtistIAlbum = () => {
                 </h2>
             </div>
             <div className="artist-i-cover">
-                <ArtistIAlbumItem />
-                <ArtistIAlbumItem />
-                <ArtistIAlbumItem />
-                <ArtistIAlbumItem />
-                <ArtistIAlbumItem />
+                {data.album.map((item) => (
+                    <ArtistIAlbumItem key={item.id} item={item} />
+                ))}
             </div>
         </section>
     );

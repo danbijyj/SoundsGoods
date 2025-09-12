@@ -2,26 +2,21 @@ import ArtistIGoodsItem from './ArtistIGoodsItem';
 import './style.scss';
 import { Link } from 'react-router-dom';
 
-const ArtistIGoods = () => {
+const ArtistIGoods = ({ data }) => {
     return (
         <section id="artist-i-goods">
             <div>
                 <h2>
-                    더보이즈 (THE BOYZ) 굿즈 예약하기
+                    {data.artist}
                     <Link to="">
-                        <img
-                            src="../../../../../public/images/streaming/more_color.png"
-                            alt=""
-                        />
+                        <img src="../../../../../public/images/streaming/more_color.png" alt="" />
                     </Link>
                 </h2>
             </div>
             <div className="artist-i-goods-list">
-                <ArtistIGoodsItem />
-                <ArtistIGoodsItem />
-                <ArtistIGoodsItem />
-                <ArtistIGoodsItem />
-                <ArtistIGoodsItem />
+                {data.goods.map((item, index) => (
+                    <ArtistIGoodsItem key={index} item={item} />
+                ))}
             </div>
         </section>
     );

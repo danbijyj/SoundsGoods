@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import './style.scss';
 import Top100MusicList from './Top100MusicList';
+import top_1_50 from '../../../../assets/api/musicComponents/top_1_50';
 
 const Top100Music = () => {
+    const [musicData, setMusicData] = useState(top_1_50);
+
     return (
         <section id="top100-music">
             <h2>인기 차트 TOP 100</h2>
@@ -22,7 +26,7 @@ const Top100Music = () => {
                     </div>
                 </div>
             </div>
-            <Top100MusicList />
+            <Top100MusicList data={musicData} />
         </section>
     );
 };

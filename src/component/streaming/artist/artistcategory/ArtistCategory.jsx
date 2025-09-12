@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import ArtistCategoryItem from './ArtistCategoryItem';
 import './style.scss';
+import artist_info from '../../../../assets/api/artist_info';
 
 const ArtistCategory = () => {
+    const [artist, setArtist] = useState(artist_info);
+
     return (
         <section id="artist-category">
             <div className="artist-category-top">
@@ -19,21 +23,9 @@ const ArtistCategory = () => {
                 </div>
             </div>
             <div className="artist-category-list">
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
-                <ArtistCategoryItem />
+                {artist.slice(0, 8).map((item) => (
+                    <ArtistCategoryItem key={item.id} item={item} />
+                ))}
             </div>
         </section>
     );
