@@ -14,7 +14,7 @@ const ArtistInfoWrap = ({ data }) => {
             <div className="artist-info-con">
                 <ArtistITop data={data} />
                 <ArtistIAlbum data={data} />
-                <ArtistIVideo />
+                <ArtistIVideo data={data} />
                 <ArtistIGoods data={data} />
             </div>
         </section>
