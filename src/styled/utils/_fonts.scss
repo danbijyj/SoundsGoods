@@ -212,8 +212,20 @@
     letter-spacing: vw(0);
     color: $fc;
 }
+@mixin font-20px-400 {
+    font-size: clamp(16px, vw(20), 24px);
+    font-weight: 400;
+    letter-spacing: vw(0);
+    color: $fc;
+}
 @mixin font-24px-700 {
     font-size: clamp(20px, vw(24), 28px);
+    font-weight: 700;
+    letter-spacing: vw(0);
+    color: $fc;
+}
+@mixin font-26px-700 {
+    font-size: clamp(20px, vw(26), 28px);
     font-weight: 700;
     letter-spacing: vw(0);
     color: $fc;
