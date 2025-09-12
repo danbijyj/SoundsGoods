@@ -1,5 +1,5 @@
 import React from 'react';
-import topdata from '../../../../assets/api/musicComponents/topData';
+import topdata from '../../../../assets/api/musicComponents/top_1_50';
 import TopItem from './TopItem';
 import './style.scss';
 const TopList = () => {

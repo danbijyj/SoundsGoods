@@ -1,5 +1,5 @@
 import React from 'react';
-import newData from '../../../../assets/api/musicComponents/newData';
+import newData from '../../../../assets/api/musicComponents/newData_51_100';
 import NewItem from './NewItem';
 import './style.scss';
 const NewList = () => {
