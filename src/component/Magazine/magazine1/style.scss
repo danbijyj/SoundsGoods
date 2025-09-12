@@ -11,10 +11,10 @@
         gap: vw(50px);
 
         h2 {
-            margin-top: (80px);
+            margin-top: vw(80px);
             font-size: vw(80px);
             font-weight: 700;
-            border-bottom: 3px solid #000;
+            border-bottom: vw(3px) solid #000;
 
             span {
                 font-size: vw(30px);
@@ -29,9 +29,9 @@
             li {
                 line-height: vw(30px);
                 padding: vw(10px) 0;
-                border-bottom: 1px solid #000;
+                border-bottom: (1px) solid #000;
                 span {
-                    font-size: 12px;
+                    font-size: vw(12px);
                     color: #777777;
                 }
             }
@@ -40,6 +40,7 @@
             font-size: vw(22px);
             font-weight: 600;
             padding: vw(10px) 0;
+            line-height: 1.6;
         }
         .day21,
         .day22,
@@ -47,14 +48,82 @@
             width: vw(340px);
             height: vw(1300px);
             padding: vw(80px) 0;
-            border-bottom: 1px solid #000;
+            border-bottom: vw(1px) solid #000;
         }
 
         .day23 {
             width: vw(400px);
             height: vw(1300px);
             padding: vw(80px) 0;
-            border-bottom: 1px solid #000;
+            border-bottom: vw(1px) solid #000;
+        }
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .inner {
+        width: 100% !important;
+        margin: 0 auto;
+        padding: vw(40, 393) vw(20, 393);
+
+        .content1 {
+            gap: 24px;
+
+            .day21,
+            .day22,
+            .day23 {
+                display: none !important;
+            }
+
+            .day23,
+            .day24 {
+                width: 100% !important;
+                height: auto !important;
+                padding: vw(40px) 0;
+                border-bottom: 1px solid #ddd;
+
+                h2 {
+                    font-size: 20px;
+                    margin-bottom: 12px;
+
+                    span {
+                        font-size: 14px;
+                        color: #777;
+                    }
+                }
+
+                li {
+                    border-bottom: none;
+                    padding: 12px 0;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+
+                        margin-bottom: 8px;
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 6px;
+                        line-height: 1.6;
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 12px;
+                        color: #777;
+                        margin-bottom: 6px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 1.4;
+                        color: #555;
+                    }
+                }
+            }
         }
     }
 }
