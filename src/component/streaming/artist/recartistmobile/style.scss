@@ -7,30 +7,30 @@
         display: flex;
         align-items: center;
         line-height: 1;
-        margin-bottom: vw(30, 393);
+        margin-bottom: vw(20, 393);
         img {
             width: vw(24, 393);
             height: vw(24, 393);
-            margin-left: vw(20, 393);
-            margin-top: vw(3);
+            margin-left: vw(14, 393);
+            object-fit: cover;
+            vertical-align: top;
         }
     }
     .rec-artist-list-mobile {
         width: 100%;
-        .my-swiper {
+        .mySwiper {
             width: 100%;
             .swiper-slide {
                 .rec-artist-item-mobile {
+                    cursor: pointer;
                     text-align: center;
                     img {
-                        width: vw(60);
-                        height: vw(60);
-                        margin-bottom: vw(20);
+                        width: vw(60, 393);
+                        height: vw(60, 393);
+                        margin-bottom: vw(10, 393);
                     }
                     h3 {
-                        @include font-14px-700();
-                        margin-bottom: vw(5);
-                        line-height: 1;
+                        @include m-font-14px-400();
                     }
                     h4 {
                         display: none;

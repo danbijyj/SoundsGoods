@@ -4,13 +4,17 @@
     width: 100vw;
     .inner {
         width: vw(1410);
-        padding-top: vw(60);
+        padding-top: vw(75);
         margin: 0 auto;
     }
     @include tablet {
+        flex: 1 !important;
+        width: 100% !important;
+        min-width: 0;
         .inner {
-            width: 100%;
-            padding: vw(40, 393) vw(20, 393) 0;
+            width: 100% !important;
+            margin: 0;
+            padding: vw(60, 393) vw(20, 393) 0;
         }
     }
 }

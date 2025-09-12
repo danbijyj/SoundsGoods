@@ -15,7 +15,6 @@ const ArtistWrap = () => {
     return (
         <section id="artist-wrap">
             <div className="inner">
-                {/* <RecArtist /> */}
                 {width > 1024 ? <RecArtist /> : <RecArtistMobile />}
                 <ArtistCategory />
                 <ArtistGoods />

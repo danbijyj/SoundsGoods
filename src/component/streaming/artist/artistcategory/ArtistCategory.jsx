@@ -18,7 +18,7 @@ const ArtistCategory = () => {
                     </div>
                 </div>
             </div>
-            <div className="artist-category-list">
+            <ul className="artist-category-list">
                 <ArtistCategoryItem />
                 <ArtistCategoryItem />
                 <ArtistCategoryItem />
@@ -34,7 +34,7 @@ const ArtistCategory = () => {
                 <ArtistCategoryItem />
                 <ArtistCategoryItem />
                 <ArtistCategoryItem />
-            </div>
+            </ul>
         </section>
     );
 };

@@ -15,8 +15,9 @@
                 color: $grey555;
                 border: vw(1) solid $grey555;
                 border-radius: vw(50);
-                padding: vw(8) vw(24);
+                padding: vw(5) vw(20) vw(7);
                 margin-right: vw(10);
+                letter-spacing: vw(-1);
             }
         }
         .genre-music-sort {
@@ -26,10 +27,10 @@
             white-space: nowrap;
             .sort-down {
                 cursor: pointer;
-                @include font-16px-600();
-                color: $grey777;
+                @include font-16px-500();
+                color: $m_color1;
                 width: vw(96);
-                border: vw(1) solid $greyc0;
+                border: vw(1) solid $m_color1;
                 border-radius: vw(50);
                 padding: vw(7) vw(20);
                 box-sizing: border-box;
@@ -47,18 +48,18 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    border: vw(1) solid $greyc0;
-                    border-radius: vw(10);
+                    border: vw(1) solid $m_color1;
+                    border-radius: vw(18);
                     padding: vw(1) vw(10) vw(1) vw(20);
                     box-sizing: border-box;
                     li {
                         cursor: pointer;
                         @include font-16px-400();
-                        color: $grey777;
+                        color: $m_color1;
                         line-height: 2;
                         &.sorting-title {
-                            @include font-16px-600();
-                            color: $grey777;
+                            @include font-16px-500();
+                            color: $m_color1;
                             line-height: 2;
                             background: url('/images/streaming/bg_up.png') no-repeat right center;
                             background-size: vw(24) auto;

@@ -1,6 +1,7 @@
 @use '../../../../styled/utils/' as *;
+
 #artist-category {
-    margin-bottom: vw(55);
+    margin-bottom: vw(75);
     .artist-category-top {
         @include display_between();
         h2 {
@@ -14,10 +15,10 @@
             white-space: nowrap;
             .sort-down {
                 cursor: pointer;
-                @include font-16px-600();
-                color: $grey777;
+                @include font-16px-500();
+                color: $m_color1;
                 width: vw(106);
-                border: vw(1) solid $greyc0;
+                border: vw(1) solid $m_color1;
                 border-radius: vw(50);
                 padding: vw(7) vw(20);
                 box-sizing: border-box;
@@ -35,18 +36,18 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    border: vw(1) solid $greyc0;
-                    border-radius: vw(10);
+                    border: vw(1) solid $m_color1;
+                    border-radius: vw(18);
                     padding: vw(1) vw(10) vw(1) vw(20);
                     box-sizing: border-box;
                     li {
                         cursor: pointer;
                         @include font-16px-400();
-                        color: $grey777;
+                        color: $m_color1;
                         line-height: 2;
                         &.sorting-title {
-                            @include font-16px-600();
-                            color: $grey777;
+                            @include font-16px-500();
+                            color: $m_color1;
                             line-height: 2;
                             background: url('/images/streaming/bg_up.png') no-repeat right vw(5)
                                 center;
@@ -59,13 +60,13 @@
         }
     }
     .artist-category-list {
-        width: vw(1410);
-        display: flex;
-        flex-wrap: wrap;
-        gap: vw(27);
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: vw(40);
+        justify-items: center;
         .artist-category-item {
             text-align: center;
+            cursor: pointer;
             img {
                 width: vw(260);
                 height: vw(260);
@@ -73,6 +74,31 @@
             }
             h3 {
                 @include font-24px-600();
+            }
+        }
+    }
+}
+@include tablet {
+    #artist-category {
+        margin-bottom: vw(40, 393);
+        .artist-category-top {
+            h2 {
+                @include m-font-18px-600();
+                margin-bottom: vw(20, 393);
+            }
+        }
+        .artist-category-list {
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            .artist-category-item {
+                img {
+                    width: vw(100, 393);
+                    height: vw(100, 393);
+                    margin-bottom: vw(10, 393);
+                }
+                h3 {
+                    @include font-14px-600();
+                }
             }
         }
     }
