@@ -1,9 +1,10 @@
 @use '../../../styled/utils' as *;
 .content3 {
     width: 100%;
+    height: auto;
     max-width: vw(1500px);
     margin: 0 0 vw(200px) 0;
-    font-family: 'Noto Sans KR', sans-serif;
+
     color: #000;
 
     .table-header {
@@ -13,7 +14,6 @@
         border-bottom: 2px solid #333;
         padding: 10px 0;
         margin-bottom: 15px;
-
         h3 {
             font-size: 18px;
             font-weight: 600;
@@ -28,6 +28,7 @@
 
     table {
         width: 100%;
+
         border-collapse: collapse;
 
         td {
@@ -75,6 +76,61 @@
         span {
             font-size: 14px;
             color: #555;
+        }
+    }
+}
+@media screen and (max-width: 393px) {
+    .content3 {
+        margin: auto 0 auto 0;
+        font-size: 12px;
+        width: 100%;
+        height: auto;
+
+        .table-header {
+            flex-direction: row;
+            width: 393px;
+            align-items: flex-start;
+            gap: 5px;
+            padding: 60px 0 20px 0;
+            h3 {
+                font-size: 16px;
+            }
+            a {
+                font-size: 12px;
+            }
+        }
+
+        table {
+            margin: auto 0;
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            padding: 0 5px;
+            width: 393px;
+
+            td {
+                line-height: 1.4;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .pagination {
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 15px;
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+
+            button {
+                font-size: 12px;
+            }
+            span {
+                font-size: 12px;
+            }
         }
     }
 }

@@ -337,10 +337,22 @@
                 margin-bottom: 0;
             }
         }
+        .video-wrap {
+            width: vw(444px);
+            height: vw(250px);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: vw(20px);
+            video {
+                width: vw(444px);
+                height: vw(250px);
+                background: #000;
+            }
+        }
+
         img {
             width: vw(444px);
             height: vw(250px);
-            background: #000;
             border-radius: 10px;
             margin-bottom: vw(20px);
         }

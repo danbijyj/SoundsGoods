@@ -49,26 +49,50 @@ const Con5Newmv = () => {
             </div>
             <ul className="newmv-wrap">
                 <li>
-                    <img src="" alt="" />
-                    <button class="play-btn">
+                    <div className="video-wrap">
+                        <video width="444" height="250" id="video1">
+                            <source src="/videos/famous.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+
+                    <button
+                        className="play-btn"
+                        onClick={() => document.getElementById('video1').play()}
+                    >
                         <img src="/images/streaming/mv-play-icon.png" alt="Play" />
                     </button>
                     <h4>Album Name</h4>
                     <strong>Artist Name</strong>
                     <p>2025.09.08</p>
                 </li>
+
                 <li>
-                    <img src="" alt="" />
-                    <button class="play-btn">
+                    <div className="video-wrap">
+                        <video width="444" height="250" id="video2">
+                            <source src="/videos/epikhigh.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <button
+                        className="play-btn"
+                        onClick={() => document.getElementById('video2').play()}
+                    >
                         <img src="/images/streaming/mv-play-icon.png" alt="Play" />
                     </button>
                     <h4>Album Name</h4>
                     <strong>Artist Name</strong>
                     <p>2025.09.08</p>
                 </li>
+
                 <li>
-                    <img src="" alt="" />
-                    <button class="play-btn">
+                    <div className="video-wrap">
+                        <video width="444" height="250" id="video3">
+                            <source src="/videos/neverendingstory.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <button
+                        className="play-btn"
+                        onClick={() => document.getElementById('video3').play()}
+                    >
                         <img src="/images/streaming/mv-play-icon.png" alt="Play" />
                     </button>
                     <h4>Album Name</h4>

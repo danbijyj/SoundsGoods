@@ -9,10 +9,16 @@ const ArtistCategoryItem = ({ item }) => {
     };
 
     return (
+
         <div className="artist-category-item">
             <img src={item.artist_img || '/images/streaming/artist.png'} alt="" onClick={onClick} />
             <h3>{item.artist}</h3>
         </div>
+
+        <li className="artist-category-item">
+            <img src="../../../../../public/images/streaming/artist.png" alt="" />
+            <h3>블랙핑크</h3>
+        </li>
     );
 };
 

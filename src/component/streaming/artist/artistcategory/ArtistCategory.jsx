@@ -27,6 +27,23 @@ const ArtistCategory = () => {
                     <ArtistCategoryItem key={item.id} item={item} />
                 ))}
             </div>
+            <ul className="artist-category-list">
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+                <ArtistCategoryItem />
+            </ul>
         </section>
     );
 };
