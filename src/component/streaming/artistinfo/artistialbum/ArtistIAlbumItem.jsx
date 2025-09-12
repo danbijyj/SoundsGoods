@@ -1,16 +1,13 @@
 import './style.scss';
 
-const ArtistIAlbumItem = () => {
+const ArtistIAlbumItem = ({ item }) => {
     return (
         <div className="artist-i-album-item">
-            <img
-                src="../../../../../public/images/streaming/album.png"
-                alt=""
-            />
+            <img src={item.image} alt="" />
             <div className="album-item-text">
-                <h3>ALBUM NAME ALBUM NAME</h3>
-                <h4>Artist Name Artist Name</h4>
-                <p>2025.09.02</p>
+                <h3>{item.title}</h3>
+                <h4>{item.artist}</h4>
+                <p>{item.release}</p>
             </div>
         </div>
     );

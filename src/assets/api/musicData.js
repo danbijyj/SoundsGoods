@@ -5151,7 +5151,7 @@ export default [
         category: '록/메탈, 발라드',
         cpn: '(주)JYP엔터테인먼트',
         like: false,
-        modal: extreme,
+        modal: false,
         chk: false,
         bookmark: false,
     },
@@ -5266,7 +5266,7 @@ export default [
         cpn: 'VLAST',
         like: false,
         modal: false,
-        chk: extreme,
+        chk: false,
         bookmark: false,
     },
     {

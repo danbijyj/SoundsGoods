@@ -21,7 +21,7 @@ const StreamingMenu = () => {
                 </ul>
                 <ul className="streamingmenu_btt">
                     <li>
-                        <Link to="">마이뮤직</Link>
+                        <Link to="/mymusic">마이뮤직</Link>
                     </li>
                     <li className="btt_common">
                         <Link to="">설정</Link>

@@ -1,7 +1,7 @@
 import ArtistITopMusicItem from './ArtistITopMusicItem';
 import './style.scss';
 
-const ArtistITopMusic = () => {
+const ArtistITopMusic = ({ data }) => {
     return (
         <div id="artist-i-top-music">
             <h2>인기곡</h2>
@@ -16,11 +16,9 @@ const ArtistITopMusic = () => {
                     <col />
                 </colgroup>
                 <tbody>
-                    <ArtistITopMusicItem />
-                    <ArtistITopMusicItem />
-                    <ArtistITopMusicItem />
-                    <ArtistITopMusicItem />
-                    <ArtistITopMusicItem />
+                    {data.album.map((item, index) => (
+                        <ArtistITopMusicItem key={index} item={item} />
+                    ))}
                 </tbody>
             </table>
         </div>

@@ -9,7 +9,7 @@ form {
     @include display_al();
     justify-content: space-between;
     label {
-        @include font-14px-400();
+        @include font-16px-400();
         @include display_center();
         height: vw(40);
         width: 5.2083vw;
