@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './style.scss';
 
 import Nav from './nav/Nav';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import headerData from '../../assets/api/headerData';
 import HeaderForm from './headerForm/HeaderForm';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,7 +24,7 @@ const Header = () => {
     const toggleLogin = () => setIsLoginOpen((prev) => !prev);
     const toggleJoin = () => setIsJoinOpen((prev) => !prev);
     const swiperRef = useRef();
-
+    const nav = useNavigate();
     return (
         <header id="header" className={show ? 'active' : ''} onMouseLeave={() => setShow(false)}>
             <div className="header_top_menu">
@@ -38,7 +38,7 @@ const Header = () => {
                         <>
                             <li>{userInfo?.name}님</li>
                             <li onClick={logout}>로그아웃</li>
-                            <li>장바구니</li>
+                            <li onClick={() => nav('/cart')}>장바구니</li>
                             <li>내 예약</li>
                         </>
                     )}

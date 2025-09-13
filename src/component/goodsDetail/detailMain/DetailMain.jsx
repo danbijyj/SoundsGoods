@@ -1,3 +1,4 @@
+import Review from './review/Review';
 import './style.scss';
 const DetailMain = ({ data }) => {
     const {
@@ -87,6 +88,8 @@ const DetailMain = ({ data }) => {
                     <li>발매일 2025년 09월</li>
                 </ul>
             </div>
+            {/* goods_status_text */}
+            <Review title={title} />
         </div>
     );
 };

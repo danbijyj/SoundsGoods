@@ -265,6 +265,7 @@ export const useGoodsStore = create((set, get) => {
         goods: localStorage.getItem('goods')
             ? JSON.parse(localStorage.getItem('goods'))
             : goodsData,
+        cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
         iveGoods: localStorage.getItem('iveGoods')
             ? JSON.parse(localStorage.getItem('iveGoods'))
             : [],

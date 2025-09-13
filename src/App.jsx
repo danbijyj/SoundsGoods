@@ -12,6 +12,7 @@ import {
     Magazine,
     Goods,
     GoodsDetail,
+    Cart,
 } from './page';
 import Layout from './common/Layout';
 import './styled/reset.scss';
@@ -30,6 +31,8 @@ const App = () => {
                         <Route path="search/:text" element={<Search />} />
                         <Route path="mymusic/access" element={<Mymusic_Access />} />
                         <Route path="magazine" element={<Magazine />} />
+                        <Route path="cart" element={<Cart />} />
+
                         <Route path="goods">
                             <Route index element={<Goods />} />
                             <Route path=":goodsID" element={<GoodsDetail />} />

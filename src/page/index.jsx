@@ -12,3 +12,4 @@ export { default as Top100 } from './streaming/top100';
 export { default as Magazine } from './magazine';
 export { default as Goods } from './goods';
 export { default as GoodsDetail } from './goodsDetail';
+export { default as Cart } from './cart';
