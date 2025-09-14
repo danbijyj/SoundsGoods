@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useGoodsStore } from '../../store';
 import CartList from './cartList/CartList';
 import './style.scss';
 const ShoppingCart = () => {

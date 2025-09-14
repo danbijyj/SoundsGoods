@@ -398,6 +398,12 @@ export const useGoodsStore = create((set, get) => {
                 }
             }
         },
+        totalCart: (x) => {
+            const { cart } = get();
+            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            localStorage.setItem('cart', JSON.stringify(total));
+            set({ itemTotal: total });
+        },
         isLike: (id) =>
             set((state) => {
                 const newGoods = state.goods.map((item) =>
