@@ -67,7 +67,7 @@ export default [
     },
     {
         id: 7,
-        artist: 'Justin BiebeR',
+        artist: 'Justin Bieber',
         ganre: 'POP/ROCK',
         album: 'Stay',
         artist_img: '/images/main/artist/at7.jpg',

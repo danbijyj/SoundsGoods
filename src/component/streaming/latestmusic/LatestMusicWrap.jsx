@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './style.scss';
 import LatestMusicListWrap from './latestmusiclistwrap/LatestMusicListWrap';
-import Pagination from '../pagination/Pagination';
 
 const LatestMusicWrap = () => {
     const swiperRef = useRef(null);
@@ -50,8 +49,44 @@ const LatestMusicWrap = () => {
 
     return (
         <section id="latest-wrap">
+            <div className="visual-area">
+                <div className="btn-wrap">
+                    <i
+                        className="swiper-no-swiping"
+                        onClick={() => {
+                            const swiper = swiperRef.current;
+                            if (!swiper) return;
+
+                            if (swiper.activeIndex === 0) {
+                                // 맨 앞에서 왼쪽 누르면 → 맨 끝으로
+                                swiper.slideTo(swiper.slides.length - 1);
+                            } else {
+                                swiper.slidePrev();
+                            }
+                        }}
+                    >
+                        <SlArrowLeft />
+                    </i>
+
+                    <i
+                        className="swiper-no-swiping"
+                        onClick={() => {
+                            const swiper = swiperRef.current;
+                            if (!swiper) return;
+
+                            if (swiper.activeIndex === swiper.slides.length - 1) {
+                                // 맨 끝에서 오른쪽 누르면 → 맨 앞으로
+                                swiper.slideTo(0);
+                            } else {
+                                swiper.slideNext();
+                            }
+                        }}
+                    >
+                        <SlArrowRight />
+                    </i>
+                </div>
+            </div>
             <Swiper
-                spaceBetween={30}
                 slidesPerView={1}
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
@@ -60,41 +95,6 @@ const LatestMusicWrap = () => {
                 {videos.map((v) => (
                     <SwiperSlide key={v.id}>
                         <div className="video-visual">
-                            <div className="btn-wrap">
-                                <i
-                                    className="swiper-no-swiping"
-                                    onClick={() => {
-                                        const swiper = swiperRef.current;
-                                        if (!swiper) return;
-
-                                        if (swiper.activeIndex === 0) {
-                                            // 맨 앞에서 왼쪽 누르면 → 맨 끝으로
-                                            swiper.slideTo(swiper.slides.length - 1);
-                                        } else {
-                                            swiper.slidePrev();
-                                        }
-                                    }}
-                                >
-                                    <SlArrowLeft />
-                                </i>
-
-                                <i
-                                    className="swiper-no-swiping"
-                                    onClick={() => {
-                                        const swiper = swiperRef.current;
-                                        if (!swiper) return;
-
-                                        if (swiper.activeIndex === swiper.slides.length - 1) {
-                                            // 맨 끝에서 오른쪽 누르면 → 맨 앞으로
-                                            swiper.slideTo(0);
-                                        } else {
-                                            swiper.slideNext();
-                                        }
-                                    }}
-                                >
-                                    <SlArrowRight />
-                                </i>
-                            </div>
                             <div className="bg-opacity"></div>
                             <iframe
                                 src={`https://www.youtube.com/embed/${v.id}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${v.id}`}
@@ -113,7 +113,6 @@ const LatestMusicWrap = () => {
                 ))}
             </Swiper>
             <LatestMusicListWrap />
-            <Pagination />
         </section>
     );
 };

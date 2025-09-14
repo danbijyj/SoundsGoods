@@ -28,10 +28,12 @@
             }
 
             &.on {
-                // 현재 페이지 스타일
-                font-family: 'pretendard' !important;
-                @include font-18px-600;
-                color: $m_color1 !important;
+                button {
+                    // 현재 페이지 스타일
+                    font-family: 'pretendard' !important;
+                    @include font-18px-600;
+                    color: $m_color1 !important;
+                }
             }
         }
     }
