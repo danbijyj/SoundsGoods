@@ -1,8 +1,10 @@
 import './style.scss';
 import { GoPlus } from 'react-icons/go';
 import { LuMinus } from 'react-icons/lu';
+import { useGoodsStore } from '../../../store';
 const GoodsCart = ({ data }) => {
-    const { artist, title, price, release, cpn, quantity } = data;
+    const { artist, title, price, release, cpn, quantity, id, totalPrice } = data;
+    const { upCountGoods, downCountGoods, cartPush } = useGoodsStore();
     return (
         <div className="goods_cart">
             <div className="cart_inner">
@@ -46,13 +48,13 @@ const GoodsCart = ({ data }) => {
                 <div className="updown_price">
                     <strong className="updown_title">{title}</strong>
                     <div className="updown_btn">
-                        <button className="down btn">
+                        <button className="down btn" onClick={() => downCountGoods(id)}>
                             <i>
                                 <LuMinus />
                             </i>
                         </button>
                         <span>{quantity}</span>
-                        <button className="up btn">
+                        <button className="up btn" onClick={() => upCountGoods(id)}>
                             <i>
                                 <GoPlus />
                             </i>
@@ -63,12 +65,12 @@ const GoodsCart = ({ data }) => {
                 {/* updown_btn */}
                 <p className="total_price_detail">
                     <span>총 상품 금액</span>
-                    <strong>₩ {price.toLocaleString()}</strong>
+                    <strong>₩ {totalPrice.toLocaleString()}</strong>
                 </p>
                 {/*total_price_detail */}
                 <p className="total_price_detail_all">
                     <span>총 상품 금액</span>
-                    <strong>₩ {price.toLocaleString()}</strong>
+                    <strong>₩ {totalPrice.toLocaleString()}</strong>
                 </p>
                 {/*total_price_detail_all */}
                 <div className="pay_btns">
@@ -76,7 +78,7 @@ const GoodsCart = ({ data }) => {
                         <span>구매하기</span>
                     </button>
                     <div className="wish_list">
-                        <button className="btn0 cart_next">
+                        <button className="btn0 cart_next" onClick={() => cartPush(data)}>
                             <span>장바구니 담기</span>
                         </button>
                         <button className="btn0 wish_next">

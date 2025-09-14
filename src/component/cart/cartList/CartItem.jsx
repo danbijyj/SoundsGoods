@@ -2,6 +2,7 @@ import React from 'react';
 import { GoPlus } from 'react-icons/go';
 import { LuMinus } from 'react-icons/lu';
 import { IoIosClose } from 'react-icons/io';
+import { useGoodsStore } from '../../../store';
 const CartItem = ({ item }) => {
     const {
         id,
@@ -20,7 +21,9 @@ const CartItem = ({ item }) => {
         chk,
         bookmark,
         count,
+        totalPrice,
     } = item;
+    const { delCart, upCount, downCount } = useGoodsStore();
     return (
         <li>
             <div className="cart_chk">
@@ -40,13 +43,13 @@ const CartItem = ({ item }) => {
                     </p>
                     <p className="limit_item">예약 판매 9/5 발송 예정</p>
                     <div className="quantity_count">
-                        <button className="down">
+                        <button className="down" onClick={() => downCount(id)}>
                             <i>
                                 <LuMinus />
                             </i>
                         </button>
                         <p className="quantity">{quantity}</p>
-                        <button className="up">
+                        <button className="up" onClick={() => upCount(id)}>
                             <i>
                                 <GoPlus />
                             </i>
@@ -56,12 +59,12 @@ const CartItem = ({ item }) => {
             </div>
             {/* item_list */}
             <p className="price_close">
-                <button>
+                <button onClick={() => delCart(id)}>
                     <i>
                         <IoIosClose />
                     </i>
                 </button>
-                <strong>₩ {price.toLocaleString()}</strong>
+                <strong>₩ {totalPrice.toLocaleString()}</strong>
             </p>
         </li>
     );

@@ -4,11 +4,10 @@ import CartItem from './CartItem';
 import './style.scss';
 
 const CartList = () => {
-    const goods = useGoodsStore((state) => state.goods);
-    const data = goods.slice(0, 2);
+    const cart = useGoodsStore((state) => state.cart);
     return (
         <ul className="cart_list">
-            {data.map((item) => (
+            {cart.map((item) => (
                 <CartItem key={item.id} item={item} />
             ))}
         </ul>

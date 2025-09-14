@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoPlus } from 'react-icons/go';
 import { LuMinus } from 'react-icons/lu';
+import { useGoodsStore } from '../../../../store';
 const GoodsItem = ({ goods }) => {
     const {
         id,
@@ -19,7 +20,9 @@ const GoodsItem = ({ goods }) => {
         chk,
         bookmark,
         count,
+        totalPrice,
     } = goods;
+    const { cartPush, downCountGoods, upCountGoods } = useGoodsStore();
     return (
         <li className="goods_li">
             <div className="pic">
@@ -37,7 +40,7 @@ const GoodsItem = ({ goods }) => {
                         <li>{release}</li>
                     </ul>
                 </div>
-                <p className="price">₩ {price.toLocaleString()}</p>
+                <p className="price">₩ {totalPrice.toLocaleString()}</p>
                 <div className="con2">
                     <ul className="count_text">
                         <li>남은수량</li>
@@ -51,20 +54,20 @@ const GoodsItem = ({ goods }) => {
                 <p className="limit_start">예약 판매 9/5 발송 예정</p>
             </div>
             <div className="quantity_count">
-                <button className="down">
+                <button className="down" onClick={() => downCountGoods(id)}>
                     <i>
                         <LuMinus />
                     </i>
                 </button>
                 <p className="quantity">{quantity}</p>
-                <button className="up">
+                <button className="up" onClick={() => upCountGoods(id)}>
                     <i>
                         <GoPlus />
                     </i>
                 </button>
             </div>
             <div className="goods_btns">
-                <div className="btn1">
+                <div className="btn1" onClick={() => cartPush(goods)}>
                     <button>
                         <img src="images/icons/white_next.png" alt="" />
                     </button>

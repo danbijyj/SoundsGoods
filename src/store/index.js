@@ -275,6 +275,9 @@ export const useGoodsStore = create((set, get) => {
         goodsMain2: localStorage.getItem('goodsMain2')
             ? JSON.parse(localStorage.getItem('goodsMain2'))
             : [],
+        itemTotal: 0,
+        paymentTotal: 0,
+        wish: localStorage.getItem('wish') ? JSON.parse(localStorage.getItem('wish')) : [],
         shuffl: () => {
             const { goods } = get();
             const limitData = goodsData.sort(() => Math.random() - 0.5).slice(0, 5);
@@ -285,7 +288,116 @@ export const useGoodsStore = create((set, get) => {
             localStorage.setItem('iveGoods', JSON.stringify(limitData3));
             set({ goodsMain: limitData, goodsMain2: limitData2, iveGoods: limitData3 });
         },
+        cartPush: (x) => {
+            const { goods, cart } = get();
+            const id = x.id;
+            const currentGoodsItem = goods.find((item) => item.id === id);
 
+            if (currentGoodsItem) {
+                const existingCartItem = cart.find((cartItem) => cartItem.id === id);
+
+                if (existingCartItem) {
+                    // 장바구니에 이미 있는 경우 - goods의 최신 수량을 기준으로 추가
+                    const updatedCart = cart.map((cartItem) =>
+                        cartItem.id === id
+                            ? {
+                                  ...cartItem,
+                                  quantity: cartItem.quantity + 1,
+                                  totalPrice: cartItem.price * (cartItem.quantity + 1),
+                              }
+                            : cartItem
+                    );
+                    localStorage.setItem('cart', JSON.stringify(updatedCart));
+                    set({ cart: updatedCart });
+                } else {
+                    // 장바구니에 없는 경우 - goods의 현재 상태를 기반으로 새 아이템 생성
+                    const newCartItem = {
+                        ...currentGoodsItem, // goods의 최신 데이터 사용
+                        quantity: currentGoodsItem.quantity, // goods의 현재 수량 사용
+                        itemtotal: currentGoodsItem.price * currentGoodsItem.quantity,
+                        totalPrice: currentGoodsItem.price * currentGoodsItem.quantity,
+                    };
+
+                    const newCart = [...cart, newCartItem];
+                    localStorage.setItem('cart', JSON.stringify(newCart));
+                    set({ cart: newCart });
+                }
+            }
+        },
+        delCart: (x) => {
+            const { cart } = get();
+            const del = cart.filter((item) => item.id !== x);
+            localStorage.setItem('cart', JSON.stringify(del));
+            set({ cart: del });
+        },
+        upCountGoods: (x) => {
+            const { goods } = get();
+            const id = x;
+            const item = goods.map((item) =>
+                item.id === id
+                    ? {
+                          ...item,
+                          quantity: item.quantity + 1,
+                          totalPrice: item.price * item.quantity,
+                      }
+                    : item
+            );
+
+            set({ goods: item });
+        },
+        upCount: (x) => {
+            const { goods, cart } = get();
+            const id = x;
+            const item = cart.map((item) =>
+                item.id === id
+                    ? {
+                          ...item,
+                          quantity: item.quantity + 1,
+                          totalPrice: item.price * item.quantity,
+                      }
+                    : item
+            );
+            localStorage.setItem('cart', JSON.stringify(item));
+            set({ cart: item });
+        },
+        downCountGoods: (id) => {
+            const { goods } = get();
+            const itemIndex = goods.findIndex((goodsItem) => goodsItem.id === id);
+
+            if (itemIndex !== -1) {
+                const updatedGoods = [...goods];
+                const item = updatedGoods[itemIndex];
+
+                if (item.quantity > 1) {
+                    updatedGoods[itemIndex] = {
+                        ...item,
+                        quantity: item.quantity - 1,
+                        totalPrice: item.price * (item.quantity - 1),
+                    };
+
+                    set({ goods: updatedGoods });
+                }
+            }
+        },
+        downCount: (id) => {
+            const { cart } = get();
+            const itemIndex = cart.findIndex((cartItem) => cartItem.id === id);
+
+            if (itemIndex !== -1) {
+                const updatedCart = [...cart];
+                const item = updatedCart[itemIndex];
+
+                if (item.quantity > 1) {
+                    updatedCart[itemIndex] = {
+                        ...item,
+                        quantity: item.quantity - 1,
+                        totalPrice: item.price * (item.quantity - 1),
+                    };
+                    localStorage.setItem('cart', JSON.stringify(updatedCart));
+                    set({ cart: updatedCart });
+                }
+            }
+        },
         isLike: (id) =>
             set((state) => {
                 const newGoods = state.goods.map((item) =>
