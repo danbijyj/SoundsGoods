@@ -1,16 +1,19 @@
 import GenreArtistItem from './GenreArtistItem';
 import './style.scss';
 
-const GenreArtist = () => {
+const GenreArtist = ({ data }) => {
     return (
         <section id="genre-artist">
-            <h2>DANCE 대표 아티스트</h2>
+            <h2>{data.genre} 대표 아티스트</h2>
             <div className="genre-artist-list">
+                {data.singer.map((item, index) => (
+                    <GenreArtistItem key={index} item={item} />
+                ))}
+
+                {/* <GenreArtistItem />
                 <GenreArtistItem />
                 <GenreArtistItem />
-                <GenreArtistItem />
-                <GenreArtistItem />
-                <GenreArtistItem />
+                <GenreArtistItem /> */}
             </div>
         </section>
     );

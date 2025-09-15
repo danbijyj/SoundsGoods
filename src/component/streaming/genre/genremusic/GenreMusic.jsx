@@ -1,10 +1,10 @@
 import GenreMusicList from './GenreMusicList';
 import './style.scss';
 
-const GenreMusic = () => {
+const GenreMusic = ({ data }) => {
     return (
         <section id="genre-music">
-            <h2>DANCE 카테고리의 모든 음악</h2>
+            <h2>{data.genre} 카테고리의 모든 음악</h2>
             <div className="genre-music-top">
                 <div className="genre-music-btn">
                     <button>전체 선택</button>
@@ -22,7 +22,7 @@ const GenreMusic = () => {
                     </div>
                 </div>
             </div>
-            <GenreMusicList />
+            <GenreMusicList data={data} />
         </section>
     );
 };

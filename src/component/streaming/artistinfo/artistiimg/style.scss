@@ -4,8 +4,14 @@
 #artist-i-img {
     position: relative;
     margin-bottom: vw(75);
+    width: vw(1690);
+
+    height: vw(400);
     img {
         width: vw(1690);
+
+        height: vw(400);
+        object-fit: cover;
     }
     .artist-info-title {
         position: absolute;

@@ -4,16 +4,16 @@ import GenreImg from './genreimg/GenreImg';
 import GenreMusic from './genremusic/GenreMusic';
 import './style.scss';
 
-const GenreWrap = () => {
+const GenreWrap = ({ data, allGenres, onSelect }) => {
     return (
         <section id="genre-wrap">
             <div className="genre-img">
-                <GenreImg />
+                <GenreImg data={data} />
             </div>
             <div className="genre_con">
-                <GenreCategory />
-                <GenreArtist />
-                <GenreMusic />
+                <GenreCategory allGenres={allGenres} selectedGenre={data} onSelect={onSelect} />
+                <GenreArtist data={data} />
+                <GenreMusic data={data} />
             </div>
         </section>
     );

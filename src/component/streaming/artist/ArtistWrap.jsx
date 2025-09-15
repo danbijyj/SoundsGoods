@@ -5,7 +5,7 @@ import RecArtist from './recartist/RecArtist';
 import RecArtistMobile from './recartistmobile/RecArtistMobile';
 import './style.scss';
 
-const ArtistWrap = () => {
+const ArtistWrap = ({ data }) => {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);
@@ -15,7 +15,7 @@ const ArtistWrap = () => {
     return (
         <section id="artist-wrap">
             <div className="inner">
-                {width > 1024 ? <RecArtist /> : <RecArtistMobile />}
+                {width > 1024 ? <RecArtist data={data} /> : <RecArtistMobile />}
                 <ArtistCategory />
                 <ArtistGoods />
             </div>

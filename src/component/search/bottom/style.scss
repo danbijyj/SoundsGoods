@@ -39,6 +39,10 @@
             justify-content: center;
             align-items: center;
             gap: vw(20);
+            img {
+                width: vw(180);
+                height: vw(180);
+            }
             .allbumInfo {
                 display: flex;
                 padding: 0 vw(10);
