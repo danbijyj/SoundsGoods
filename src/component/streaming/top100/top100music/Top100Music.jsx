@@ -5,13 +5,20 @@ import top_1_50 from '../../../../assets/api/musicComponents/top_1_50';
 
 const Top100Music = () => {
     const [musicData, setMusicData] = useState(top_1_50);
+    const [selectedAll, setSelectedAll] = useState(false);
+
+    const handleSelectAll = () => {
+        setSelectedAll((prev) => !prev);
+    };
 
     return (
         <section id="top100-music">
-            <h2>인기 차트 TOP 100</h2>
+            <h2>인기 차트 TOP 50</h2>
             <div className="top100-music-top">
                 <div className="top100-music-btn">
-                    <button>전체 선택</button>
+                    <button onClick={handleSelectAll}>
+                        {selectedAll ? '전체 해제' : '전체 선택'}
+                    </button>
                     <button>전체 재생</button>
                 </div>
                 <div className="top100-music-sort">
@@ -26,7 +33,7 @@ const Top100Music = () => {
                     </div>
                 </div>
             </div>
-            <Top100MusicList data={musicData} />
+            <Top100MusicList data={musicData} selectedAll={selectedAll} />
         </section>
     );
 };

@@ -11,13 +11,15 @@ const Con4Genre = () => {
                 </Link>
             </h3>
             <ul className="genre-wrap">
-                <li>
-                    <div className="genre-sub-img">
-                        <img src="/images/streaming/genre_dance_s.jpg" alt="" />
-                        <span>DANCE</span>
-                    </div>
-                    <p>DANCE</p>
-                </li>
+                <Link to="genre/dance">
+                    <li>
+                        <div className="genre-sub-img">
+                            <img src="/images/streaming/genre_dance_s.jpg" alt="" />
+                            <span>DANCE</span>
+                        </div>
+                        <p>DANCE</p>
+                    </li>
+                </Link>
                 <li>
                     <div className="genre-sub-img">
                         <img src="/images/streaming/genre_jazz_s.jpg" alt="" />

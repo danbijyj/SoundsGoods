@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react';
 import './style.scss';
 
-const LatestMusicItem = ({ item }) => {
+const LatestMusicItem = ({ item, isSelected }) => {
     const [minute, setMinute] = useState(0);
 
     useEffect(() => {
-        const randomMinute = Math.floor(Math.random() * 60);
-        setMinute(randomMinute);
+        setMinute(Math.floor(Math.random() * 60));
     }, []);
+
     return (
-        <tr>
+        <tr className={isSelected ? 'selected' : ''}>
             <td className="col-album-td">
                 <img src={item.image} alt="" />
             </td>
             <td className="col-title-td">
                 {item.title}
-                <p>{item.album}.</p>
+                <p>{item.album}</p>
             </td>
-            <td className="col-artist-td">{item.artist}</td>
+            <td className="col-artist-td">
+                <p>{item.artist}</p>
+            </td>
             <td className="col-time-td">3:{minute < 10 ? `0${minute}` : minute}</td>
             <td className="col-release-td">{item.release}</td>
             <td className="col-play-td icon">

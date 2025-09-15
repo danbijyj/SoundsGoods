@@ -1,13 +1,24 @@
+import { useState } from 'react';
 import LatestMusicList from './LatestMusicList';
 import './style.scss';
+import newData_51_100 from '../../../../assets/api/musicComponents/newData_51_100';
 
 const LatestMusicListWrap = () => {
+    const [musicData, setMusicData] = useState(newData_51_100);
+    const [selectedAll, setSelectedAll] = useState(false);
+
+    const handleSelectAll = () => {
+        setSelectedAll((prev) => !prev);
+    };
+
     return (
         <section id="latest-music">
             <h2>최신 음악</h2>
             <div className="latest-music-top">
                 <div className="latest-music-btn">
-                    <button>전체 선택</button>
+                    <button onClick={handleSelectAll}>
+                        {selectedAll ? '전체 해제' : '전체 선택'}
+                    </button>
                     <button>전체 재생</button>
                 </div>
                 <div className="latest-music-sort">
@@ -22,7 +33,7 @@ const LatestMusicListWrap = () => {
                     </div>
                 </div>
             </div>
-            <LatestMusicList />
+            <LatestMusicList data={musicData} selectedAll={selectedAll} />
         </section>
     );
 };
