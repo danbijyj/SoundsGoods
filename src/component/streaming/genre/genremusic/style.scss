@@ -15,7 +15,7 @@
                 color: $grey555;
                 border: vw(1) solid $grey555;
                 border-radius: vw(50);
-                padding: vw(5) vw(20) vw(7);
+                padding: 5px 20px 7px;
                 margin-right: vw(10);
                 letter-spacing: vw(-1);
             }
@@ -23,34 +23,37 @@
         .genre-music-sort {
             position: relative;
             width: vw(96);
-            min-width: 68px;
+            min-width: 76px;
             white-space: nowrap;
             .sort-down {
                 cursor: pointer;
                 @include font-16px-500();
                 color: $m_color1;
-                width: vw(96);
+                width: 100%;
+                min-width: 76px;
                 border: vw(1) solid $m_color1;
                 border-radius: vw(50);
-                padding: vw(7) vw(20);
+                padding: 7px 20px;
                 box-sizing: border-box;
                 text-align: left;
-                background: url('/images/streaming/bg_down.png') no-repeat right vw(10) center;
+                background: url('/images/streaming/bg_down.png') no-repeat;
+                background-position: calc(100% - 13px) center;
                 background-size: vw(24) auto;
                 background-origin: content-box;
                 padding-right: vw(0);
             }
             .sorting {
-                display: none;
+                //display: none;
                 ul {
-                    background-color: $fff;
-                    width: vw(96);
+                    //background-color: $fff;
+                    width: 100%;
+                    min-width: 76px;
                     position: absolute;
                     top: 0;
                     left: 0;
                     border: vw(1) solid $m_color1;
-                    border-radius: vw(18);
-                    padding: vw(1) vw(10) vw(1) vw(20);
+                    border-radius: 18px;
+                    padding: 1px 10px 1px 20px;
                     box-sizing: border-box;
                     li {
                         cursor: pointer;
@@ -61,7 +64,9 @@
                             @include font-16px-500();
                             color: $m_color1;
                             line-height: 2;
-                            background: url('/images/streaming/bg_up.png') no-repeat right center;
+                            background: url('/images/streaming/bg_up.png')
+                                no-repeat;
+                            background-position: right vw(3) center;
                             background-size: vw(24) auto;
                             background-origin: content-box;
                         }

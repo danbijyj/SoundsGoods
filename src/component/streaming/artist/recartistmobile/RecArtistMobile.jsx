@@ -14,7 +14,11 @@ const RecArtistMobile = () => {
                 </Link>
             </h2>
             <div className="rec-artist-list-mobile">
-                <Swiper className="mySwiper" slidesPerView={5} spaceBetween={20}>
+                <Swiper
+                    className="mySwiper"
+                    slidesPerView={4.6}
+                    spaceBetween={20}
+                >
                     <SwiperSlide>
                         <RecArtistItemMobile />
                     </SwiperSlide>
