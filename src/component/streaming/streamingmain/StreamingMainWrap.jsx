@@ -5,7 +5,7 @@ import Con4Genre from './Con4Genre';
 import Con5Newmv from './Con5Newmv';
 import './style.scss';
 
-const StreamingMainWrap = () => {
+const StreamingMainWrap = ({ data, allGenres, onSelect }) => {
     return (
         <section id="streaming-wrap">
             <div className="video-visual">
@@ -25,7 +25,7 @@ const StreamingMainWrap = () => {
             <Con1Latest />
             <Con2Top100 />
             <Con3Artist />
-            <Con4Genre />
+            <Con4Genre data={data} allGenres={allGenres} onSelect={onSelect} />
             <Con5Newmv />
         </section>
     );

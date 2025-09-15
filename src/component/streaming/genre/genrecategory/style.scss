@@ -31,7 +31,9 @@
                 img {
                     border-radius: vw(10);
                     width: vw(337);
+                    height: vw(192.869);
                     display: block;
+                    object-fit: cover;
                 }
                 &::after {
                     content: '';

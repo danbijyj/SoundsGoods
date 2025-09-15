@@ -23,6 +23,7 @@
         img {
             width: vw(300);
             height: vw(300);
+            object-fit: contain;
             border-radius: vw(500);
         }
     }

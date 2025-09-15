@@ -48,6 +48,15 @@
         gap: vw(20);
         width: vw(180);
         height: vw(297);
+        h2 {
+            width: vw(160);
+            height: vw(45);
+        }
+        img {
+            width: vw(180);
+            height: vw(180);
+            object-fit: cover;
+        }
         .popupInfo {
             display: flex;
             padding: 0 vw(10);

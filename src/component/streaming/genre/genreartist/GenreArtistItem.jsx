@@ -1,10 +1,10 @@
 import './style.scss';
 
-const GenreArtistItem = () => {
+const GenreArtistItem = ({ item }) => {
     return (
         <div className="genre-artist-item">
-            <img src="/public/images/streaming/artist.png" alt="" />
-            <h3>블랙핑크</h3>
+            <img src={item.artistimg} alt="" />
+            <h3>{item.artist}</h3>
         </div>
     );
 };

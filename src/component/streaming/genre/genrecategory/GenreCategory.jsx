@@ -1,5 +1,9 @@
 import './style.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+const GenreCategory = ({ allGenres, selectedGenre, onSelect }) => {
+    const navigate = useNavigate();
+
 
 const GenreCategory = () => {
     const genres = [
@@ -12,6 +16,7 @@ const GenreCategory = () => {
         { name: 'OST', img: '/images/streaming/genre_ost_s.jpg' },
         { name: 'INDIE', img: '/images/streaming/genre_indie_s.jpg' },
     ];
+
     return (
         <section id="genre-category">
             <h2>
@@ -21,6 +26,21 @@ const GenreCategory = () => {
                 </Link>
             </h2>
             <ul className="genre-sub">
+
+                {allGenres?.map((item, index) => (
+                    <li key={index}>
+                        <div
+                            className="genre-sub-img"
+                            onClick={() => {
+                                onSelect(item);
+                                navigate(`/streaming/genre/${item.genre}`, { state: item });
+                            }}
+                        >
+                            <img src={item.genreimg} alt={item.genre} />
+                            <span>{item.genre}</span>
+                        </div>
+                        <p>{item.genre}</p>
+
                 {genres.map((genre) => (
                     <li key={genre.name}>
                         <div className="genre-sub-img">
@@ -28,6 +48,7 @@ const GenreCategory = () => {
                             <span>{genre.name}</span>
                         </div>
                         <p>{genre.name}</p>
+
                     </li>
                 ))}
             </ul>

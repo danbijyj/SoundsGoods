@@ -7,16 +7,18 @@ const ArtistIGoods = ({ data }) => {
         <section id="artist-i-goods">
             <div>
                 <h2>
-                    {data.artist}
+                    {data?.artist || '아티스트 정보 없음'}
                     <Link to="">
-                        <img src="../../../../../public/images/streaming/more_color.png" alt="" />
+                        <img src="/images/streaming/more_color.png" alt="더보기" />
                     </Link>
                 </h2>
             </div>
             <div className="artist-i-goods-list">
-                {data.goods.map((item, index) => (
-                    <ArtistIGoodsItem key={index} item={item} />
-                ))}
+                {data?.goods && data.goods.length > 0 ? (
+                    data.goods.map((item, index) => <ArtistIGoodsItem key={index} item={item} />)
+                ) : (
+                    <div className="no-goods">등록된 굿즈가 없습니다.</div>
+                )}
             </div>
         </section>
     );

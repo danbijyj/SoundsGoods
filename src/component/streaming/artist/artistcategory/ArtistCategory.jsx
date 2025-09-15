@@ -4,7 +4,7 @@ import './style.scss';
 import artist_info from '../../../../assets/api/artist_info';
 
 const ArtistCategory = () => {
-    const [artist, setArtist] = useState(artist_info);
+    const [artist] = useState(artist_info);
 
     return (
         <section id="artist-category">
@@ -23,7 +23,7 @@ const ArtistCategory = () => {
                 </div>
             </div>
             <div className="artist-category-list">
-                {artist.slice(0, 8).map((item) => (
+                {artist.slice(0, 15).map((item) => (
                     <ArtistCategoryItem key={item.id} item={item} />
                 ))}
             </div>

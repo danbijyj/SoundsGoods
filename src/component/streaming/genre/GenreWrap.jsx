@@ -7,6 +7,9 @@ import GenreMusic from './genremusic/GenreMusic';
 import './style.scss';
 import GenreArtistMobile from './genreartistmobile/GenreArtistMobile';
 
+
+const GenreWrap = ({ data, allGenres, onSelect }) => {
+
 const GenreWrap = () => {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
@@ -14,15 +17,22 @@ const GenreWrap = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
     return (
         <section id="genre-wrap">
             <div className="genre-img">
-                <GenreImg />
+                <GenreImg data={data} />
             </div>
             <div className="genre_con">
+
+                <GenreCategory allGenres={allGenres} selectedGenre={data} onSelect={onSelect} />
+                <GenreArtist data={data} />
+                <GenreMusic data={data} />
+
                 {width > 1024 ? <GenreCategory /> : <GenreCategoryMobile />}
                 {width > 1024 ? <GenreArtist /> : <GenreArtistMobile />}
                 <GenreMusic />
+
             </div>
         </section>
     );

@@ -11,11 +11,7 @@ const ArtistCategoryItem = ({ item }) => {
     return (
         <>
             <div className="artist-category-item">
-                <img
-                    src={item.artist_img || '/images/streaming/artist.png'}
-                    alt=""
-                    onClick={onClick}
-                />
+                <img src={item.imageS || '/images/streaming/artist.png'} alt="" onClick={onClick} />
                 <h3>{item.artist}</h3>
             </div>
         </>

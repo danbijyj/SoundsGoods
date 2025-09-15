@@ -1,28 +1,61 @@
+import { useEffect, useState } from 'react';
 import GenreMusicList from './GenreMusicList';
 import './style.scss';
 
-const GenreMusic = () => {
+const GenreMusic = ({ data }) => {
+    const [sortType, setSortType] = useState('최신순');
+    const [sortedList, setSortedList] = useState([...(data.music || [])]);
+    const [sortOpen, setSortOpen] = useState(false);
+    const toggleSort = () => setSortOpen(!sortOpen);
+
+    useEffect(() => {
+        let newList = [...(data.music || [])];
+
+        if (sortType === '최신순') {
+            newList.sort((a, b) => new Date(b.release) - new Date(a.release));
+        } else if (sortType === '인기순') {
+            newList.sort(() => Math.random() - 0.5);
+        } else if (sortType === '이름순') {
+            newList.sort((a, b) => a.title.localeCompare(b.title));
+        }
+
+        setSortedList(newList);
+    }, [sortType, data.music]);
+
     return (
         <section id="genre-music">
-            <h2>DANCE 카테고리의 모든 음악</h2>
+            <h2>{data.genre} 카테고리의 모든 음악</h2>
             <div className="genre-music-top">
                 <div className="genre-music-btn">
                     <button>전체 선택</button>
                     <button>전체 재생</button>
                 </div>
                 <div className="genre-music-sort">
-                    <div className="sort-down">정렬</div>
+                    <div className="sort-down" onClick={toggleSort}>
+                        정렬
+                    </div>
                     <div className="sorting">
-                        <ul>
-                            <li className="sorting-title">정렬</li>
-                            <li>최신순</li>
-                            <li>인기순</li>
-                            <li>이름순</li>
-                        </ul>
+                        {sortOpen && (
+                            <ul className={`sorting ${sortOpen ? 'on' : ''}`}>
+                                <li className="sorting-title">정렬</li>
+                                {['최신순', '인기순', '이름순'].map((type) => (
+                                    <li
+                                        key={type}
+                                        className={sortType === type ? 'on' : ''}
+                                        onClick={() => {
+                                            setSortType(type);
+                                            setSortOpen(false);
+                                        }}
+                                    >
+                                        {type}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </div>
             </div>
-            <GenreMusicList />
+            <GenreMusicList data={sortedList} />
         </section>
     );
 };

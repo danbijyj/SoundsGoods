@@ -20,6 +20,7 @@
         display: flex;
         justify-content: space-between;
         .artist-i-goods-item {
+            cursor: pointer;
             width: vw(260);
             margin-bottom: vw(40);
             .artist-i-goods-img {

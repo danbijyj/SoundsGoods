@@ -1,7 +1,7 @@
 import './style.scss';
 import GenreMusicItem from './GenreMusicItem';
 
-const GenreMusicList = () => {
+const GenreMusicList = ({ data }) => {
     return (
         <table>
             <colgroup>
@@ -27,16 +27,9 @@ const GenreMusicList = () => {
                 </tr>
             </thead>
             <tbody>
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
+                {(data || []).map((item) => (
+                    <GenreMusicItem key={item.id} item={item} />
+                ))}
             </tbody>
         </table>
     );

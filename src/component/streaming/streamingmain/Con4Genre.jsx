@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import jazz_401_450 from '../../../assets/api/musicComponents/jazz_401_450';
-const Con4Genre = () => {
+import genre from '../../../assets/api/genre';
+const Con4Genre = ({ allGenres, selectedGenre, onSelect }) => {
+    const navigate = useNavigate();
     return (
         <div className="con-inner">
             <h3>
@@ -11,6 +13,23 @@ const Con4Genre = () => {
                 </Link>
             </h3>
             <ul className="genre-wrap">
+
+                {allGenres.map((item, index) => (
+                    <li key={index}>
+                        <div
+                            className="genre-sub-img"
+                            onClick={() => {
+                                onSelect(item);
+                                navigate(`/streaming/genre/${item.genre}`), { state: item };
+                            }}
+                        >
+                            <img src={item.genreimg} alt={item.genre} />
+                            <span>{item.genre}</span>
+                        </div>
+                        <p>{item.genre}</p>
+                    </li>
+                ))}
+
                 <Link to="genre/dance">
                     <li>
                         <div className="genre-sub-img">
@@ -69,6 +88,7 @@ const Con4Genre = () => {
                     </div>
                     <p>INDIE</p>
                 </li>
+
             </ul>
         </div>
     );

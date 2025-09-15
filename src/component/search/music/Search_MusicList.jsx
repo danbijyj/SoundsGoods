@@ -1,14 +1,11 @@
 import React from 'react';
 import './style.scss';
 import Search_MusicItem from './Search_MusicItem';
-const Search_MusicList = () => {
+const Search_MusicList = ({ data }) => {
     return (
         <div className="musicList">
             <div className="musicTitle">
-                <h2>
-                    곡 검색결과<span>136</span>
-                    <span>건</span>
-                </h2>
+                <h2>곡 검색결과</h2>
                 <h3>더보기</h3>
             </div>
             <table>
@@ -35,11 +32,11 @@ const Search_MusicList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Search_MusicItem />
-                    <Search_MusicItem />
-                    <Search_MusicItem />
-                    <Search_MusicItem />
-                    <Search_MusicItem />
+                    {data
+                        .flatMap((artist) => artist.album || [])
+                        .map((album) => (
+                            <Search_MusicItem key={album.id} item={album} />
+                        ))}
                 </tbody>
             </table>
         </div>
