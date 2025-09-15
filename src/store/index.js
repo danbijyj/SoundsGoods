@@ -265,6 +265,7 @@ export const useGoodsStore = create((set, get) => {
         goods: localStorage.getItem('goods')
             ? JSON.parse(localStorage.getItem('goods'))
             : goodsData,
+
         cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
         iveGoods: localStorage.getItem('iveGoods')
             ? JSON.parse(localStorage.getItem('iveGoods'))
@@ -275,20 +276,37 @@ export const useGoodsStore = create((set, get) => {
         goodsMain2: localStorage.getItem('goodsMain2')
             ? JSON.parse(localStorage.getItem('goodsMain2'))
             : [],
+
+        wish: localStorage.getItem('wish') ? JSON.parse(localStorage.getItem('wish')) : [],
+
+        // 상태로 변경
         itemTotal: 0,
         paymentTotal: 0,
-        wish: localStorage.getItem('wish') ? JSON.parse(localStorage.getItem('wish')) : [],
+        cartItemCount: 0,
+        updateTotals: () => {
+            const { cart } = get();
+            const newItemTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            const newCartItemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            set({
+                itemTotal: newItemTotal,
+                paymentTotal: newItemTotal + 3000,
+                cartItemCount: newCartItemCount,
+            });
+        },
         shuffl: () => {
             const { goods } = get();
-            const limitData = goodsData.sort(() => Math.random() - 0.5).slice(0, 5);
+            const limitData = [...goods].sort(() => Math.random() - 0.5).slice(0, 5);
             localStorage.setItem('goodsMain', JSON.stringify(limitData));
-            const limitData2 = goodsData.sort(() => Math.random() - 0.5).slice(0, 5);
+            const limitData2 = [...goods].sort(() => Math.random() - 0.5).slice(0, 5);
             localStorage.setItem('goodsMain2', JSON.stringify(limitData2));
-            const limitData3 = goodsData.sort(() => Math.random() - 0.5).slice(0, 6);
+            const limitData3 = [...goods].sort(() => Math.random() - 0.5).slice(0, 6);
             localStorage.setItem('iveGoods', JSON.stringify(limitData3));
             set({ goodsMain: limitData, goodsMain2: limitData2, iveGoods: limitData3 });
         },
-        cartPush: (x) => {
+
+        cartPush: (x, quantity = 1) => {
+            // quantity 매개변수 추가
             const { goods, cart } = get();
             const id = x.id;
             const currentGoodsItem = goods.find((item) => item.id === id);
@@ -297,25 +315,25 @@ export const useGoodsStore = create((set, get) => {
                 const existingCartItem = cart.find((cartItem) => cartItem.id === id);
 
                 if (existingCartItem) {
-                    // 장바구니에 이미 있는 경우 - goods의 최신 수량을 기준으로 추가
+                    // 장바구니에 이미 있는 경우 - 지정된 수량만큼 증가
                     const updatedCart = cart.map((cartItem) =>
                         cartItem.id === id
                             ? {
                                   ...cartItem,
-                                  quantity: cartItem.quantity + 1,
-                                  totalPrice: cartItem.price * (cartItem.quantity + 1),
+                                  quantity: cartItem.quantity + quantity, // 지정 수량 추가
+                                  totalPrice: cartItem.price * (cartItem.quantity + quantity),
                               }
                             : cartItem
                     );
                     localStorage.setItem('cart', JSON.stringify(updatedCart));
                     set({ cart: updatedCart });
                 } else {
-                    // 장바구니에 없는 경우 - goods의 현재 상태를 기반으로 새 아이템 생성
+                    // 장바구니에 없는 경우 - 지정된 수량으로 새 항목 추가
                     const newCartItem = {
-                        ...currentGoodsItem, // goods의 최신 데이터 사용
-                        quantity: currentGoodsItem.quantity, // goods의 현재 수량 사용
-                        itemtotal: currentGoodsItem.price * currentGoodsItem.quantity,
-                        totalPrice: currentGoodsItem.price * currentGoodsItem.quantity,
+                        ...currentGoodsItem,
+                        quantity: quantity, // 사용자가 지정한 수량 사용
+                        itemtotal: currentGoodsItem.price * quantity,
+                        totalPrice: currentGoodsItem.price * quantity,
                     };
 
                     const newCart = [...cart, newCartItem];
@@ -338,7 +356,7 @@ export const useGoodsStore = create((set, get) => {
                     ? {
                           ...item,
                           quantity: item.quantity + 1,
-                          totalPrice: item.price * item.quantity,
+                          totalPrice: item.price * (item.quantity + 1),
                       }
                     : item
             );
@@ -353,7 +371,7 @@ export const useGoodsStore = create((set, get) => {
                     ? {
                           ...item,
                           quantity: item.quantity + 1,
-                          totalPrice: item.price * item.quantity,
+                          totalPrice: item.price * (item.quantity + 1),
                       }
                     : item
             );

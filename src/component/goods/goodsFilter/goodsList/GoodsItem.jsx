@@ -45,7 +45,7 @@ const GoodsItem = ({ goods }) => {
                         <li>{release}</li>
                     </ul>
                 </div>
-                <p className="price">₩ {totalPrice.toLocaleString()}</p>
+                <p className="price">₩ {price.toLocaleString()}</p>
                 <div className="con2">
                     <ul className="count_text">
                         <li>남은수량</li>
