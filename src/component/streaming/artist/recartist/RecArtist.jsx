@@ -3,6 +3,7 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 
 const RecArtist = () => {
+    const itemCount = 8;
     return (
         <section id="rec-artist">
             <div>
@@ -14,14 +15,11 @@ const RecArtist = () => {
                 </h2>
             </div>
             <ul className="rec-artist-list">
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
-                <RecArtistItem />
+                {Array(itemCount)
+                    .fill(0)
+                    .map((_, i) => (
+                        <RecArtistItem key={i} />
+                    ))}
             </ul>
         </section>
     );

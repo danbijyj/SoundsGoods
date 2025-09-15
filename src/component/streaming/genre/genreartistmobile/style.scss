@@ -7,16 +7,25 @@
         margin-bottom: vw(20, 393);
     }
     .genre-artist-list-mobile {
-        .genre-artist-item-mobile {
-            text-align: center;
-            cursor: pointer;
-            img {
-                width: vw(60, 393);
-                height: vw(60, 393);
-                margin-bottom: vw(10, 393);
-            }
-            h3 {
-                @include m-font-14px-400();
+        width: 100%;
+        margin-right: vw(-20, 393);
+        padding-left: vw(10, 393);
+        .mySwiper {
+            width: 100%;
+            padding-right: vw(20, 393);
+            .swiper-slide {
+                .genre-artist-item-mobile {
+                    text-align: center;
+                    cursor: pointer;
+                    img {
+                        width: vw(60, 393);
+                        height: vw(60, 393);
+                        margin-bottom: vw(10, 393);
+                    }
+                    h3 {
+                        @include m-font-14px-400();
+                    }
+                }
             }
         }
     }
