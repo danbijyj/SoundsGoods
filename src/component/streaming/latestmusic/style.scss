@@ -1,13 +1,12 @@
 @use '../../../styled/utils' as *;
 #latest-wrap {
     width: vw(1690px);
-    .video-visual {
-        position: relative;
-        width: 100%;
+    .visual-area {
+        width: vw(1690px);
         height: vw(400px);
-        overflow: hidden;
-        margin: 0 0 vw(60px) 0;
+        position: absolute;
         .btn-wrap {
+            position: absolute;
             height: vw(40px);
             position: absolute;
             bottom: vw(50px);
@@ -18,8 +17,18 @@
                 color: $fff;
                 margin-left: vw(30px);
                 pointer-events: auto;
+                cursor: pointer;
             }
         }
+    }
+
+    .video-visual {
+        position: relative;
+        width: 100%;
+        height: vw(400px);
+        overflow: hidden;
+        margin: 0 0 vw(60px) 0;
+
         .bg-opacity {
             position: absolute;
             left: 0;

@@ -1,7 +1,9 @@
 import './style.scss';
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 
-const GenreCategory = () => {
+const GenreCategoryMobile = () => {
     const genres = [
         { name: 'DANCE', img: '/images/streaming/genre_dance_s.jpg' },
         { name: 'JAZZ', img: '/images/streaming/genre_jazz_s.jpg' },
@@ -13,26 +15,26 @@ const GenreCategory = () => {
         { name: 'INDIE', img: '/images/streaming/genre_indie_s.jpg' },
     ];
     return (
-        <section id="genre-category">
+        <section id="genre-category-mobile">
             <h2>
                 장르별 음악
                 <Link to="">
-                    <img src="/images/streaming/more.png" alt="더보기" />
+                    <img src="/images/streaming/more.png" alt="" />
                 </Link>
             </h2>
-            <ul className="genre-sub">
+            <Swiper spaceBetween={16} slidesPerView={2.5}>
                 {genres.map((genre) => (
-                    <li key={genre.name}>
-                        <div className="genre-sub-img">
+                    <SwiperSlide key={genre.name}>
+                        <div className="genre-sub-img-mobile">
                             <img src={genre.img} alt={genre.name} />
                             <span>{genre.name}</span>
                         </div>
                         <p>{genre.name}</p>
-                    </li>
+                    </SwiperSlide>
                 ))}
-            </ul>
+            </Swiper>
         </section>
     );
 };
 
-export default GenreCategory;
+export default GenreCategoryMobile;

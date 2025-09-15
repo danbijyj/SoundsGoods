@@ -4,9 +4,8 @@ const GenreImg = () => {
     return (
         <section id="genre-img">
             <p>
-                <img src="../../../../public/images/streaming/genre_dance.jpg" alt="" />
+                <img src="/images/streaming/genre_dance.jpg" alt="" />
             </p>
-
             <h2>Dance</h2>
         </section>
     );
