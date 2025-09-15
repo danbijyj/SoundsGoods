@@ -79,12 +79,15 @@
         .artist-goods-list {
             .artist-goods-item {
                 width: vw(110, 393);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                padding-bottom: vw(2, 393);
                 .goods-img {
                     position: relative;
                     width: vw(110, 393);
                     height: vw(143, 393);
                     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
                     @include display_center();
+                    margin-bottom: vw(8, 393);
                     img {
                         width: vw(110, 393);
                         height: vw(110, 393);
@@ -118,7 +121,7 @@
                         -webkit-line-clamp: 2;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        height: vw(30, 363);
+                        margin-bottom: vw(5, 393);
                     }
                     h4 {
                         @include m-font-12px-500();

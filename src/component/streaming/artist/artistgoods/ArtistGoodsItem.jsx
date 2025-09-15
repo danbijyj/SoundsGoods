@@ -12,7 +12,7 @@ const ArtistGoodsItem = ({ item }) => {
             <div className="goods-img" onClick={onClick}>
                 <img src={item.imageM} />
                 <p>
-                    <img src="../../../../../public/images/streaming/goods_heart.png" alt="" />
+                    <img src="/images/streaming/goods_heart.png" alt="" />
                 </p>
             </div>
             <div className="artist-goods-text">

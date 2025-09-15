@@ -22,17 +22,19 @@ const GenreCategoryMobile = () => {
                     <img src="/images/streaming/more.png" alt="" />
                 </Link>
             </h2>
-            <Swiper spaceBetween={16} slidesPerView={2.5}>
-                {genres.map((genre) => (
-                    <SwiperSlide key={genre.name}>
-                        <div className="genre-sub-img-mobile">
-                            <img src={genre.img} alt={genre.name} />
-                            <span>{genre.name}</span>
-                        </div>
-                        <p>{genre.name}</p>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <div className="genre-category-list-mobile">
+                <Swiper className="mySwiper" spaceBetween={16} slidesPerView={2.5}>
+                    {genres.map((genre) => (
+                        <SwiperSlide key={genre.name}>
+                            <div className="genre-sub-img-mobile">
+                                <img src={genre.img} alt={genre.name} />
+                                <span>{genre.name}</span>
+                            </div>
+                            <p>{genre.name}</p>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </section>
     );
 };

@@ -52,8 +52,7 @@
                             @include font-16px-500();
                             color: $m_color1;
                             line-height: 2;
-                            background: url('/images/streaming/bg_up.png')
-                                no-repeat;
+                            background: url('/images/streaming/bg_up.png') no-repeat;
                             background-position: right center;
                             background-size: vw(24) auto;
                             background-origin: content-box;
@@ -64,14 +63,16 @@
         }
     }
     .artist-category-list {
-        display: grid;
-        flex-wrap: nowrap;
-        grid-template-columns: repeat(5, 1fr);
-        gap: vw(40);
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
         .artist-category-item {
+            width: vw(260);
             text-align: center;
             cursor: pointer;
+            flex-shrink: 0;
+            margin-bottom: vw(40);
             img {
                 width: vw(260);
                 height: vw(260);
@@ -119,10 +120,8 @@
             }
         }
         .artist-category-list {
-            grid-template-columns: repeat(3, 1fr);
-            gap: vw(80) vw(20);
-            justify-items: center;
             .artist-category-item {
+                width: vw(100, 393);
                 img {
                     width: vw(100, 393);
                     height: vw(100, 393);
