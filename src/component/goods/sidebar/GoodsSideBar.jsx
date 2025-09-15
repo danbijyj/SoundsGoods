@@ -75,16 +75,16 @@ const GoodsSideBar = () => {
                     </ul>
                     <div className="sold_out">
                         <p>slod out 포함</p>
-                        <label class="switch">
+                        <label className="switch">
                             <input type="checkbox" />
-                            <span class="slider round"></span>
+                            <span className="slider round"></span>
                         </label>
                     </div>
                     <div className="sold_out">
                         <p>판매 예정 포함</p>
-                        <label class="switch">
+                        <label className="switch">
                             <input type="checkbox" />
-                            <span class="slider round"></span>
+                            <span className="slider round"></span>
                         </label>
                     </div>
                 </div>

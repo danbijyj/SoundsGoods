@@ -3,6 +3,11 @@ import { useGoodsStore } from '../../store';
 import CartList from './cartList/CartList';
 import './style.scss';
 const ShoppingCart = () => {
+    const { itemTotal, paymentTotal, cartItemCount, cart } = useGoodsStore();
+    const { updateTotals } = useGoodsStore();
+    useEffect(() => {
+        updateTotals();
+    }, [itemTotal, cart]);
     return (
         <div className="shopping_cart">
             <div className="shopping_item">
@@ -13,7 +18,7 @@ const ShoppingCart = () => {
                 <CartList />
                 <p className="total_price">
                     <span>총 합계 금액</span>
-                    <strong>₩ 107,000</strong>
+                    <strong>₩ {itemTotal.toLocaleString()}</strong>
                 </p>
             </div>
             {/* shopping_item */}

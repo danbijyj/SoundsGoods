@@ -20,7 +20,11 @@ const ArtistGoodsItem = ({ item }) => {
                     alt={item?.title || '상품 이미지 없음'}
                 />
                 <p>
+
                     <img src="/images/streaming/goods_heart.png" alt="좋아요" />
+
+                    <img src="/images/streaming/goods_heart.png" alt="" />
+
                 </p>
             </div>
             <div className="artist-goods-text">

@@ -8,7 +8,6 @@ const Top100Wrap = () => {
             <div className="inner">
                 <Top100Music />
             </div>
-            <Pagination />
         </section>
     );
 };

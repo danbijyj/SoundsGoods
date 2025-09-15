@@ -10,10 +10,16 @@ const GenreImg = ({ data }) => {
     return (
         <section id="genre-img" className={isDefault ? 'default-text' : ''}>
             <p>
+
                 <img src={imgSrc} alt="" />
             </p>
 
             <h2>{genreText}</h2>
+
+                <img src="/images/streaming/genre_dance.jpg" alt="" />
+            </p>
+            <h2>Dance</h2>
+
         </section>
     );
 };
