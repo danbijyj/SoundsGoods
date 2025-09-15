@@ -43,13 +43,7 @@
                 padding-right: vw(0);
             }
             .sorting {
-
-                &.on {
-                    display: block;
-                }
-
                 //display: none;
-
                 ul {
                     //background-color: $fff;
                     width: 100%;
@@ -70,8 +64,7 @@
                             @include font-16px-500();
                             color: $m_color1;
                             line-height: 2;
-                            background: url('/images/streaming/bg_up.png')
-                                no-repeat;
+                            background: url('/images/streaming/bg_up.png') no-repeat;
                             background-position: right vw(3) center;
                             background-size: vw(24) auto;
                             background-origin: content-box;
@@ -158,6 +151,68 @@
                 img {
                     width: vw(24);
                     cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    #genre-music {
+        h2 {
+            @include m-font-18px-600();
+            margin-bottom: vw(20, 393);
+        }
+        table {
+            width: 100%;
+            col {
+                &.col-album {
+                }
+                &.col-title {
+                }
+                &.col-play {
+                }
+                &.col-like {
+                }
+                &.col-fav {
+                }
+            }
+            thead {
+                tr {
+                    th {
+                        &:nth-child(3) {
+                            display: none;
+                        }
+                        &:nth-child(4) {
+                            display: none;
+                        }
+                        &:nth-child(5) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            tr {
+                .col-album-td {
+                    img {
+                        width: vw(60, 393);
+                        border-radius: vw(10, 393);
+                    }
+                }
+                .col-artist-td {
+                    display: none;
+                }
+                .col-time-td {
+                    display: none;
+                }
+                .col-release-td {
+                    display: none;
+                }
+                .icon {
+                    img {
+                        width: auto;
+                        height: vw(22, 393);
+                    }
                 }
             }
         }
