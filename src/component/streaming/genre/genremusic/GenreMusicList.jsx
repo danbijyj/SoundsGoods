@@ -27,19 +27,9 @@ const GenreMusicList = ({ data }) => {
                 </tr>
             </thead>
             <tbody>
-                {data.music.map((item) => (
+                {(data || []).map((item) => (
                     <GenreMusicItem key={item.id} item={item} />
                 ))}
-
-                {/* <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem />
-                <GenreMusicItem /> */}
             </tbody>
         </table>
     );

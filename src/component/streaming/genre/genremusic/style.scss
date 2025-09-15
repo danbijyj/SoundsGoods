@@ -41,7 +41,9 @@
                 padding-right: vw(0);
             }
             .sorting {
-                display: none;
+                &.on {
+                    display: block;
+                }
                 ul {
                     background-color: $fff;
                     width: vw(96);
