@@ -3,11 +3,11 @@ import { useGoodsStore } from '../../store';
 import CartList from './cartList/CartList';
 import './style.scss';
 const ShoppingCart = () => {
-    const { itemTotal, paymentTotal, cartItemCount } = useGoodsStore();
+    const { itemTotal, paymentTotal, cartItemCount, cart } = useGoodsStore();
     const { updateTotals } = useGoodsStore();
     useEffect(() => {
         updateTotals();
-    }, []);
+    }, [itemTotal, cart]);
     return (
         <div className="shopping_cart">
             <div className="shopping_item">
